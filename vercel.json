@@ -1,7 +1,7 @@
 {
   "outputDirectory": "website",
   "trailingSlash": false,
-  "cleanUrls": false,
+  "cleanUrls": true,
   "headers": [
     {
       "source": "/css/(.*)",
