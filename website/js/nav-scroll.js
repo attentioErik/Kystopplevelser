@@ -25,8 +25,10 @@
     if (!nav) return;
     if (scrolled) {
       nav.classList.add('nav--scrolled');
+      nav.classList.remove('nav--transparent');
     } else {
       nav.classList.remove('nav--scrolled');
+      nav.classList.add('nav--transparent');
     }
   }
 

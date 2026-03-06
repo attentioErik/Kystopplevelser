@@ -188,16 +188,19 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  margin-top: -72px; /* pull hero up behind fixed nav so video/image fills from y=0 */
 }
 
 .hero--inner {
   min-height: 60vh;
-  padding-block: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  padding-top: max(var(--section-padding), 5.5rem); /* 5.5rem = 88px > 72px nav */
 }
 
 .hero--inner-sm {
   min-height: 50vh;
-  padding-block: clamp(3rem, 6vw, 6rem);
+  padding-bottom: clamp(3rem, 6vw, 6rem);
+  padding-top: max(clamp(3rem, 6vw, 6rem), 5.5rem);
 }
 
 .hero__bg {
