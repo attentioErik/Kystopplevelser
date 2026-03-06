@@ -93,12 +93,16 @@
 
     <!-- SECTION 1 — HERO -->
     <section class="hero" aria-label="Introduksjon">
-      <div class="hero__bg hero-placeholder" role="img" aria-label="Utsikt over norsk fjord ved solnedgang">
-        <div style="position:absolute;bottom:0;left:0;right:0;height:120px;overflow:hidden;opacity:0.12;">
-          <svg class="hero-wave-animate" viewBox="0 0 1440 120" fill="none" preserveAspectRatio="none" style="height:120px;" aria-hidden="true">
-            <path d="M0,60 C240,100 480,20 720,60 C960,100 1200,20 1440,60 L1440,120 L0,120 Z" fill="#A8C5D8"/>
-            <path d="M0,80 C240,40 480,120 720,80 C960,40 1200,120 1440,80 L1440,120 L0,120 Z" fill="#2C5F8A" opacity="0.6"/>
-          </svg>
+      <div class="hero__bg" aria-hidden="true" style="background:#0A141D;">
+        <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none;">
+          <iframe
+            src="https://player.vimeo.com/video/1170952103?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;background=1&amp;autoplay=1&amp;loop=1&amp;muted=1"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            style="position:absolute;top:50%;left:50%;width:100vw;height:56.25vw;min-height:100%;min-width:177.78vh;transform:translate(-50%,-50%);"
+            title="Kystopplevelser Promo">
+          </iframe>
         </div>
       </div>
       <div class="hero__overlay" aria-hidden="true"></div>
@@ -131,7 +135,7 @@
           <a href="rib-tur-bergen.html" class="service-hub-card reveal">
             <div class="service-hub-card__image">
               <div class="service-hub-card__image-bg" role="img" aria-label="RIB-båt i høy fart på fjorden"
-                   style="background: linear-gradient(160deg, #1B3A52 0%, #2C5F8A 50%, #A8C5D8 100%);"></div>
+                   style="background-image:url('https://ucarecdn.com/e1f06564-4b7f-47a9-b225-d4b38d40be95/creative_1_4x5.jpg');background-size:cover;background-position:center;"></div>
             </div>
             <div class="service-hub-card__body">
               <p class="service-hub-card__eyebrow">Adrenalin</p>
@@ -147,7 +151,7 @@
           <a href="baatutleie-bergen.html" class="service-hub-card reveal">
             <div class="service-hub-card__image">
               <div class="service-hub-card__image-bg" role="img" aria-label="Motorbåt i skjærgården"
-                   style="background: linear-gradient(160deg, #1B3A52 0%, #2C5F8A 45%, #3D6B4F 100%);"></div>
+                   style="background-image:url('https://ucarecdn.com/620fad48-2c36-4838-8931-cef46d684fc2/IMG_20250527_122847_514.jpg');background-size:cover;background-position:center;"></div>
             </div>
             <div class="service-hub-card__body">
               <p class="service-hub-card__eyebrow">Frihet</p>
@@ -163,7 +167,7 @@
           <a href="sauna-badstue-bergen.html" class="service-hub-card reveal">
             <div class="service-hub-card__image">
               <div class="service-hub-card__image-bg" role="img" aria-label="Flytende badstue ved solnedgang over fjorden"
-                   style="background: linear-gradient(160deg, #C97B2A 0%, #1B3A52 55%, #0D1B26 100%);"></div>
+                   style="background-image:url('https://ucarecdn.com/2e5bf63e-29cb-45b1-9216-b9ea5f4403e3/DSC00037.avif');background-size:cover;background-position:center;"></div>
             </div>
             <div class="service-hub-card__body">
               <p class="service-hub-card__eyebrow">Velvære</p>
@@ -437,6 +441,7 @@
   </footer>
 
   <!-- JS -->
+  <script src="https://player.vimeo.com/api/player.js"></script>
   <script src="js/nav-scroll.js"></script>
   <script src="js/main.js"></script>
 </body>
