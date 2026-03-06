@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="nb" data-theme="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Møt menneskene bak Kystopplevelser i Bergen. Vi er drevet av lidenskap for havet og et ønske om å dele den norske kystens skjønnhet med alle.">
+  <meta property="og:title" content="Om oss — Kystopplevelser Bergen">
+  <meta property="og:description" content="Historien om Kystopplevelser — et lite selskap med stor lidenskap for havet og Bergen.">
+  <meta property="og:type" content="website">
+  <title>Om oss — Kystopplevelser Bergen</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <script src="js/theme-manager.js"></script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Hopp til innhold</a>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Hovednavigasjon">
+    <div class="nav__inner container">
+      <a href="index.html" class="nav__logo" aria-label="Kystopplevelser — Til forsiden">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M4 20 Q8 12 16 16 Q24 20 28 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <path d="M4 24 Q8 16 16 20 Q24 24 28 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
+        </svg>
+        <span class="nav__logo-text">Kystopplevelser</span>
+      </a>
+      <div class="nav__links" role="list">
+        <a href="opplevelser.html" class="nav__link" role="listitem">Opplevelser</a>
+        <a href="om-oss.html" class="nav__link" role="listitem" aria-current="page">Om oss</a>
+        <a href="galleri.html" class="nav__link" role="listitem">Galleri</a>
+      </div>
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Bytt tema" title="Bytt mellom lyst og mørkt tema">
+          <svg class="theme-toggle__sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="theme-toggle__moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="bestilling.html" class="btn btn--primary btn--sm">Bestill nå</a>
+        <button class="nav__hamburger" id="navHamburger" aria-label="Åpne meny" aria-expanded="false" aria-controls="navDrawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div class="nav-drawer" id="navDrawer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Navigasjonsmeny">
+    <div class="nav-drawer__overlay" id="navOverlay"></div>
+    <div class="nav-drawer__panel">
+      <div class="nav-drawer__header">
+        <span class="nav__logo-text">Kystopplevelser</span>
+        <button class="nav-drawer__close" id="navClose" aria-label="Lukk meny">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <nav class="nav-drawer__links">
+        <a href="opplevelser.html" class="nav-drawer__link">Opplevelser</a>
+        <a href="om-oss.html" class="nav-drawer__link">Om oss</a>
+        <a href="galleri.html" class="nav-drawer__link">Galleri</a>
+        <a href="bestilling.html" class="nav-drawer__link">Bestilling</a>
+      </nav>
+      <a href="bestilling.html" class="btn btn--primary" style="margin:1.5rem">Bestill nå →</a>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero hero--inner-sm" aria-label="Om oss introduksjon">
+      <div class="hero__bg" role="img" aria-label="Utsikt over Bergens kystlinje"
+           style="background: linear-gradient(160deg, #0D1B26 0%, #1B3A52 50%, #2C5F8A 100%);">
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__content container">
+        <p class="hero__eyebrow">Historien vår</p>
+        <h1 class="hero__title" style="font-size:var(--text-4xl)">Om oss</h1>
+        <p class="hero__subtitle">Et lite selskap med stor lidenskap for havet og den norske kysten.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 1: STORY -->
+    <section class="section" aria-labelledby="story-heading">
+      <div class="container">
+        <div class="story-section">
+          <p class="section__eyebrow text-center reveal">Vår historie</p>
+          <h2 id="story-heading" class="section__title text-center reveal" style="margin-bottom:var(--space-8)">Fra havkjærlighet til levevei</h2>
+
+          <div class="reveal">
+            <p>Det hele begynte med en gammel trebåt og en drøm. Magnus Lindström vokste opp i nærheten av Bryggen og tilbrakte barndommen sin med å ro mellom øyene, fiske krabber med morfaren og følge båttrafikken inn og ut av Byfjorden. For ham var havet ikke bare en kulisse — det var hjem. Da han møtte Astrid Bakke under et seamanship-kurs i 2014, fant han ikke bare sin fremtidige partner, men også medgründer av det som skulle bli Kystopplevelser.</p>
+
+            <p>Vi startet forsiktig. Én RIB-båt, et lite skur ved kaien og en haug med ubesvarte spørsmål om hva folk egentlig ønsket fra en kystopplevelse. Det vi raskt lærte var at gjestene — enten de kom fra Stavanger eller Sydney — søkte noe ekte. Ikke bare en båttur, men en forbindelse til havet, til stedets kultur og til dem de reiste med. Vi bestemte oss for at det var akkurat det vi skulle tilby: autentiske opplevelser, fortalt av mennesker som genuint er glad i kysten.</p>
+
+            <p>I dag er vi et lite team av havgale bergensere som brenner for at du skal oppleve det samme vi gjør — hvert eneste dag vi er ute på fjorden. Vi har vokst forsiktig og bevisst, alltid med fokus på kvalitet fremfor kvantitet. Hvert eneste år tar vi imot gjester fra hele verden, og hvert eneste år lærer vi noe nytt av havet — og av dem vi møter på det.</p>
+          </div>
+
+          <blockquote class="pull-quote reveal">
+            <p>"Havet gjør noe med mennesker. Det setter alt i perspektiv — og det er akkurat det vi ønsker for deg."</p>
+            <footer style="margin-top:var(--space-3);font-size:var(--text-sm);color:var(--text-muted);">
+              — Magnus Lindström, daglig leder
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: VALUES -->
+    <section class="section section--secondary" aria-labelledby="values-heading">
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="section__eyebrow">Det vi tror på</p>
+          <h2 id="values-heading" class="section__title">Våre verdier</h2>
+          <p class="section__subtitle">Disse tre prinsippene er grunnlaget for alt vi gjør ute på vannet.</p>
+        </div>
+        <div class="values-grid reveal-stagger">
+
+          <div class="values-card reveal">
+            <div class="values-card__icon values-card__icon--ember" aria-hidden="true">
+              <!-- Shield icon -->
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3 class="values-card__title">Trygghet</h3>
+            <p class="values-card__body">Sikkerhet er aldri en kompromiss for oss. Alt vårt utstyr er sertifisert og regelmessig kontrollert. Alle guider holder gjeldende sertifikater for sjøferdsel og livredningsteknikker. Du kan slappe av — vi passer på deg.</p>
+          </div>
+
+          <div class="values-card reveal">
+            <div class="values-card__icon values-card__icon--ocean" aria-hidden="true">
+              <!-- Map pin icon -->
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <h3 class="values-card__title">Lokalt kjennskap</h3>
+            <p class="values-card__body">Vi er bergensere gjennom og gjennom. Vi kjenner hver vik, hvert skjær og alle de skjulte perlene langs kysten. Vårt lokalkunnskap gjør at du opplever steder de fleste aldri finner på egenhånd.</p>
+          </div>
+
+          <div class="values-card reveal">
+            <div class="values-card__icon values-card__icon--moss" aria-hidden="true">
+              <!-- Leaf icon -->
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 8C8 10 5.9 16.17 3.82 19H6a2 2 0 0 1 2 2H5a2 2 0 0 1-2-2 10 10 0 0 1 .83-4A10 10 0 0 1 17 8z"/>
+                <path d="M19 3c-5.5 5.5-5 10-3 14a2 2 0 0 0 3-3c2-4 2-9 0-11z"/>
+              </svg>
+            </div>
+            <h3 class="values-card__title">Bærekraft</h3>
+            <p class="values-card__body">Vi elsker havet og vil ta vare på det. Vi bruker miljøvennlig drivstoff der det er mulig, har strenge regler mot avfall i fjorden, og støtter lokale tiltak for å bevare kystøkosystemet for fremtidige generasjoner.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: TEAM -->
+    <section class="section" aria-labelledby="team-heading">
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="section__eyebrow">Menneskene bak</p>
+          <h2 id="team-heading" class="section__title">Møt teamet</h2>
+          <p class="section__subtitle">Fire bergensere med et felles mål: å gjøre din dag til havs uforglemmelig.</p>
+        </div>
+        <div class="team-grid reveal-stagger">
+
+          <div class="team-card reveal">
+            <div class="team-card__avatar">
+              <div class="team-card__avatar-placeholder" role="img" aria-label="Magnus Lindström"
+                   style="background: linear-gradient(135deg, #1B3A52, #2C5F8A);"></div>
+            </div>
+            <h3 class="team-card__name">Magnus Lindström</h3>
+            <p class="team-card__role">Daglig leder og guide</p>
+            <p class="team-card__tagline">"Har tilbrakt mer tid på vannet enn på land siden 1998"</p>
+          </div>
+
+          <div class="team-card reveal">
+            <div class="team-card__avatar">
+              <div class="team-card__avatar-placeholder" role="img" aria-label="Astrid Bakke"
+                   style="background: linear-gradient(135deg, #3D6B4F, #2C5F8A);"></div>
+            </div>
+            <h3 class="team-card__name">Astrid Bakke</h3>
+            <p class="team-card__role">Erfaren RIB-kaptein</p>
+            <p class="team-card__tagline">"Kjenner hver vik og strøm i Byfjorden"</p>
+          </div>
+
+          <div class="team-card reveal">
+            <div class="team-card__avatar">
+              <div class="team-card__avatar-placeholder" role="img" aria-label="Erik Solberg"
+                   style="background: linear-gradient(135deg, #C97B2A, #1B3A52);"></div>
+            </div>
+            <h3 class="team-card__name">Erik Solberg</h3>
+            <p class="team-card__role">Sauna og wellness</p>
+            <p class="team-card__tagline">"Overbevist om at kaldvann løser alt"</p>
+          </div>
+
+          <div class="team-card reveal">
+            <div class="team-card__avatar">
+              <div class="team-card__avatar-placeholder" role="img" aria-label="Lena Moe"
+                   style="background: linear-gradient(135deg, #A8C5D8, #1B3A52);"></div>
+            </div>
+            <h3 class="team-card__name">Lena Moe</h3>
+            <p class="team-card__role">Booking og gjestfrihet</p>
+            <p class="team-card__tagline">"Sørger for at din opplevelse er perfekt fra første kontakt"</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: LOCATION -->
+    <section class="section section--secondary" aria-labelledby="location-heading">
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="section__eyebrow">Finn oss</p>
+          <h2 id="location-heading" class="section__title">Vår lokasjon</h2>
+          <p class="section__subtitle">Vi holder til ved historiske Bryggen i Bergen sentrum — lett tilgjengelig for alle.</p>
+        </div>
+        <div class="location-card reveal" style="max-width:900px;margin-inline:auto;">
+          <div class="location-card__map" role="img" aria-label="Kart over Bryggen i Bergen">
+            <!-- Map placeholder with fjord gradient -->
+            <svg width="100%" height="100%" viewBox="0 0 800 300" fill="none" style="position:absolute;inset:0;opacity:0.15;" aria-hidden="true">
+              <!-- Simplified coastline decoration -->
+              <path d="M0,200 C100,160 200,220 300,180 C400,140 500,210 600,170 C700,130 750,190 800,160 L800,300 L0,300 Z" fill="#A8C5D8"/>
+              <path d="M0,240 C100,200 200,260 300,220 C400,180 500,250 600,210 C700,170 750,230 800,200 L800,300 L0,300 Z" fill="#2C5F8A" opacity="0.6"/>
+            </svg>
+            <a href="https://maps.google.com/?q=Bryggen+12,+5003+Bergen" target="_blank" rel="noopener" class="location-card__map-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Åpne i Google Maps
+            </a>
+          </div>
+          <div class="location-card__info">
+            <div class="location-card__info-group">
+              <h4>Adresse</h4>
+              <p>Bryggen 12<br>5003 Bergen<br>Norge</p>
+            </div>
+            <div class="location-card__info-group">
+              <h4>Slik kommer du deg dit</h4>
+              <p>5 min gange fra Bergen togstasjon. 10 min fra flybussens endestasjon. Buss 1, 5 og 9 stopper ved Torget.</p>
+            </div>
+            <div class="location-card__info-group">
+              <h4>Parkering</h4>
+              <p>Parkering finnes ved Bygarasjen (400m) og Klostergarasjen (600m). Båtplass er tilgjengelig for de som kommer sjøveien.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: SAFETY -->
+    <section class="section" aria-labelledby="safety-heading">
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="section__eyebrow">Sikkerhet</p>
+          <h2 id="safety-heading" class="section__title">Sertifisert og trygg</h2>
+        </div>
+        <div class="safety-strip reveal">
+          <div class="safety-strip__badges" role="list">
+
+            <div class="safety-badge" role="listitem">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Sjøfartsdirektoratet godkjent
+            </div>
+            <div class="safety-badge" role="listitem">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Livredningssertifisert personell
+            </div>
+            <div class="safety-badge" role="listitem">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              Fullstendig forsikret
+            </div>
+            <div class="safety-badge" role="listitem">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Regelmessig utstyrskontroll
+            </div>
+
+          </div>
+          <p class="safety-strip__text">Alle våre aktiviteter gjennomføres med strengeste sikkerhetsstandarder i henhold til norske og internasjonale krav. Hvert fartøy gjennomgår regelmessig teknisk kontroll, og alt sikkerhetsutstyr er alltid oppdatert og tilgjengelig. Din sikkerhet er vår aller høyeste prioritet ute på vannet.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-block" aria-labelledby="about-cta-heading">
+      <div class="container" style="position:relative;z-index:1;">
+        <div class="reveal">
+          <span class="cta-block__eyebrow">La oss ta deg med</span>
+          <h2 id="about-cta-heading" class="cta-block__title">Bli kjent med oss ute på vannet</h2>
+          <p class="cta-block__body">Den beste måten å møte teamet vårt på er ute på fjorden. Book en opplevelse og vi viser deg Bergen slik vi ser den.</p>
+          <a href="bestilling.html" class="btn btn--primary btn--lg">Bestill nå →</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner container">
+      <div class="footer__col">
+        <a href="index.html" class="footer__logo">Kystopplevelser</a>
+        <p class="footer__tagline">Autentiske kystopplevelser<br>fra Bergen, Norge</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram" class="footer__social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook" class="footer__social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__heading">Sider</h3>
+        <nav aria-label="Bunnavigasjon">
+          <a href="index.html" class="footer__link">Hjem</a>
+          <a href="opplevelser.html" class="footer__link">Opplevelser</a>
+          <a href="om-oss.html" class="footer__link">Om oss</a>
+          <a href="galleri.html" class="footer__link">Galleri</a>
+          <a href="bestilling.html" class="footer__link">Bestilling</a>
+        </nav>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__heading">Kontakt</h3>
+        <a href="tel:+4755000000" class="footer__link">+47 55 00 00 00</a>
+        <a href="mailto:hei@kystopplevelser.no" class="footer__link">hei@kystopplevelser.no</a>
+        <a href="https://wa.me/4755000000" class="footer__link" target="_blank" rel="noopener">WhatsApp</a>
+        <address class="footer__address">Bryggen 12, 5003 Bergen</address>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <span>© 2025 Kystopplevelser AS</span>
+        <div class="footer__legal">
+          <a href="#">Personvern</a>
+          <a href="#">Vilkår</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav-scroll.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
