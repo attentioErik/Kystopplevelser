@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="nb" data-theme="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lei båt i Bergen og utforsk skjærgården og fjordene i eget tempo. Erfaring ikke nødvendig — utstyr, opplæring og kystdiagram inkludert. Kontakt oss for pris og tilgjengelighet.">
+  <meta property="og:title" content="Båtutleie Bergen — Utforsk kysten i eget tempo">
+  <meta property="og:description" content="Lei motorbåt i Bergen og sett din egen kurs. Opptil 8 personer, April–Oktober. Pris på forespørsel.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://kystopplevelser.no/baatutleie-bergen.html">
+  <link rel="alternate" hreflang="nb" href="https://kystopplevelser.no/baatutleie-bergen.html">
+  <link rel="alternate" hreflang="en" href="https://kystopplevelser.no/en/boat-rental-bergen.html">
+  <link rel="alternate" hreflang="x-default" href="https://kystopplevelser.no/baatutleie-bergen.html">
+  <title>Båtutleie Bergen — Utforsk kysten i eget tempo | Kystopplevelser</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/services.css">
+
+  <script src="js/theme-manager.js"></script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Hopp til innhold</a>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Hovednavigasjon">
+    <div class="nav__inner container">
+      <a href="index.html" class="nav__logo" aria-label="Kystopplevelser — Til forsiden">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M4 20 Q8 12 16 16 Q24 20 28 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <path d="M4 24 Q8 16 16 20 Q24 24 28 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
+        </svg>
+        <span class="nav__logo-text">Kystopplevelser</span>
+      </a>
+      <div class="nav__links" role="list">
+        <a href="rib-tur-bergen.html" class="nav__link" role="listitem">RIB-tur</a>
+        <a href="baatutleie-bergen.html" class="nav__link" role="listitem" aria-current="page">Båtutleie</a>
+        <a href="sauna-badstue-bergen.html" class="nav__link" role="listitem">Sauna</a>
+        <a href="om-oss.html" class="nav__link" role="listitem">Om oss</a>
+      </div>
+      <div class="nav__actions">
+        <a href="en/boat-rental-bergen.html" class="lang-switch" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Bytt tema" title="Bytt mellom lyst og mørkt tema">
+          <svg class="theme-toggle__sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="theme-toggle__moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="bestilling.html?opplevelse=batleje" class="btn btn--primary btn--sm">Kontakt oss</a>
+        <button class="nav__hamburger" id="navHamburger" aria-label="Åpne meny" aria-expanded="false" aria-controls="navDrawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div class="nav-drawer" id="navDrawer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Navigasjonsmeny">
+    <div class="nav-drawer__overlay" id="navOverlay"></div>
+    <div class="nav-drawer__panel">
+      <div class="nav-drawer__header">
+        <span class="nav__logo-text">Kystopplevelser</span>
+        <button class="nav-drawer__close" id="navClose" aria-label="Lukk meny">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <nav class="nav-drawer__links">
+        <a href="rib-tur-bergen.html" class="nav-drawer__link">RIB-tur</a>
+        <a href="baatutleie-bergen.html" class="nav-drawer__link">Båtutleie</a>
+        <a href="sauna-badstue-bergen.html" class="nav-drawer__link">Sauna</a>
+        <a href="om-oss.html" class="nav-drawer__link">Om oss</a>
+        <a href="bestilling.html" class="nav-drawer__link">Bestilling</a>
+      </nav>
+      <div class="nav-drawer__lang">
+        <span class="nav-drawer__lang-label">Språk</span>
+        <a href="en/boat-rental-bergen.html" class="nav-drawer__lang-link" hreflang="en" lang="en">English</a>
+      </div>
+      <a href="bestilling.html?opplevelse=batleje" class="btn btn--primary" style="margin:1.5rem">Kontakt oss →</a>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ─── HERO ─── -->
+    <section class="hero hero--inner" aria-label="Båtutleie i Bergen">
+      <div class="hero__bg" role="img" aria-label="Motorbåt ankret opp i rolig vik langs Bergens kystlinje"
+           style="background: linear-gradient(160deg, #0D1B26 0%, #1B3A52 40%, #2C5F8A 65%, #3D6B4F 100%);">
+        <div style="position:absolute;bottom:0;left:0;right:0;height:120px;overflow:hidden;opacity:0.1;">
+          <svg class="hero-wave-animate" viewBox="0 0 1440 120" fill="none" preserveAspectRatio="none" style="height:120px;" aria-hidden="true">
+            <path d="M0,60 C240,100 480,20 720,60 C960,100 1200,20 1440,60 L1440,120 L0,120 Z" fill="#3D6B4F"/>
+            <path d="M0,80 C240,40 480,120 720,80 C960,40 1200,120 1440,80 L1440,120 L0,120 Z" fill="#A8C5D8" opacity="0.6"/>
+          </svg>
+        </div>
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__content container">
+        <p class="hero__eyebrow reveal">Båtutleie &middot; Bergen</p>
+        <h1 class="hero__title reveal">Utforsk kysten i eget tempo</h1>
+        <p class="hero__subtitle reveal">Lei vår godt utstyrte motorbåt og sett din egen kurs langs den norske kystlinjen. Ingen erfaring nødvendig — vi gir deg alt du trenger.</p>
+        <div class="hero__ctas reveal">
+          <a href="#kontakt" class="btn btn--primary btn--lg">Kontakt oss for pris</a>
+          <a href="#hva-passer-det-for" class="btn btn--ghost btn--lg">Les mer</a>
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ─── BREADCRUMB ─── -->
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Brødsmule">
+        <a href="index.html">Hjem</a>
+        <span class="breadcrumb__sep" aria-hidden="true">/</span>
+        <span aria-current="page">Båtutleie Bergen</span>
+      </nav>
+    </div>
+
+    <!-- ─── INTRO ─── -->
+    <section class="section section--sm" aria-labelledby="baat-intro-heading">
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="section__eyebrow">Fleksibel leie</p>
+          <h2 id="baat-intro-heading" class="section__title">Friheten til å utforske</h2>
+        </div>
+        <div class="service-intro reveal">
+          <p>Det er en helt annen frihet i det å sette din egen kurs på sjøen. Med vår motorbåt har du tilgang til hundrevis av kilometer kystlinje, øyer, viker og skjær — akkurat de stedene du ikke finner på de vanlige turistrutene. Kanskje en øde sandstrand rett nordvest for Sotra, eller en stille ankerbukt med utsikt tilbake til Bergen.</p>
+          <p>Vi tilbyr leie av vår godt utstyrte og vedlikeholdte motorbåt for selvstyrte turer langs kysten rundt Bergen. Båten er godkjent for opptil 8 personer og er enkel å manøvrere, selv for de med liten erfaring fra sjøen. Vi gir deg en grundig gjennomgang ved avreise, med kystdiagram, GPS og alle nødvendige sikkerhetspunkter.</p>
+          <p>Pris varierer etter varighet, tidspunkt og gruppestørrelse. Kontakt oss for et uforpliktende pristilbud — vi setter gjerne sammen en pakke som passer dine behov og ønsker.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── WHO IS IT FOR ─── -->
+    <section id="hva-passer-det-for" class="section section--secondary" aria-labelledby="audience-heading">
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="section__eyebrow">Hvem passer det for</p>
+          <h2 id="audience-heading" class="section__title">Din dag på sjøen</h2>
+          <p class="section__subtitle">Båtutleie er den perfekte rammen for mange ulike anledninger og opplevelser.</p>
+        </div>
+        <div class="benefits-grid reveal-stagger">
+
+          <div class="benefit-card reveal">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <h3 class="benefit-card__title">Romantisk dagstur</h3>
+            <p class="benefit-card__body">Sett kursen mot en øde vik, ta med picnic og nyt dagen for dere to alene — med havet som eneste selskap. En dato du ikke glemmer på lenge.</p>
+          </div>
+
+          <div class="benefit-card reveal">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3 class="benefit-card__title">Vennegjeng på sjøen</h3>
+            <p class="benefit-card__body">Lei båten for en hel dag, ta med mat og drikke og nyt friheten i vennelag. Svøm fra båten, utforsk nye steder og lag gode minner på fjorden.</p>
+          </div>
+
+          <div class="benefit-card reveal">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2"/>
+                <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+              </svg>
+            </div>
+            <h3 class="benefit-card__title">Bedriftsarrangement</h3>
+            <p class="benefit-card__body">En dag på sjøen er et friskt alternativ til tradisjonell teambuilding. Bestill båtutleie som del av et større arrangement, gjerne kombinert med badstue eller RIB-tur.</p>
+          </div>
+
+          <div class="benefit-card reveal">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <h3 class="benefit-card__title">Familietur</h3>
+            <p class="benefit-card__body">Med plass til 8 personer passer båten godt for familien. Ta med ungene til strender og øyer de aldri ville funnet på egenhånd — og skap minner for livet.</p>
+          </div>
+
+          <div class="benefit-card reveal">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+              </svg>
+            </div>
+            <h3 class="benefit-card__title">Turister og besøkende</h3>
+            <p class="benefit-card__body">Bergen fra sjøsiden er en helt annen oppdagelsesreise. Utforsk de skjulte perler langs kysten som de fleste besøkende aldri oppdager, i din egen rute og i ditt eget tempo.</p>
+          </div>
+
+          <div class="benefit-card reveal">
+            <div class="benefit-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3 class="benefit-card__title">Ingen erfaring nødvendig</h3>
+            <p class="benefit-card__body">Du trenger verken båtlisens eller sjøerfaring. Vi gir deg en grundig innføring ved avreise og er tilgjengelig på telefon under turen dersom du har spørsmål.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── INCLUDED ─── -->
+    <section class="section" aria-labelledby="baat-included-heading">
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="section__eyebrow">Inkludert</p>
+          <h2 id="baat-included-heading" class="section__title">Godt utstyrt fra start</h2>
+        </div>
+        <ul class="included-list included-list--2col reveal" style="max-width:680px;margin-inline:auto;">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Kystdiagram og GPS
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Livredningsutstyr for alle ombord
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Grundig opplæring ved avreise
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Telefonisk støtte under turen
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Anbefalt ruteplanlegging
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Gratis ombooking ved dårlig vær
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ─── CONTACT CTA ─── -->
+    <section id="kontakt" class="section section--secondary" aria-labelledby="baat-contact-heading">
+      <div class="container">
+        <div class="contact-cta-card reveal">
+          <span class="contact-cta-card__eyebrow">Pris på forespørsel</span>
+          <h2 id="baat-contact-heading" class="contact-cta-card__title">Kontakt oss for pris og tilgjengelighet</h2>
+          <p class="contact-cta-card__body">
+            Pris for båtutleie avhenger av ønsket varighet, dato og gruppestørrelse. Vi setter gjerne sammen et tilbud som passer din gruppe — enten det er en halv dag, en hel dag eller noe helt skreddersydd.
+          </p>
+          <div class="contact-cta-card__actions">
+            <a href="bestilling.html?opplevelse=batleje" class="btn btn--primary btn--lg">Send forespørsel →</a>
+            <a href="tel:+4755000000" class="btn btn--outline btn--lg">Ring oss</a>
+            <a href="https://wa.me/4755000000" class="btn btn--outline btn--lg" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CTA BLOCK ─── -->
+    <section class="cta-block" aria-labelledby="baat-cta-heading">
+      <div class="cta-block__deco cta-block__deco--top" aria-hidden="true">
+        <svg viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none" style="width:100%;height:80px;">
+          <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,20 1440,40 L1440,0 L0,0 Z" fill="var(--bg-secondary)"/>
+        </svg>
+      </div>
+      <div class="container" style="position:relative;z-index:1;">
+        <div class="reveal">
+          <span class="cta-block__eyebrow">Din egen kurs</span>
+          <h2 id="baat-cta-heading" class="cta-block__title">Klar til å utforske?</h2>
+          <p class="cta-block__body">Ta kontakt og la oss finne det perfekte alternativet for deg. Vi er tilgjengelige April–Oktober og svarer raskt på alle henvendelser.</p>
+          <div style="display:flex;gap:var(--space-3);justify-content:center;flex-wrap:wrap;">
+            <a href="bestilling.html?opplevelse=batleje" class="btn btn--primary btn--lg">Send forespørsel →</a>
+            <a href="mailto:hei@kystopplevelser.no" class="btn btn--ghost btn--lg">Send e-post</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner container">
+      <div class="footer__col">
+        <a href="index.html" class="footer__logo">Kystopplevelser</a>
+        <p class="footer__tagline">Autentiske kystopplevelser<br>fra Bergen, Norge</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram" class="footer__social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook" class="footer__social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__heading">Tjenester</h3>
+        <nav aria-label="Tjenester">
+          <a href="rib-tur-bergen.html" class="footer__link">RIB-tur</a>
+          <a href="baatutleie-bergen.html" class="footer__link">Båtutleie</a>
+          <a href="sauna-badstue-bergen.html" class="footer__link">Sauna / Badstue</a>
+          <a href="om-oss.html" class="footer__link">Om oss</a>
+          <a href="bestilling.html" class="footer__link">Bestilling</a>
+        </nav>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__heading">Kontakt</h3>
+        <a href="tel:+4755000000" class="footer__link">+47 55 00 00 00</a>
+        <a href="mailto:hei@kystopplevelser.no" class="footer__link">hei@kystopplevelser.no</a>
+        <a href="https://wa.me/4755000000" class="footer__link" target="_blank" rel="noopener">WhatsApp</a>
+        <address class="footer__address">Bryggen 12, 5003 Bergen</address>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <span>© 2025 Kystopplevelser AS</span>
+        <div class="footer__legal">
+          <a href="#">Personvern</a>
+          <a href="#">Vilkår</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav-scroll.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

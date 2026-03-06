@@ -3,10 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kystopplevelser tilbyr autentiske kystopplevelser fra Bergen — RIB-turer, båtleie, krabbefiske, badstue og vannscooter på de vakre norske fjordene.">
+  <meta name="description" content="Kystopplevelser tilbyr autentiske opplevelser fra Bergen — RIB-tur på fjorden, båtutleie og badstue ved sjøen. Opplev kysten fra en annen vinkel.">
   <meta property="og:title" content="Kystopplevelser — Autentiske kystopplevelser fra Bergen">
-  <meta property="og:description" content="Opplev kysten fra en annen vinkel. RIB-turer, båtleie, krabbefiske, badstue og vannscooter nær Bergen.">
+  <meta property="og:description" content="RIB-tur, båtutleie og badstue ved sjøen nær Bergen. Opplev kysten fra en annen vinkel.">
   <meta property="og:type" content="website">
+  <link rel="canonical" href="https://kystopplevelser.no/">
+  <link rel="alternate" hreflang="nb" href="https://kystopplevelser.no/">
+  <link rel="alternate" hreflang="en" href="https://kystopplevelser.no/en/">
+  <link rel="alternate" hreflang="x-default" href="https://kystopplevelser.no/">
   <title>Kystopplevelser — Autentiske kystopplevelser fra Bergen</title>
 
   <!-- Fonts -->
@@ -19,6 +23,7 @@
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/services.css">
 
   <!-- Theme: applied before body renders to avoid flash -->
   <script src="js/theme-manager.js"></script>
@@ -28,9 +33,7 @@
   <!-- Skip link -->
   <a href="#main-content" class="skip-link">Hopp til innhold</a>
 
-  <!-- ═══════════════════════════════════════
-       NAV
-  ═══════════════════════════════════════ -->
+  <!-- NAV -->
   <nav class="nav" id="nav" role="navigation" aria-label="Hovednavigasjon">
     <div class="nav__inner container">
       <a href="index.html" class="nav__logo" aria-label="Kystopplevelser — Til forsiden">
@@ -41,11 +44,13 @@
         <span class="nav__logo-text">Kystopplevelser</span>
       </a>
       <div class="nav__links" role="list">
-        <a href="opplevelser.html" class="nav__link" role="listitem">Opplevelser</a>
+        <a href="rib-tur-bergen.html" class="nav__link" role="listitem">RIB-tur</a>
+        <a href="baatutleie-bergen.html" class="nav__link" role="listitem">Båtutleie</a>
+        <a href="sauna-badstue-bergen.html" class="nav__link" role="listitem">Sauna</a>
         <a href="om-oss.html" class="nav__link" role="listitem">Om oss</a>
-        <a href="galleri.html" class="nav__link" role="listitem">Galleri</a>
       </div>
       <div class="nav__actions">
+        <a href="en/index.html" class="lang-switch" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
         <button class="theme-toggle" id="themeToggle" aria-label="Bytt tema" title="Bytt mellom lyst og mørkt tema">
           <svg class="theme-toggle__sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
           <svg class="theme-toggle__moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -69,27 +74,26 @@
         </button>
       </div>
       <nav class="nav-drawer__links">
-        <a href="opplevelser.html" class="nav-drawer__link">Opplevelser</a>
+        <a href="rib-tur-bergen.html" class="nav-drawer__link">RIB-tur</a>
+        <a href="baatutleie-bergen.html" class="nav-drawer__link">Båtutleie</a>
+        <a href="sauna-badstue-bergen.html" class="nav-drawer__link">Sauna</a>
         <a href="om-oss.html" class="nav-drawer__link">Om oss</a>
-        <a href="galleri.html" class="nav-drawer__link">Galleri</a>
         <a href="bestilling.html" class="nav-drawer__link">Bestilling</a>
       </nav>
+      <div class="nav-drawer__lang">
+        <span class="nav-drawer__lang-label">Språk</span>
+        <a href="en/index.html" class="nav-drawer__lang-link" hreflang="en" lang="en">English</a>
+      </div>
       <a href="bestilling.html" class="btn btn--primary" style="margin:1.5rem">Bestill nå →</a>
     </div>
   </div>
 
-  <!-- ═══════════════════════════════════════
-       MAIN CONTENT
-  ═══════════════════════════════════════ -->
+  <!-- MAIN CONTENT -->
   <main id="main-content">
 
-    <!-- ─────────────────────────────────────
-         SECTION 1 — HERO
-    ───────────────────────────────────────── -->
+    <!-- SECTION 1 — HERO -->
     <section class="hero" aria-label="Introduksjon">
-      <!-- Background placeholder (fjord gradient + wave pattern) -->
       <div class="hero__bg hero-placeholder" role="img" aria-label="Utsikt over norsk fjord ved solnedgang">
-        <!-- Animated wave pattern -->
         <div style="position:absolute;bottom:0;left:0;right:0;height:120px;overflow:hidden;opacity:0.12;">
           <svg class="hero-wave-animate" viewBox="0 0 1440 120" fill="none" preserveAspectRatio="none" style="height:120px;" aria-hidden="true">
             <path d="M0,60 C240,100 480,20 720,60 C960,100 1200,20 1440,60 L1440,120 L0,120 Z" fill="#A8C5D8"/>
@@ -97,11 +101,7 @@
           </svg>
         </div>
       </div>
-
-      <!-- Overlay -->
       <div class="hero__overlay" aria-hidden="true"></div>
-
-      <!-- Content -->
       <div class="hero__content container">
         <p class="hero__eyebrow reveal">Bergen &middot; Norge</p>
         <h1 class="hero__title reveal">Opplev kysten fra en annen vinkel</h1>
@@ -111,8 +111,6 @@
           <a href="bestilling.html" class="btn btn--ghost btn--lg">Bestill nå</a>
         </div>
       </div>
-
-      <!-- Scroll chevron -->
       <div class="hero__scroll" aria-hidden="true">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <polyline points="6 9 12 15 18 9"/>
@@ -120,91 +118,70 @@
       </div>
     </section>
 
-    <!-- ─────────────────────────────────────
-         SECTION 2 — EXPERIENCE STRIP
-    ───────────────────────────────────────── -->
-    <section class="exp-strip" aria-labelledby="exp-strip-heading">
+    <!-- SECTION 2 — SERVICE CARDS -->
+    <section class="section" aria-labelledby="services-heading">
       <div class="container">
-        <h2 id="exp-strip-heading" class="sr-only">Våre opplevelser</h2>
-        <div class="exp-strip__scroll reveal-stagger" role="list">
-
-          <a href="opplevelser.html#rib-turer" class="exp-card reveal" role="listitem">
-            <div class="exp-card__icon" aria-hidden="true">
-              <!-- Speedboat icon -->
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M2 20h20"/><path d="M5 20V10l7-7 7 7v10"/><path d="M9 20v-5h6v5"/>
-              </svg>
-            </div>
-            <h3 class="exp-card__title">RIB-turer</h3>
-            <p class="exp-card__teaser">Adrenalin på fjorden</p>
-          </a>
-
-          <a href="opplevelser.html#batleje" class="exp-card reveal" role="listitem">
-            <div class="exp-card__icon" aria-hidden="true">
-              <!-- Helm icon -->
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/>
-                <line x1="12" y1="2" x2="12" y2="9"/><line x1="12" y1="15" x2="12" y2="22"/>
-                <line x1="2" y1="12" x2="9" y2="12"/><line x1="15" y1="12" x2="22" y2="12"/>
-              </svg>
-            </div>
-            <h3 class="exp-card__title">Båtleie</h3>
-            <p class="exp-card__teaser">Utforsk i eget tempo</p>
-          </a>
-
-          <a href="opplevelser.html#krabbefiske" class="exp-card reveal" role="listitem">
-            <div class="exp-card__icon" aria-hidden="true">
-              <!-- Crab-like icon (simplified) -->
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <ellipse cx="12" cy="13" rx="5" ry="4"/>
-                <path d="M7 13 L3 10 M7 15 L3 18 M17 13 L21 10 M17 15 L21 18"/>
-                <path d="M9 9 L7 5 M15 9 L17 5"/>
-                <circle cx="9.5" cy="12" r="0.8" fill="currentColor"/>
-                <circle cx="14.5" cy="12" r="0.8" fill="currentColor"/>
-              </svg>
-            </div>
-            <h3 class="exp-card__title">Krabbefiske</h3>
-            <p class="exp-card__teaser">Autentisk kystliv</p>
-          </a>
-
-          <a href="opplevelser.html#badstue" class="exp-card reveal" role="listitem">
-            <div class="exp-card__icon" aria-hidden="true">
-              <!-- Flame/sauna icon -->
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2 C12 2 6 8 6 13a6 6 0 0 0 12 0C18 8 12 2 12 2z"/>
-                <path d="M12 12 C12 12 10 14 10 16a2 2 0 0 0 4 0C14 14 12 12 12 12z" fill="currentColor" opacity="0.3"/>
-              </svg>
-            </div>
-            <h3 class="exp-card__title">Badstue</h3>
-            <p class="exp-card__teaser">Avslapning ved sjøen</p>
-          </a>
-
-          <a href="opplevelser.html#vannscooter" class="exp-card reveal" role="listitem">
-            <div class="exp-card__icon" aria-hidden="true">
-              <!-- Wave/speed icon -->
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M2 14 C5 10 8 18 11 14 C14 10 17 18 22 14"/>
-                <path d="M2 18 C5 14 8 22 11 18 C14 14 17 22 22 18"/>
-                <path d="M5 8 L12 4 L19 8" stroke-width="1.5"/>
-              </svg>
-            </div>
-            <h3 class="exp-card__title">Vannscooter</h3>
-            <p class="exp-card__teaser">Frihet på vannet</p>
-          </a>
-
+        <div class="section__header reveal">
+          <p class="section__eyebrow">Våre tjenester</p>
+          <h2 id="services-heading" class="section__title">Tre unike opplevelser</h2>
+          <p class="section__subtitle">Velg den opplevelsen som passer deg — eller kombiner dem for en uforglemmelig dag til havs.</p>
         </div>
-        <!-- Mobile scroll hint -->
-        <div class="scroll-hint" aria-hidden="true">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-          Scroll for å se alle
+        <div class="services-hub-grid reveal-stagger">
+
+          <a href="rib-tur-bergen.html" class="service-hub-card reveal">
+            <div class="service-hub-card__image">
+              <div class="service-hub-card__image-bg" role="img" aria-label="RIB-båt i høy fart på fjorden"
+                   style="background: linear-gradient(160deg, #1B3A52 0%, #2C5F8A 50%, #A8C5D8 100%);"></div>
+            </div>
+            <div class="service-hub-card__body">
+              <p class="service-hub-card__eyebrow">Adrenalin</p>
+              <h3 class="service-hub-card__title">RIB-tur på fjorden</h3>
+              <p class="service-hub-card__desc">Erfarne guider tar deg med ut på Byfjorden i høy hastighet. Avgang fra Bergen sentrum eller Sotra — opptil 12 personer.</p>
+              <span class="service-hub-card__link">
+                Les mer om RIB-tur
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <a href="baatutleie-bergen.html" class="service-hub-card reveal">
+            <div class="service-hub-card__image">
+              <div class="service-hub-card__image-bg" role="img" aria-label="Motorbåt i skjærgården"
+                   style="background: linear-gradient(160deg, #1B3A52 0%, #2C5F8A 45%, #3D6B4F 100%);"></div>
+            </div>
+            <div class="service-hub-card__body">
+              <p class="service-hub-card__eyebrow">Frihet</p>
+              <h3 class="service-hub-card__title">Båtutleie</h3>
+              <p class="service-hub-card__desc">Sett din egen kurs langs kysten. Lei motorbåt og utforsk skjærgården på egenhånd — ingen erfaring nødvendig.</p>
+              <span class="service-hub-card__link">
+                Les mer om båtutleie
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <a href="sauna-badstue-bergen.html" class="service-hub-card reveal">
+            <div class="service-hub-card__image">
+              <div class="service-hub-card__image-bg" role="img" aria-label="Flytende badstue ved solnedgang over fjorden"
+                   style="background: linear-gradient(160deg, #C97B2A 0%, #1B3A52 55%, #0D1B26 100%);"></div>
+            </div>
+            <div class="service-hub-card__body">
+              <p class="service-hub-card__eyebrow">Velvære</p>
+              <h3 class="service-hub-card__title">Sauna / Badstue</h3>
+              <p class="service-hub-card__desc">Flytende badstue med panoramautsikt over Byfjorden. Privat sesjon, badstuecruise eller drop-in — tilgjengelig hele året.</p>
+              <span class="service-hub-card__link">
+                Les mer om badstue
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+              </span>
+            </div>
+          </a>
+
         </div>
       </div>
     </section>
 
-    <!-- ─────────────────────────────────────
-         SECTION 3 — AUDIENCE QUALIFIER
-    ───────────────────────────────────────── -->
-    <section class="section" aria-labelledby="audience-heading">
+    <!-- SECTION 3 — AUDIENCE QUALIFIER -->
+    <section class="section section--secondary" aria-labelledby="audience-heading">
       <div class="container">
         <div class="section__header reveal">
           <p class="section__eyebrow">Passer for...</p>
@@ -214,7 +191,6 @@
 
           <div class="audience-card reveal">
             <div class="audience-card__icon" aria-hidden="true">
-              <!-- Compass icon -->
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"/>
                 <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
@@ -226,11 +202,9 @@
 
           <div class="audience-card reveal">
             <div class="audience-card__icon" aria-hidden="true">
-              <!-- Briefcase icon -->
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2" y="7" width="20" height="14" rx="2"/>
                 <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
-                <line x1="12" y1="12" x2="12" y2="12"/>
                 <line x1="8" y1="12" x2="16" y2="12"/>
               </svg>
             </div>
@@ -240,7 +214,6 @@
 
           <div class="audience-card reveal">
             <div class="audience-card__icon" aria-hidden="true">
-              <!-- People icon -->
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
                 <circle cx="9" cy="7" r="4"/>
@@ -249,21 +222,17 @@
               </svg>
             </div>
             <h3 class="audience-card__title">Grupper</h3>
-            <p class="audience-card__body">Fra bursdager og jungel-turer til familiesammenkomster — vi tar imot grupper i alle størrelser og skreddersyr opplevelsen etter deres ønsker.</p>
+            <p class="audience-card__body">Fra bursdager og vennegjenger til familiesammenkomster — vi tar imot grupper i alle størrelser og skreddersyr opplevelsen etter deres ønsker.</p>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- ─────────────────────────────────────
-         SECTION 4 — FEATURE SPLIT A (RIB)
-    ───────────────────────────────────────── -->
+    <!-- SECTION 4 — FEATURE SPLIT A (RIB) -->
     <section class="section section--secondary" aria-labelledby="feature-rib-heading">
       <div class="container">
         <div class="feature-split">
-
-          <!-- Image left -->
           <div class="feature-split__image reveal reveal--left">
             <div class="feature-split__image-placeholder" role="img" aria-label="RIB-båt på vei ut på Byfjorden"
                  style="background: linear-gradient(160deg, #1B3A52 0%, #2C5F8A 45%, #A8C5D8 75%, #DDE4EC 100%);">
@@ -273,51 +242,42 @@
               </svg>
             </div>
           </div>
-
-          <!-- Text right -->
           <div class="feature-split__text reveal reveal--right">
             <p class="feature-split__eyebrow">Populær aktivitet</p>
             <h2 id="feature-rib-heading" class="feature-split__title">RIB-turer på fjorden</h2>
-            <p class="feature-split__body">Det finnes ingen bedre måte å oppleve Bergen fra sjøsiden. Våre RIB-turer bringer deg ut på de åpne fjordene i høy hastighet, med vindkast og bølger som vekker deg til live. Erfarne guider tar deg med til de mest spektakulære stedene langs kysten.</p>
+            <p class="feature-split__body">Det finnes ingen bedre måte å oppleve Bergen fra sjøsiden. Våre RIB-turer bringer deg ut på de åpne fjordene i høy hastighet, med vindkast og bølger som vekker deg til live. Avgang fra Bergen sentrum og Sotra/Sund — opptil 12 personer per tur.</p>
             <ul class="feature-split__bullets">
               <li>Erfarne guider med lokalkunnskap</li>
               <li>Livredningsutstyr inkludert</li>
-              <li>Solnedgangsturer tilgjengelig</li>
+              <li>To avgangssteder å velge mellom</li>
             </ul>
-            <a href="opplevelser.html#rib-turer" class="feature-split__cta">
+            <a href="rib-tur-bergen.html" class="feature-split__cta">
               Les mer om RIB-turer
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
             </a>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ─────────────────────────────────────
-         SECTION 5 — FEATURE SPLIT B (Badstue)
-    ───────────────────────────────────────── -->
+    <!-- SECTION 5 — FEATURE SPLIT B (Badstue) -->
     <section class="section" aria-labelledby="feature-badstue-heading">
       <div class="container">
         <div class="feature-split feature-split--reverse">
-
-          <!-- Text left -->
           <div class="feature-split__text reveal reveal--left">
             <p class="feature-split__eyebrow">Hele året</p>
             <h2 id="feature-badstue-heading" class="feature-split__title">Badstue ved sjøen</h2>
-            <p class="feature-split__body">Vår flytende badstue er en oase av ro og varme, med panoramautsikt over Byfjorden. Veksle mellom den intense varmen i badstuen og det forfriskende hoppet i sjøen — en kontrast som vekker kroppen og renser sinnet. Tilgjengelig hele året.</p>
+            <p class="feature-split__body">Vår flytende badstue er en oase av ro og varme, med panoramautsikt over Byfjorden. Veksle mellom den intense varmen og det forfriskende hoppet i sjøen. Privat sesjon, badstuecruise eller drop-in — tre formater å velge mellom.</p>
             <ul class="feature-split__bullets">
               <li>Private sesjoner tilgjengelig</li>
               <li>Håndklær og varm drikke inkludert</li>
-              <li>Perfekt for par og grupper</li>
+              <li>Tilgjengelig hele året</li>
             </ul>
-            <a href="opplevelser.html#badstue" class="feature-split__cta">
+            <a href="sauna-badstue-bergen.html" class="feature-split__cta">
               Les mer om badstue
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
             </a>
           </div>
-
-          <!-- Image right -->
           <div class="feature-split__image reveal reveal--right">
             <div class="feature-split__image-placeholder" role="img" aria-label="Flytende badstue ved solnedgang over fjorden"
                  style="background: linear-gradient(160deg, #C97B2A 0%, #1B3A52 60%, #0D1B26 100%);">
@@ -326,14 +286,11 @@
               </svg>
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ─────────────────────────────────────
-         SECTION 6 — TESTIMONIALS
-    ───────────────────────────────────────── -->
+    <!-- SECTION 6 — TESTIMONIALS -->
     <section class="section section--secondary" aria-labelledby="testimonials-heading">
       <div class="container">
         <div class="section__header reveal">
@@ -341,8 +298,6 @@
           <h2 id="testimonials-heading" class="section__title">Ekte opplevelser, ekte meninger</h2>
         </div>
         <div class="testimonials">
-
-          <!-- Large card -->
           <div class="testimonial-card testimonial-card--large reveal">
             <span class="testimonial-card__quote-mark" aria-hidden="true">&ldquo;</span>
             <p class="testimonial-card__text">Vi booket RIB-turen på et innfall den siste kvelden i Bergen, og det var absolutt høydepunktet av hele turen. Guiden vår Magnus visste alt om fjorden — historiene, fuglene, de skjulte vikene. Vi fikk se solnedgangen fra vannet og følte oss helt alene i det vakre landskapet. Jeg anbefaler dette til alle som besøker Bergen. Uforglemmelig!</p>
@@ -356,10 +311,7 @@
             <p class="testimonial-card__reviewer">Emma T.</p>
             <p class="testimonial-card__descriptor">Australia — RIB-tur ved solnedgang</p>
           </div>
-
-          <!-- Stacked small cards -->
           <div class="testimonial-stack">
-
             <div class="testimonial-card reveal">
               <div class="testimonial-card__stars" aria-label="5 av 5 stjerner" style="margin-bottom:var(--space-2)">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -368,11 +320,10 @@
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
               </div>
-              <p class="testimonial-card__text testimonial-card__text--sm">Vi brukte Kystopplevelser til firmafest og alle var begeistret. Perfekt mix av RIB-tur og krabbefiske. Vil absolutt booke igjen neste år!</p>
+              <p class="testimonial-card__text testimonial-card__text--sm">Vi brukte Kystopplevelser til firmafest og alle var begeistret. Perfekt mix av RIB-tur og badstue. Vil absolutt booke igjen neste år!</p>
               <p class="testimonial-card__reviewer">Lars M.</p>
               <p class="testimonial-card__descriptor">Bergen — Bedriftsarrangement</p>
             </div>
-
             <div class="testimonial-card reveal">
               <div class="testimonial-card__stars" aria-label="5 av 5 stjerner" style="margin-bottom:var(--space-2)">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -381,19 +332,16 @@
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
               </div>
-              <p class="testimonial-card__text testimonial-card__text--sm">Krabbefisket var en drøm for barna! Guidene var tålmodige og morsomme. Vi tilberedte krabben etterpå — det var genuint magisk.</p>
-              <p class="testimonial-card__reviewer">Ingrid og familie</p>
-              <p class="testimonial-card__descriptor">Stavanger — Krabbefiske</p>
+              <p class="testimonial-card__text testimonial-card__text--sm">Badstuen om vinteren var magisk. Damp, stjernehimmel og kald sjø — helt utrolig. Det ble en tradisjon for oss hvert år.</p>
+              <p class="testimonial-card__reviewer">Ingrid H.</p>
+              <p class="testimonial-card__descriptor">Oslo — Badstue ved sjøen</p>
             </div>
-
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ─────────────────────────────────────
-         SECTION 7 — GALLERY TEASER
-    ───────────────────────────────────────── -->
+    <!-- SECTION 7 — GALLERY TEASER -->
     <section class="section" aria-labelledby="gallery-teaser-heading">
       <div class="container">
         <div class="section__header reveal">
@@ -401,60 +349,40 @@
           <h2 id="gallery-teaser-heading" class="section__title">Øyeblikk fra fjorden</h2>
         </div>
         <div class="gallery-teaser reveal">
-
-          <!-- Tall left image -->
           <div class="gallery-teaser__item">
             <div class="gallery-teaser__placeholder" role="img" aria-label="RIB-tur i høy fart"
                  style="width:100%;height:100%;background:linear-gradient(160deg,#1B3A52 0%,#2C5F8A 50%,#A8C5D8 100%);"></div>
           </div>
-
-          <!-- Top right -->
           <div class="gallery-teaser__item">
-            <div class="gallery-teaser__placeholder" role="img" aria-label="Krabbefiske fra båt"
+            <div class="gallery-teaser__placeholder" role="img" aria-label="Båtutleie i rolig kystlandskap"
                  style="width:100%;height:100%;background:linear-gradient(160deg,#3D6B4F 0%,#2C5F8A 60%,#A8C5D8 100%);"></div>
           </div>
-
-          <!-- Bottom right top -->
           <div class="gallery-teaser__item">
             <div class="gallery-teaser__placeholder" role="img" aria-label="Badstue ved sjøen"
                  style="width:100%;height:100%;background:linear-gradient(160deg,#C97B2A 0%,#1B3A52 70%,#0D1B26 100%);"></div>
           </div>
-
-          <!-- Bottom right — CTA -->
-          <div class="gallery-teaser__item gallery-teaser__item--cta" style="display:none">
-            <!-- handled below -->
-          </div>
-
         </div>
-
-        <!-- Gallery CTA below the grid -->
         <div style="text-align:center;margin-top:var(--space-6);" class="reveal">
           <a href="galleri.html" class="btn btn--outline btn--lg">Se alle bilder →</a>
         </div>
       </div>
     </section>
 
-    <!-- ─────────────────────────────────────
-         SECTION 8 — CTA BLOCK
-    ───────────────────────────────────────── -->
+    <!-- SECTION 8 — CTA BLOCK -->
     <section class="cta-block" aria-labelledby="cta-heading">
-      <!-- Wave top decoration -->
       <div class="cta-block__deco cta-block__deco--top" aria-hidden="true">
         <svg viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none" style="width:100%;height:80px;">
           <path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,20 1440,40 L1440,0 L0,0 Z" fill="#F5F2EC"/>
         </svg>
       </div>
-
       <div class="container" style="position:relative;z-index:1;">
         <div class="reveal">
           <span class="cta-block__eyebrow">Klar for eventyret?</span>
-          <h2 id="cta-heading" class="cta-block__title">Klar for eventyret?</h2>
-          <p class="cta-block__body">Book din neste kystopplevelse i dag. Vi svarer innen 24 timer og hjelper deg å skreddersy den perfekte turen.</p>
+          <h2 id="cta-heading" class="cta-block__title">Book din kystopplevelse</h2>
+          <p class="cta-block__body">Book din neste opplevelse i dag. Vi svarer innen 24 timer og hjelper deg å skreddersy den perfekte turen.</p>
           <a href="bestilling.html" class="btn btn--primary btn--lg">Bestill nå →</a>
         </div>
       </div>
-
-      <!-- Wave bottom decoration -->
       <div class="cta-block__deco" aria-hidden="true">
         <svg viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none" style="width:100%;height:80px;">
           <path d="M0,40 C360,0 720,80 1080,40 C1260,20 1380,60 1440,40 L1440,80 L0,80 Z" fill="#1B3A52" opacity="0.5"/>
@@ -464,9 +392,7 @@
 
   </main>
 
-  <!-- ═══════════════════════════════════════
-       FOOTER
-  ═══════════════════════════════════════ -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer__inner container">
       <div class="footer__col">
@@ -482,12 +408,12 @@
         </div>
       </div>
       <div class="footer__col">
-        <h3 class="footer__heading">Sider</h3>
-        <nav aria-label="Bunnavigasjon">
-          <a href="index.html" class="footer__link">Hjem</a>
-          <a href="opplevelser.html" class="footer__link">Opplevelser</a>
+        <h3 class="footer__heading">Tjenester</h3>
+        <nav aria-label="Tjenester">
+          <a href="rib-tur-bergen.html" class="footer__link">RIB-tur</a>
+          <a href="baatutleie-bergen.html" class="footer__link">Båtutleie</a>
+          <a href="sauna-badstue-bergen.html" class="footer__link">Sauna / Badstue</a>
           <a href="om-oss.html" class="footer__link">Om oss</a>
-          <a href="galleri.html" class="footer__link">Galleri</a>
           <a href="bestilling.html" class="footer__link">Bestilling</a>
         </nav>
       </div>
