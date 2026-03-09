@@ -96,12 +96,15 @@
     <section class="hero" aria-label="Introduksjon">
       <div class="hero__bg" aria-hidden="true" style="background:#0A141D;">
         <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none;">
+          <!-- Thumbnail placeholder — fades out when video plays -->
+          <div class="hero__video-thumb" id="heroThumb"></div>
           <iframe
+            id="heroVideo"
             src="https://player.vimeo.com/video/1170952103?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;background=1&amp;autoplay=1&amp;loop=1&amp;muted=1"
             frameborder="0"
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
-            style="position:absolute;top:50%;left:50%;width:100vw;height:56.25vw;min-height:100%;min-width:177.78vh;transform:translate(-50%,-50%);"
+            style="position:absolute;top:50%;left:50%;width:100vw;height:56.25vw;min-height:100%;min-width:177.78vh;transform:translate(-50%,-50%);opacity:0;transition:opacity .8s ease;"
             title="Kystopplevelser Promo">
           </iframe>
         </div>
@@ -152,7 +155,7 @@
           <a href="baatutleie-bergen.html" class="service-hub-card reveal">
             <div class="service-hub-card__image">
               <div class="service-hub-card__image-bg" role="img" aria-label="Motorbåt i skjærgården"
-                   style="background-image:url('https://ucarecdn.com/620fad48-2c36-4838-8931-cef46d684fc2/IMG_20250527_122847_514.jpg');background-size:cover;background-position:center;"></div>
+                   style="background-image:url('https://ucarecdn.com/9219159c-e2f1-42e7-8495-19e909e408a2/ChatGPTImage9mars202614_38_38.png');background-size:cover;background-position:center;"></div>
             </div>
             <div class="service-hub-card__body">
               <p class="service-hub-card__eyebrow">Frihet</p>
@@ -441,5 +444,35 @@
   <script src="https://player.vimeo.com/api/player.js"></script>
   <script src="js/nav-scroll.js"></script>
   <script src="js/main.js"></script>
+
+  <!-- Hero video thumbnail fade -->
+  <script>
+  (function () {
+    var thumb  = document.getElementById('heroThumb');
+    var iframe = document.getElementById('heroVideo');
+    if (!thumb || !iframe) return;
+
+    // Fetch Vimeo thumbnail via oEmbed and set as background
+    fetch('https://vimeo.com/api/oembed.json?url=https%3A//vimeo.com/1170952103&width=1920')
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (data.thumbnail_url) {
+          var img = new Image();
+          img.onload = function () {
+            thumb.style.backgroundImage = 'url(' + data.thumbnail_url + ')';
+          };
+          img.src = data.thumbnail_url;
+        }
+      })
+      .catch(function () { /* keep dark fallback */ });
+
+    // Fade iframe in and thumbnail out when video plays
+    var player = new Vimeo.Player(iframe);
+    player.on('playing', function () {
+      iframe.style.opacity = '1';
+      thumb.classList.add('hero__video-thumb--hidden');
+    });
+  })();
+  </script>
 </body>
 </html>

@@ -56,26 +56,31 @@
   -webkit-backdrop-filter: blur(16px) saturate(180%);
 }
 
-.nav--scrolled .nav__logo,
-.nav--scrolled .nav__link {
+/* Default (scrolled / no hero): use theme-aware text color */
+.nav__logo,
+.nav__link {
   color: var(--text-primary);
 }
 
-.nav--scrolled .nav__hamburger span {
+.nav__hamburger span {
   background-color: var(--text-primary);
 }
 
+.theme-toggle {
+  color: var(--text-primary);
+}
+
 /* When nav is transparent (over hero), force white text */
-.nav:not(.nav--scrolled) .nav__logo,
-.nav:not(.nav--scrolled) .nav__link {
+.nav--transparent .nav__logo,
+.nav--transparent .nav__link {
   color: #FFFFFF;
 }
 
-.nav:not(.nav--scrolled) .nav__hamburger span {
+.nav--transparent .nav__hamburger span {
   background-color: #FFFFFF;
 }
 
-.nav:not(.nav--scrolled) .theme-toggle {
+.nav--transparent .theme-toggle {
   color: #FFFFFF;
 }
 
@@ -151,11 +156,7 @@
   color: var(--accent-primary);
 }
 
-.nav--scrolled .nav__link[aria-current="page"] {
-  color: var(--accent-primary);
-}
-
-.nav:not(.nav--scrolled) .nav__link[aria-current="page"] {
+.nav--transparent .nav__link[aria-current="page"] {
   color: #FFFFFF;
 }
 
@@ -187,14 +188,13 @@
 }
 
 .theme-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.3);
-}
-
-.nav--scrolled .theme-toggle:hover {
   background-color: var(--bg-secondary);
   border-color: var(--border-color);
-  color: var(--text-primary);
+}
+
+.nav--transparent .theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .theme-toggle__sun,

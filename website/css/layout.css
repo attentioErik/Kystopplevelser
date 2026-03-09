@@ -209,6 +209,21 @@
   z-index: var(--z-base);
 }
 
+.hero__video-thumb {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: #0A141D;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1s ease;
+}
+
+.hero__video-thumb--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .hero__overlay {
   position: absolute;
   inset: 0;
