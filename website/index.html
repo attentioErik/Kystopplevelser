@@ -35,7 +35,7 @@
   <a href="#main-content" class="skip-link">Hopp til innhold</a>
 
   <!-- NAV -->
-  <nav class="nav" id="nav" role="navigation" aria-label="Hovednavigasjon">
+  <nav class="nav nav--transparent" id="nav" role="navigation" aria-label="Hovednavigasjon">
     <div class="nav__inner container">
       <a href="index.html" class="nav__logo" aria-label="Kystopplevelser — Til forsiden">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
@@ -96,8 +96,6 @@
     <section class="hero" aria-label="Introduksjon">
       <div class="hero__bg" aria-hidden="true" style="background:#0A141D;">
         <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none;">
-          <!-- Thumbnail placeholder — fades out when video plays -->
-          <div class="hero__video-thumb" id="heroThumb" style="background-image:url('https://ucarecdn.com/def5213b-65a1-49a4-8abc-ff15836e36c1/hf_20260309_124552_8092a5ca989b441c88b7afdede53c1a4.jpeg');"></div>
           <iframe
             id="heroVideo"
             src="https://player.vimeo.com/video/1170952103?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;background=1&amp;autoplay=1&amp;loop=1&amp;muted=1"
@@ -110,6 +108,8 @@
         </div>
       </div>
       <div class="hero__overlay" aria-hidden="true"></div>
+      <!-- Thumbnail — sits above overlay, fades out when video plays -->
+      <div class="hero__video-thumb" id="heroThumb" style="background-image:url('https://ucarecdn.com/def5213b-65a1-49a4-8abc-ff15836e36c1/hf_20260309_124552_8092a5ca989b441c88b7afdede53c1a4.jpeg');"></div>
       <div class="hero__content container">
         <p class="hero__eyebrow reveal">Bergen &middot; Norge</p>
         <h1 class="hero__title reveal">RIB-tur i Bergens vakreste skjærgård</h1>
