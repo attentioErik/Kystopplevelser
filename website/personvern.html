@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="nb" data-theme="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personvernerklæring og betalingsbetingelser for Kystopplevelser AS i Bergen.">
+  <meta property="og:title" content="Personvern og vilkår — Kystopplevelser Bergen">
+  <meta property="og:description" content="Les om hvordan Kystopplevelser AS håndterer dine personopplysninger og våre betalingsbetingelser.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://kystopplevelser.no/personvern.html">
+  <title>Personvern og vilkår — Kystopplevelser Bergen</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/services.css">
+
+  <script src="js/auth-check.js"></script>
+  <script src="js/theme-manager.js"></script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Hopp til innhold</a>
+
+  <!-- NAV -->
+  <nav class="nav nav--scrolled" id="nav" aria-label="Hovednavigasjon">
+    <div class="nav__inner container">
+      <a href="index.html" class="nav__logo">Kystopplevelser</a>
+
+      <div class="nav__links" role="list">
+        <a href="opplevelser.html" class="nav__link" role="listitem">Opplevelser</a>
+        <a href="galleri.html" class="nav__link" role="listitem">Galleri</a>
+        <a href="om-oss.html" class="nav__link" role="listitem">Om oss</a>
+        <a href="bestilling.html" class="btn btn--primary btn--sm nav__cta" role="listitem">Bestill nå</a>
+      </div>
+
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Bytt fargetema">
+          <svg class="theme-toggle__sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="theme-toggle__moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <div class="lang-switch">
+          <a href="personvern.html" class="lang-switch__link lang-switch__link--active" aria-current="true">NO</a>
+          <span class="lang-switch__sep" aria-hidden="true">/</span>
+          <a href="personvern.html" class="lang-switch__link">EN</a>
+        </div>
+      </div>
+
+      <button class="nav__hamburger" id="navHamburger" aria-label="Åpne meny" aria-expanded="false" aria-controls="navDrawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div class="nav-overlay" id="navOverlay"></div>
+  <aside class="nav-drawer" id="navDrawer" aria-hidden="true" aria-label="Mobilmeny">
+    <div class="nav-drawer__header">
+      <span class="nav-drawer__logo">Kystopplevelser</span>
+      <button class="nav-drawer__close" id="navClose" aria-label="Lukk meny">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="nav-drawer__nav" role="navigation" aria-label="Mobilnavigasjon">
+      <a href="opplevelser.html" class="nav-drawer__link">Opplevelser</a>
+      <a href="galleri.html" class="nav-drawer__link">Galleri</a>
+      <a href="om-oss.html" class="nav-drawer__link">Om oss</a>
+      <a href="bestilling.html" class="btn btn--primary btn--lg" style="margin-top:var(--space-4);text-align:center;">Bestill nå</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN -->
+  <main id="main-content">
+
+    <!-- PAGE HEADER -->
+    <section class="section section--secondary" style="padding-top:calc(var(--nav-height) + var(--space-8));">
+      <div class="container" style="max-width:800px;">
+        <h1 style="font-family:var(--font-heading);font-size:var(--text-4xl);color:var(--text-primary);margin-bottom:var(--space-2);">Personvern og vilkår</h1>
+        <p style="color:var(--text-secondary);font-size:var(--text-lg);line-height:var(--leading-relaxed);margin-bottom:var(--space-8);">Kystopplevelser AS (Org.nr: 996859770)</p>
+
+        <div style="color:var(--text-primary);line-height:var(--leading-relaxed);font-size:var(--text-base);">
+
+          <h2 style="font-family:var(--font-heading);font-size:var(--text-2xl);color:var(--text-primary);margin-top:var(--space-8);margin-bottom:var(--space-3);">Betalingsbetingelser</h2>
+
+          <h3 style="font-family:var(--font-heading);font-size:var(--text-xl);color:var(--text-primary);margin-top:var(--space-6);margin-bottom:var(--space-2);">1. Generelt</h3>
+          <p style="margin-bottom:var(--space-4);color:var(--text-secondary);">Kystopplevelser AS (996859770) ivaretar vi ditt personvern. I denne personvernerklæringen informerer vi om hvordan vi håndterer personopplysningene dine i forbindelse med at du besøker våre nettsider eller registrerer en konto via noen av våre nettsider. Vi kan gjøre endringer i vår personvernerklæring for å gjenspeile endringer i vår virksomhet, på våre nettsteder eller tjenester, eller gjeldende lov. Den siste versjonen av personvernerklæringen finnes alltid her på nettstedet.</p>
+
+          <h3 style="font-family:var(--font-heading);font-size:var(--text-xl);color:var(--text-primary);margin-top:var(--space-6);margin-bottom:var(--space-2);">2. Behandling og rettigheter</h3>
+          <p style="margin-bottom:var(--space-4);color:var(--text-secondary);">Du har når som helst mulighet til å trekke tilbake eller be om innsikt i din persondata. Kun personer med nødvendige arbeidsoppgaver vil ha mulighet til å aksessere detaljer for å kunne håndtere avtaler og henvendelser.</p>
+
+          <h3 style="font-family:var(--font-heading);font-size:var(--text-xl);color:var(--text-primary);margin-top:var(--space-6);margin-bottom:var(--space-2);">3. Hvem er ansvarlig for personopplysningene vi samler inn?</h3>
+          <p style="margin-bottom:var(--space-4);color:var(--text-secondary);">Kystopplevelser AS har ansvaret for å sikre at dine personopplysninger er behandlet i henhold til lover og regler. Vi iverksetter tekniske, juridiske og organisatoriske sikkerhetstiltak for å verne personopplysningene dine mot å bli manipulert, gå tapt eller bli ødelagt eller at uvedkommende får tilgang til dem.</p>
+
+          <h3 style="font-family:var(--font-heading);font-size:var(--text-xl);color:var(--text-primary);margin-top:var(--space-6);margin-bottom:var(--space-2);">4. Hvordan samler vi inn personvernopplysninger?</h3>
+          <p style="margin-bottom:var(--space-3);color:var(--text-secondary);">For å kunne tilby deg et komplett tilbud så vil vi be om:</p>
+          <ul style="margin-bottom:var(--space-4);color:var(--text-secondary);padding-left:var(--space-5);">
+            <li>Telefonnummer</li>
+            <li>E-postadresse</li>
+            <li>Adresse</li>
+            <li>Navn</li>
+          </ul>
+          <p style="margin-bottom:var(--space-3);color:var(--text-secondary);">Vi samler inn persondata igjennom Vipps og igjennom inntasting av bruker. Denne informasjonen deles ikke med andre og brukes kun til sitt nødvendige formål for administrering, støtte av og gjennomføring av avtaler mellom brukersted og kunde.</p>
+          <p style="margin-bottom:var(--space-4);color:var(--text-secondary);">Vipps sine vilkår kan leses her: <a href="https://www.vipps.no/vilkar/vilkar-privat/" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:underline;">vipps.no/vilkar/vilkar-privat</a></p>
+
+          <h3 style="font-family:var(--font-heading);font-size:var(--text-xl);color:var(--text-primary);margin-top:var(--space-6);margin-bottom:var(--space-2);">5. Vilkår for kjøp</h3>
+          <p style="margin-bottom:var(--space-4);color:var(--text-secondary);">Selger er Kystopplevelser AS, org.nr 996859770, og betegnes i det følgende som selger/selgeren. Kjøper er den forbrukeren som foretar bestillingen, og betegnes i det følgende som kjøper/kjøperen.</p>
+
+          <h3 style="font-family:var(--font-heading);font-size:var(--text-xl);color:var(--text-primary);margin-top:var(--space-6);margin-bottom:var(--space-2);">6. Abonnement og medlemskap</h3>
+          <p style="margin-bottom:var(--space-4);color:var(--text-secondary);">Ditt medlemskap gir tilgang til Kystopplevelser AS sine fasiliteter og tjenester. Du vil få tilgang fra kjøpsøyeblikket. Abonnementet har ingen bindingstid og kan når som helst avbrytes enten med å kontakte Kystopplevelser AS på <a href="mailto:post@kyst-opplevelser.no" style="color:var(--accent);text-decoration:underline;">post@kyst-opplevelser.no</a> eller ved å avbryte abonnementet i Vipps under «Administrer abonnement».</p>
+          <p style="margin-bottom:var(--space-4);color:var(--text-secondary);">Etter belastning vil du få tilgang til den fulle måneden uavhengig av når i måneden du avbryter. Du har 14 dagers angrerett og kontakt oss på <a href="mailto:post@kyst-opplevelser.no" style="color:var(--accent);text-decoration:underline;">post@kyst-opplevelser.no</a> for en refundering hvis du ikke er fornøyd. Hvis du ikke selv klarer å avbryte abonnementet kan du kontakte oss på <a href="mailto:post@kyst-opplevelser.no" style="color:var(--accent);text-decoration:underline;">post@kyst-opplevelser.no</a> for en øyeblikkelig kansellering.</p>
+
+          <h3 style="font-family:var(--font-heading);font-size:var(--text-xl);color:var(--text-primary);margin-top:var(--space-6);margin-bottom:var(--space-2);">7. Booking</h3>
+          <p style="margin-bottom:var(--space-4);color:var(--text-secondary);">Ved booking får du tilgang til lokasjon eller aktivitet ved bookingøyeblikket. Ved kansellering nær bookingøyeblikket vil ikke bookingen bli automatisk refundert. Betaling skjer når bookingen bestilles, og anses som levert når besøket starter. Du kan be om refundering eller justering hvis du har gjort en feilbooking så lenge det skjer i tide før besøket skulle startet.</p>
+
+          <h3 style="font-family:var(--font-heading);font-size:var(--text-xl);color:var(--text-primary);margin-top:var(--space-6);margin-bottom:var(--space-2);">Klager og tvister</h3>
+          <p style="margin-bottom:var(--space-4);color:var(--text-secondary);">Klager rettes til selger innen rimelig tid. Partene skal forsøke å løse eventuelle tvister i minnelighet. Dersom dette ikke lykkes, kan kjøperen ta kontakt med Forbrukerrådet for mekling. Forbrukerrådet er tilgjengelig på telefon 23 400 500 eller <a href="https://www.forbrukerradet.no" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:underline;">www.forbrukerradet.no</a>.</p>
+
+          <hr style="border:none;border-top:1px solid var(--border-color);margin:var(--space-8) 0;">
+
+          <h2 style="font-family:var(--font-heading);font-size:var(--text-2xl);color:var(--text-primary);margin-bottom:var(--space-4);">Kontaktinformasjon</h2>
+          <p style="margin-bottom:var(--space-2);color:var(--text-secondary);">Har du ytterligere spørsmål om Kystopplevelsers betalingsbetingelser eller andre forespørsler kan du kontakte bedriften.</p>
+          <p style="margin-bottom:var(--space-1);color:var(--text-secondary);">Telefon: <a href="tel:+4793624642" style="color:var(--accent);text-decoration:underline;">+47 936 24 642</a></p>
+          <p style="margin-bottom:var(--space-8);color:var(--text-secondary);">E-post: <a href="mailto:post@kyst-opplevelser.no" style="color:var(--accent);text-decoration:underline;">post@kyst-opplevelser.no</a></p>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner container">
+      <div class="footer__col">
+        <a href="index.html" class="footer__logo">Kystopplevelser</a>
+        <p class="footer__tagline">Autentiske kystopplevelser<br>fra Bergen, Norge</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram" class="footer__social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook" class="footer__social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__heading">Utforsk</h3>
+        <nav class="footer__nav" aria-label="Bunntekstnavigasjon">
+          <a href="opplevelser.html" class="footer__link">Opplevelser</a>
+          <a href="galleri.html" class="footer__link">Galleri</a>
+          <a href="om-oss.html" class="footer__link">Om oss</a>
+          <a href="bestilling.html" class="footer__link">Bestill</a>
+        </nav>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__heading">Kontakt</h3>
+        <a href="tel:+4793624642" class="footer__link">+47 936 24 642</a>
+        <a href="mailto:post@kyst-opplevelser.no" class="footer__link">post@kyst-opplevelser.no</a>
+        <address class="footer__address">Bryggen 12, 5003 Bergen</address>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <span>&copy; 2025 Kystopplevelser AS</span>
+        <div class="footer__legal">
+          <a href="personvern.html">Personvern</a>
+          <a href="personvern.html">Vilkår</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav-scroll.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -97,7 +97,7 @@
       <div class="hero__bg" aria-hidden="true" style="background:#0A141D;">
         <div style="position:absolute;inset:0;overflow:hidden;pointer-events:none;">
           <!-- Thumbnail placeholder — fades out when video plays -->
-          <div class="hero__video-thumb" id="heroThumb"></div>
+          <div class="hero__video-thumb" id="heroThumb" style="background-image:url('https://ucarecdn.com/def5213b-65a1-49a4-8abc-ff15836e36c1/hf_20260309_124552_8092a5ca989b441c88b7afdede53c1a4.jpeg');"></div>
           <iframe
             id="heroVideo"
             src="https://player.vimeo.com/video/1170952103?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;background=1&amp;autoplay=1&amp;loop=1&amp;muted=1"
@@ -242,13 +242,10 @@
       <div class="container">
         <div class="feature-split">
           <div class="feature-split__image reveal reveal--left">
-            <div class="feature-split__image-placeholder" role="img" aria-label="RIB-båt på vei ut på Byfjorden"
-                 style="background: linear-gradient(160deg, #1B3A52 0%, #2C5F8A 45%, #A8C5D8 75%, #DDE4EC 100%);">
-              <svg class="feature-split__image-deco" viewBox="0 0 800 200" fill="none" aria-hidden="true">
-                <path d="M0,100 C200,140 400,60 600,100 C700,120 750,80 800,100 L800,200 L0,200 Z" fill="#A8C5D8" opacity="0.4"/>
-                <path d="M0,140 C200,100 400,160 600,130 C700,115 750,145 800,130 L800,200 L0,200 Z" fill="#DDE4EC" opacity="0.3"/>
-              </svg>
-            </div>
+            <img src="https://ucarecdn.com/63a64994-bb1a-4015-9b41-7a705a6e84a4/hf_20260309_124325_5604bd3732d74ee89dc0be428cb316e7.jpeg"
+                 alt="RIB-båt på vei ut på Byfjorden"
+                 class="feature-split__img"
+                 loading="lazy" />
           </div>
           <div class="feature-split__text reveal reveal--right">
             <p class="feature-split__eyebrow">Populær aktivitet</p>
@@ -424,8 +421,8 @@
       </div>
       <div class="footer__col">
         <h3 class="footer__heading">Kontakt</h3>
-        <a href="tel:+4755000000" class="footer__link">+47 55 00 00 00</a>
-        <a href="mailto:hei@kystopplevelser.no" class="footer__link">hei@kystopplevelser.no</a>
+        <a href="tel:+4793624642" class="footer__link">+47 936 24 642</a>
+        <a href="mailto:post@kyst-opplevelser.no" class="footer__link">post@kyst-opplevelser.no</a>
         <address class="footer__address">Bryggen 12, 5003 Bergen</address>
       </div>
     </div>
@@ -433,8 +430,8 @@
       <div class="container">
         <span>© 2025 Kystopplevelser AS</span>
         <div class="footer__legal">
-          <a href="#">Personvern</a>
-          <a href="#">Vilkår</a>
+          <a href="personvern.html">Personvern</a>
+          <a href="personvern.html">Vilkår</a>
         </div>
       </div>
     </div>
@@ -451,20 +448,6 @@
     var thumb  = document.getElementById('heroThumb');
     var iframe = document.getElementById('heroVideo');
     if (!thumb || !iframe) return;
-
-    // Fetch Vimeo thumbnail via oEmbed and set as background
-    fetch('https://vimeo.com/api/oembed.json?url=https%3A//vimeo.com/1170952103&width=1920')
-      .then(function (r) { return r.json(); })
-      .then(function (data) {
-        if (data.thumbnail_url) {
-          var img = new Image();
-          img.onload = function () {
-            thumb.style.backgroundImage = 'url(' + data.thumbnail_url + ')';
-          };
-          img.src = data.thumbnail_url;
-        }
-      })
-      .catch(function () { /* keep dark fallback */ });
 
     // Fade iframe in and thumbnail out when video plays
     var player = new Vimeo.Player(iframe);

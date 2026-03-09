@@ -122,7 +122,6 @@
           <button class="gallery-filter__btn" data-filter="rib" aria-pressed="false">RIB-tur</button>
           <button class="gallery-filter__btn" data-filter="baatutleie" aria-pressed="false">Båtutleie</button>
           <button class="gallery-filter__btn" data-filter="badstue" aria-pressed="false">Sauna</button>
-          <button class="gallery-filter__btn" data-filter="natur" aria-pressed="false">Natur</button>
         </div>
 
         <!-- Masonry gallery grid -->
@@ -281,21 +280,8 @@
             <p style="color:var(--text-secondary);max-width:50ch;margin-inline:auto;line-height:var(--leading-relaxed);">Få et glimt av hva som venter deg ute på fjorden. Vår film viser en typisk dag hos Kystopplevelser — fra RIB-turer ved soloppgang til rolige kvelder i badstuen.</p>
           </div>
 
-          <div class="video-placeholder" role="button" tabindex="0" aria-label="Spill av video: Kystopplevelser i aksjon">
-            <!-- Wave decoration inside video placeholder -->
-            <svg style="position:absolute;bottom:0;left:0;right:0;opacity:0.1;" viewBox="0 0 800 120" fill="none" aria-hidden="true">
-              <path d="M0,60 C160,100 320,20 480,60 C640,100 720,20 800,60 L800,120 L0,120 Z" fill="#A8C5D8"/>
-            </svg>
-
-            <div class="video-placeholder__play">
-              <div class="video-placeholder__btn" aria-hidden="true">
-                <!-- Play icon -->
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                  <polygon points="5 3 19 12 5 21 5 3"/>
-                </svg>
-              </div>
-              <span class="video-placeholder__label">Spill av video</span>
-            </div>
+          <div style="padding:56.25% 0 0 0;position:relative;max-width:800px;margin-inline:auto;border-radius:var(--radius-xl);overflow:hidden;">
+            <iframe src="https://player.vimeo.com/video/1170952103?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Kystopplevelser Promo"></iframe>
           </div>
         </div>
 
@@ -320,7 +306,7 @@
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Bildefremviser" aria-hidden="true">
     <div class="lightbox__inner">
       <div class="lightbox__display">
-        <div class="lightbox__placeholder" style="width:100%;height:100%;"></div>
+        <img class="lightbox__img" src="" alt="" />
       </div>
     </div>
 
@@ -367,8 +353,8 @@
       </div>
       <div class="footer__col">
         <h3 class="footer__heading">Kontakt</h3>
-        <a href="tel:+4755000000" class="footer__link">+47 55 00 00 00</a>
-        <a href="mailto:hei@kystopplevelser.no" class="footer__link">hei@kystopplevelser.no</a>
+        <a href="tel:+4793624642" class="footer__link">+47 936 24 642</a>
+        <a href="mailto:post@kyst-opplevelser.no" class="footer__link">post@kyst-opplevelser.no</a>
         <address class="footer__address">Bryggen 12, 5003 Bergen</address>
       </div>
     </div>
@@ -376,13 +362,14 @@
       <div class="container">
         <span>© 2025 Kystopplevelser AS</span>
         <div class="footer__legal">
-          <a href="#">Personvern</a>
-          <a href="#">Vilkår</a>
+          <a href="personvern.html">Personvern</a>
+          <a href="personvern.html">Vilkår</a>
         </div>
       </div>
     </div>
   </footer>
 
+  <script src="https://player.vimeo.com/api/player.js"></script>
   <script src="js/nav-scroll.js"></script>
   <script src="js/gallery.js"></script>
   <script src="js/main.js"></script>

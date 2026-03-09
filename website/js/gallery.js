@@ -11,25 +11,6 @@
 (function () {
   'use strict';
 
-  // ── Gallery data (matches placeholder divs in HTML) ──────────────────────
-  // Each entry corresponds to a .gallery-item in the HTML.
-  // gradient: CSS gradient string used for lightbox display
-  // caption: descriptive label shown in lightbox
-  var galleryData = [
-    { category: 'rib',          caption: 'RIB-tur på Byfjorden',              gradient: 'linear-gradient(160deg,#0D1B26 0%,#1B3A52 35%,#2C5F8A 65%,#A8C5D8 100%)' },
-    { category: 'krabbefiske',  caption: 'Krabbefiske — autentisk kystliv',   gradient: 'linear-gradient(160deg,#3D6B4F 0%,#2C5F8A 50%,#A8C5D8 100%)' },
-    { category: 'badstue',      caption: 'Badstue ved sjøen ved solnedgang',  gradient: 'linear-gradient(160deg,#C97B2A 0%,#1B3A52 60%,#0D1B26 100%)' },
-    { category: 'vannscooter',  caption: 'Vannscooter — fart og frihet',      gradient: 'linear-gradient(160deg,#2C5F8A 0%,#A8C5D8 50%,#DDE4EC 100%)' },
-    { category: 'natur',        caption: 'Solnedgang over Byfjorden',         gradient: 'linear-gradient(160deg,#C97B2A 20%,#1B3A52 70%,#0D1B26 100%)' },
-    { category: 'rib',          caption: 'Guidet RIB-tur i høy fart',         gradient: 'linear-gradient(160deg,#1B3A52 0%,#2C5F8A 50%,#0D1B26 100%)' },
-    { category: 'natur',        caption: 'Kystlinje mot vest',                gradient: 'linear-gradient(160deg,#3D6B4F 0%,#A8C5D8 60%,#DDE4EC 100%)' },
-    { category: 'badstue',      caption: 'Kaldvann og badstuevarme',          gradient: 'linear-gradient(160deg,#0D1B26 0%,#C97B2A 50%,#1B3A52 100%)' },
-    { category: 'krabbefiske',  caption: 'Krabbetiner klar for havet',        gradient: 'linear-gradient(160deg,#2C5F8A 0%,#3D6B4F 50%,#1B3A52 100%)' },
-    { category: 'vannscooter',  caption: 'Bølger og frihet på fjorden',       gradient: 'linear-gradient(160deg,#A8C5D8 0%,#2C5F8A 50%,#1B3A52 100%)' },
-    { category: 'natur',        caption: 'Bergen fra sjøen',                  gradient: 'linear-gradient(160deg,#1B3A52 0%,#3D6B4F 40%,#A8C5D8 100%)' },
-    { category: 'rib',          caption: 'Solnedgangstur langs kysten',       gradient: 'linear-gradient(160deg,#C97B2A 0%,#2C5F8A 50%,#1B3A52 100%)' }
-  ];
-
   // ── State ────────────────────────────────────────────────────────────────
   var currentIndex      = 0;
   var lightboxOpen      = false;
@@ -42,7 +23,7 @@
   var galleryItems  = document.querySelectorAll('.gallery-item');
   var lightbox      = document.getElementById('lightbox');
   var lbDisplay     = lightbox ? lightbox.querySelector('.lightbox__display') : null;
-  var lbPlaceholder = lightbox ? lightbox.querySelector('.lightbox__placeholder') : null;
+  var lbImg         = lightbox ? lightbox.querySelector('.lightbox__img') : null;
   var lbClose       = lightbox ? lightbox.querySelector('.lightbox__close') : null;
   var lbPrev        = lightbox ? lightbox.querySelector('.lightbox__prev') : null;
   var lbNext        = lightbox ? lightbox.querySelector('.lightbox__next') : null;
@@ -51,6 +32,21 @@
 
   // ── Guard: only run on gallery page ─────────────────────────────────────
   if (!galleryItems.length) return;
+
+  // ── Helper: extract image URL from a gallery item ───────────────────────
+  function getItemImageUrl(item) {
+    var placeholder = item.querySelector('.gallery-item__placeholder');
+    if (!placeholder) return '';
+    var bg = placeholder.style.backgroundImage || '';
+    // Extract URL from url('...')
+    var match = bg.match(/url\(['"]?(.*?)['"]?\)/);
+    return match ? match[1] : '';
+  }
+
+  function getItemCaption(item) {
+    var placeholder = item.querySelector('.gallery-item__placeholder');
+    return placeholder ? (placeholder.getAttribute('aria-label') || '') : '';
+  }
 
   // ── 1. Filter logic ──────────────────────────────────────────────────────
   function buildFilteredIndices() {
@@ -91,17 +87,21 @@
 
   // ── 2. Lightbox ──────────────────────────────────────────────────────────
   function updateLightboxDisplay(globalIdx) {
-    if (!lbPlaceholder) return;
-    var data = galleryData[globalIdx];
-    if (!data) return;
+    if (!lbImg) return;
+    var item = galleryItems[globalIdx];
+    if (!item) return;
 
-    lbPlaceholder.style.background = data.gradient;
+    var url     = getItemImageUrl(item);
+    var caption = getItemCaption(item);
+
+    lbImg.src = url;
+    lbImg.alt = caption;
 
     // Update counter (position within filtered set)
     var posInFilter = filteredIndices.indexOf(globalIdx) + 1;
     var total       = filteredIndices.length;
     if (lbCounter) lbCounter.textContent = posInFilter + ' / ' + total;
-    if (lbCaption) lbCaption.textContent = data.caption || '';
+    if (lbCaption) lbCaption.textContent = caption;
   }
 
   function openLightbox(globalIdx) {
@@ -243,8 +243,8 @@
       // Keyboard: Enter / Space
       item.setAttribute('tabindex', '0');
       item.setAttribute('role', 'button');
-      var data = galleryData[idx];
-      item.setAttribute('aria-label', data ? 'Vis: ' + data.caption : 'Vis bilde');
+      var caption = getItemCaption(item);
+      item.setAttribute('aria-label', caption ? 'Vis: ' + caption : 'Vis bilde');
       item.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
