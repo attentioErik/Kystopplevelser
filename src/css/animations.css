@@ -19,7 +19,7 @@ html {
 /* ──────────────────────────────────────────────
    2. SCROLL REVEAL
 ────────────────────────────────────────────── */
-.reveal {
+html[data-ready] .reveal {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
@@ -39,7 +39,7 @@ html {
 .reveal-stagger .reveal:nth-child(5) { transition-delay: 320ms; }
 
 /* Slide in from left */
-.reveal--left {
+html[data-ready] .reveal--left {
   transform: translateX(-24px);
 }
 
@@ -48,7 +48,7 @@ html {
 }
 
 /* Slide in from right */
-.reveal--right {
+html[data-ready] .reveal--right {
   transform: translateX(24px);
 }
 

@@ -4,6 +4,8 @@ import { useEffect } from 'react';
 
 export default function ScrollReveal() {
   useEffect(() => {
+    document.documentElement.setAttribute('data-ready', '');
+
     const elements = document.querySelectorAll('.reveal');
     if (!elements.length) return;
 
