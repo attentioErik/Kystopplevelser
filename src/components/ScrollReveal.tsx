@@ -4,8 +4,6 @@ import { useEffect } from 'react';
 
 export default function ScrollReveal() {
   useEffect(() => {
-    document.documentElement.setAttribute('data-ready', '');
-
     const elements = document.querySelectorAll('.reveal');
     if (!elements.length) return;
 
@@ -14,6 +12,15 @@ export default function ScrollReveal() {
       elements.forEach((el) => el.classList.add('visible'));
       return;
     }
+
+    // Only hide elements that are below the current viewport.
+    // Elements already visible stay visible — no blank flash.
+    elements.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top > window.innerHeight) {
+        el.classList.add('will-animate');
+      }
+    });
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -27,7 +34,11 @@ export default function ScrollReveal() {
       { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
     );
 
-    elements.forEach((el) => observer.observe(el));
+    elements.forEach((el) => {
+      if (el.classList.contains('will-animate')) {
+        observer.observe(el);
+      }
+    });
 
     return () => observer.disconnect();
   }, []);
