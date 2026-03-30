@@ -14,7 +14,6 @@ interface HeroProps {
   variant?: 'full' | 'inner';
   bgStyle?: React.CSSProperties;
   videoUrl?: string;
-  thumbUrl?: string;
 }
 
 export default function Hero({
@@ -25,7 +24,6 @@ export default function Hero({
   variant = 'full',
   bgStyle,
   videoUrl,
-  thumbUrl,
 }: HeroProps) {
   const isInner = variant === 'inner';
 
@@ -70,13 +68,6 @@ export default function Hero({
         )}
       </div>
       <div className="hero__overlay" aria-hidden="true"></div>
-      {thumbUrl && (
-        <div
-          className="hero__video-thumb"
-          id="heroThumb"
-          style={{ backgroundImage: `url('${thumbUrl}')` }}
-        />
-      )}
       <div className="hero__content container">
         <p className="hero__eyebrow reveal">{eyebrow}</p>
         <h1 className="hero__title reveal">{title}</h1>

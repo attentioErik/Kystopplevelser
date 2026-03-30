@@ -37,7 +37,6 @@ export default function HomePage() {
         title={t('heroTitle')}
         subtitle={t('heroSubtitle')}
         videoUrl="https://player.vimeo.com/video/1170952103?badge=0&autopause=0&player_id=0&app_id=58479&background=1&autoplay=1&loop=1&muted=1"
-        thumbUrl="https://ucarecdn.com/def5213b-65a1-49a4-8abc-ff15836e36c1/hf_20260309_124552_8092a5ca989b441c88b7afdede53c1a4.jpeg"
         ctas={[
           { href: '/opplevelser', label: t('heroCta1'), variant: 'primary' },
           { href: '/bestilling', label: t('heroCta2'), variant: 'ghost' },
