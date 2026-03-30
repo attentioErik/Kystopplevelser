@@ -113,7 +113,13 @@ export default function RibTurPage() {
         eyebrow={t('heroEyebrow')}
         title={t('heroTitle')}
         subtitle={t('heroSubtitle')}
-        bgStyle={{ background: 'linear-gradient(160deg, #0A141D 0%, #1B3A52 35%, #2C5F8A 65%, #A8C5D8 100%)' }}
+        bgStyle={{ background: '#0A141D' }}
+        shaderColors={[
+          'hsl(204, 50%, 21%)',   /* Fjord */
+          'hsl(205, 45%, 52%)',   /* Seafoam lighter */
+          'hsl(209, 52%, 36%)',   /* Ocean */
+          'hsl(200, 35%, 75%)',   /* Seafoam */
+        ]}
         ctas={[
           { href: '#priser', label: t('heroCta1'), variant: 'primary' },
           { href: '/bestilling', label: t('heroCta2'), variant: 'ghost' },

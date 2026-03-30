@@ -1,4 +1,5 @@
 import { Link } from '@/i18n/navigation';
+import WarpShaderBg from './WarpShaderBg';
 
 interface HeroCTA {
   href: string;
@@ -14,6 +15,7 @@ interface HeroProps {
   variant?: 'full' | 'inner';
   bgStyle?: React.CSSProperties;
   videoUrl?: string;
+  shaderColors?: string[];
 }
 
 export default function Hero({
@@ -24,6 +26,7 @@ export default function Hero({
   variant = 'full',
   bgStyle,
   videoUrl,
+  shaderColors,
 }: HeroProps) {
   const isInner = variant === 'inner';
 
@@ -58,7 +61,8 @@ export default function Hero({
             />
           </div>
         )}
-        {isInner && (
+        {shaderColors && <WarpShaderBg colors={shaderColors} />}
+        {isInner && !shaderColors && (
           <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 120, overflow: 'hidden', opacity: 0.1 }}>
             <svg className="hero-wave-animate" viewBox="0 0 1440 120" fill="none" preserveAspectRatio="none" style={{ height: 120 }} aria-hidden="true">
               <path d="M0,60 C240,100 480,20 720,60 C960,100 1200,20 1440,60 L1440,120 L0,120 Z" fill="#A8C5D8" />

@@ -107,7 +107,13 @@ export default function SaunaPage() {
         eyebrow={t('heroEyebrow')}
         title={t('heroTitle')}
         subtitle={t('heroSubtitle')}
-        bgStyle={{ background: 'linear-gradient(160deg, #0A0F14 0%, #1B3A52 30%, #C97B2A 65%, #E8A050 100%)' }}
+        bgStyle={{ background: '#0A0F14' }}
+        shaderColors={[
+          'hsl(204, 50%, 15%)',   /* Dark Fjord */
+          'hsl(30, 65%, 47%)',    /* Ember #C97B2A */
+          'hsl(25, 70%, 35%)',    /* Ember darker */
+          'hsl(35, 75%, 58%)',    /* Ember warm glow */
+        ]}
         ctas={[
           { href: '#tilbud', label: t('heroCta1'), variant: 'primary' },
           { href: '/bestilling', label: t('heroCta2'), variant: 'ghost' },

@@ -46,7 +46,13 @@ export default function BoatRentalPage() {
         eyebrow={t('heroEyebrow')}
         title={t('heroTitle')}
         subtitle={t('heroSubtitle')}
-        bgStyle={{ background: 'linear-gradient(160deg, #0D1B26 0%, #1B3A52 40%, #2C5F8A 65%, #3D6B4F 100%)' }}
+        bgStyle={{ background: '#0D1B26' }}
+        shaderColors={[
+          'hsl(204, 50%, 21%)',   /* Fjord */
+          'hsl(152, 29%, 33%)',   /* Moss #3D6B4F */
+          'hsl(209, 52%, 36%)',   /* Ocean */
+          'hsl(155, 30%, 55%)',   /* Moss lighter */
+        ]}
         ctas={[
           { href: '#kontakt', label: t('heroCta1'), variant: 'primary' },
           { href: '#hva-passer-det-for', label: t('heroCta2'), variant: 'ghost' },
