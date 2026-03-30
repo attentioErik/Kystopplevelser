@@ -1,20 +1,27 @@
 'use client';
 
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState } from 'react';
 import HeroLoader from './HeroLoader';
 
-const MIN_LOADER_TIME = 1800; // ms — minimum time to show the loader
+const MIN_LOADER_TIME = 1800;
+const CACHE_KEY = 'kyst-video-loaded';
 
 export default function HeroVideo() {
-  const [loaderVisible, setLoaderVisible] = useState(true);
-
-  const hideLoader = useCallback(() => {
-    setLoaderVisible(false);
-  }, []);
+  const [showLoader, setShowLoader] = useState(() => {
+    if (typeof window === 'undefined') return true;
+    return !sessionStorage.getItem(CACHE_KEY);
+  });
+  const [loaderVisible, setLoaderVisible] = useState(showLoader);
 
   useEffect(() => {
     const iframe = document.getElementById('heroVideo') as HTMLIFrameElement | null;
     if (!iframe) return;
+
+    // If video was already loaded this session, show it immediately
+    if (!showLoader) {
+      iframe.style.opacity = '1';
+      return;
+    }
 
     const mountTime = Date.now();
     let videoReady = false;
@@ -24,16 +31,15 @@ export default function HeroVideo() {
       if (videoReady && minTimeReached) {
         iframe!.style.opacity = '1';
         setLoaderVisible(false);
+        sessionStorage.setItem(CACHE_KEY, '1');
       }
     }
 
-    // Minimum display time
     const timer = setTimeout(() => {
       minTimeReached = true;
       tryHide();
     }, MIN_LOADER_TIME);
 
-    // Load Vimeo API and listen for playing
     const script = document.createElement('script');
     script.src = 'https://player.vimeo.com/api/player.js';
     script.onload = () => {
@@ -41,7 +47,6 @@ export default function HeroVideo() {
       const player = new window.Vimeo.Player(iframe);
       player.on('playing', () => {
         videoReady = true;
-        // If min time already passed, calculate remaining wait
         const elapsed = Date.now() - mountTime;
         if (elapsed >= MIN_LOADER_TIME) {
           minTimeReached = true;
@@ -52,7 +57,8 @@ export default function HeroVideo() {
     document.head.appendChild(script);
 
     return () => clearTimeout(timer);
-  }, [hideLoader]);
+  }, [showLoader]);
 
+  if (!showLoader) return null;
   return <HeroLoader visible={loaderVisible} />;
 }
