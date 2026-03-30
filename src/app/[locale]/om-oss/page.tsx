@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import Hero from '@/components/Hero';
+import WarpShaderBg from '@/components/WarpShaderBg';
 import type { Metadata } from 'next';
 
 export async function generateMetadata({
@@ -31,11 +32,9 @@ export default function AboutPage() {
     <>
       {/* HERO */}
       <section className="hero hero--inner-sm" aria-label={t('heroTitle')}>
-        <div
-          className="hero__bg"
-          aria-hidden="true"
-          style={{ background: 'linear-gradient(160deg, #0D1B26 0%, #1B3A52 50%, #2C5F8A 100%)' }}
-        />
+        <div className="hero__bg" aria-hidden="true" style={{ background: '#0D1B26' }}>
+          <WarpShaderBg />
+        </div>
         <div className="hero__overlay" aria-hidden="true"></div>
         <div className="hero__content container">
           <p className="hero__eyebrow">{t('heroEyebrow')}</p>
