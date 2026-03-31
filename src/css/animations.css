@@ -430,6 +430,13 @@ body,
   color: rgba(168, 197, 216, 0.7);
 }
 
+.hero-loader__logo-img {
+  width: 80px;
+  height: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+}
+
 .hero-loader__title {
   font-family: var(--font-display), serif;
   font-size: clamp(1.8rem, 4vw, 3rem);

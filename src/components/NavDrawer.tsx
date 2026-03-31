@@ -89,7 +89,13 @@ export default function NavDrawer() {
         <div className="nav-drawer__overlay" onClick={closeDrawer}></div>
         <div className="nav-drawer__panel">
           <div className="nav-drawer__header">
-            <span className="nav__logo-text">Kystopplevelser</span>
+            <img
+              src="https://ucarecdn.com/c49160b7-8a02-4603-900e-18d5c784a393/kystopplevelserlogoside.png"
+              alt="Kystopplevelser"
+              className="nav-drawer__logo-img"
+              width={120}
+              height={30}
+            />
             <button className="nav-drawer__close" onClick={closeDrawer} aria-label={t('closeMenu')}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <line x1="18" y1="6" x2="6" y2="18" />
