@@ -28,6 +28,13 @@ const nextConfig: NextConfig = {
       { source: '/no/kontakt', destination: '/bestilling', permanent: true },
       // Old target paths from CSV
       { source: '/opplevelser/rib-tur', destination: '/rib-tur-bergen', permanent: true },
+      // Old Webflow paths (Google-indexed)
+      { source: '/opplevelser/batutleie', destination: '/baatutleie-bergen', permanent: true },
+      { source: '/opplevelser/badstu', destination: '/sauna-badstue-bergen', permanent: true },
+      { source: '/en/opplevelser/badstu', destination: '/en/sauna-bergen', permanent: true },
+      { source: '/en/opplevelser/batutleie', destination: '/en/boat-rental-bergen', permanent: true },
+      { source: '/betalingsbetingelser', destination: '/personvern', permanent: true },
+      { source: '/en/betalingsbetingelser', destination: '/en/privacy', permanent: true },
     ];
   },
 };
