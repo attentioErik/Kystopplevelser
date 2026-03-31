@@ -24,6 +24,12 @@ export async function generateMetadata({
         en: 'https://kystopplevelser.no/en',
       },
     },
+    openGraph: {
+      title: t('title'),
+      description: t('description'),
+      url: 'https://kystopplevelser.no',
+      images: ['https://ucarecdn.com/f35d0529-b060-4496-a6de-164e4f6c4b33/hf_20260309_124501_de624687f2e640f2b3575ba107be2584.jpeg'],
+    },
   };
 }
 
