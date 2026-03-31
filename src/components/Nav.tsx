@@ -47,13 +47,10 @@ export default function Nav({ variant = 'transparent' }: NavProps) {
     >
       <div className="nav__inner container">
         <Link href="/" className="nav__logo" aria-label={t('logoLabel')}>
-          <img
-            src="https://ucarecdn.com/c49160b7-8a02-4603-900e-18d5c784a393/kystopplevelserlogoside.png"
-            alt=""
-            className="nav__logo-img"
-            width={32}
-            height={32}
-          />
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <path d="M4 20 Q8 12 16 16 Q24 20 28 12" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+            <path d="M4 24 Q8 16 16 20 Q24 24 28 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.5" />
+          </svg>
           <span className="nav__logo-text">Kystopplevelser</span>
         </Link>
         <div className="nav__links" role="list">
@@ -63,19 +60,6 @@ export default function Nav({ variant = 'transparent' }: NavProps) {
           <Link href="/om-oss" className="nav__link" role="listitem">{t('about')}</Link>
         </div>
         <div className="nav__actions">
-          <a
-            href="https://www.instagram.com/kyst.opplevelser/"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Instagram"
-            className="nav__social-link"
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <rect x="2" y="2" width="20" height="20" rx="5" />
-              <circle cx="12" cy="12" r="4" />
-              <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
-            </svg>
-          </a>
           <Link href="/" locale={otherLocale} className="lang-switch" hrefLang={otherLocale}>
             {otherLocale.toUpperCase()}
           </Link>

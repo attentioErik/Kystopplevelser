@@ -8,15 +8,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer__inner container">
         <div className="footer__col">
-          <Link href="/" className="footer__logo">
-            <img
-              src="https://ucarecdn.com/c49160b7-8a02-4603-900e-18d5c784a393/kystopplevelserlogoside.png"
-              alt="Kystopplevelser"
-              className="footer__logo-img"
-              width={160}
-              height={40}
-            />
-          </Link>
+          <Link href="/" className="footer__logo">Kystopplevelser</Link>
           <p className="footer__tagline">{t('tagline')}</p>
           <div className="footer__social">
             <a

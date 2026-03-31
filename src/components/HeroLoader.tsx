@@ -29,13 +29,10 @@ export default function HeroLoader({ visible }: HeroLoaderProps) {
       {/* Centered content */}
       <div className="hero-loader__content">
         <div className="hero-loader__logo">
-          <img
-            src="https://ucarecdn.com/bc64f1cf-1c36-41df-81e0-5d1029ae47e1/kystopplevelserlogo.png"
-            alt="Kystopplevelser"
-            className="hero-loader__logo-img"
-            width={80}
-            height={80}
-          />
+          <svg width="40" height="40" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <path d="M4 20 Q8 12 16 16 Q24 20 28 12" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+            <path d="M4 24 Q8 16 16 20 Q24 24 28 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.5" />
+          </svg>
         </div>
         <h2 className="hero-loader__title">Kystopplevelser</h2>
         <p className="hero-loader__subtitle">Bergen · Norge</p>
