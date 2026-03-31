@@ -212,7 +212,7 @@ export default function RibTurPage() {
               tax={t('pricing1Tax')}
               note={t.raw('pricing1Note')}
               ctaText={t('pricing1Cta')}
-              ctaHref="/bestilling"
+              ctaHref="/bestilling?opplevelse=rib-bergen"
             />
             <PricingCard
               title={t('pricing2Title')}
@@ -223,7 +223,7 @@ export default function RibTurPage() {
               tax={t('pricing2Tax')}
               note={t.raw('pricing2Note')}
               ctaText={t('pricing2Cta')}
-              ctaHref="/bestilling"
+              ctaHref="/bestilling?opplevelse=rib-sotra"
             />
           </div>
           <p style={{ textAlign: 'center', marginTop: 'var(--space-4)', fontSize: 'var(--text-sm)', color: 'var(--text-muted)' }}>

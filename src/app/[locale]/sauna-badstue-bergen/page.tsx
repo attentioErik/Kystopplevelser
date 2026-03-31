@@ -81,7 +81,11 @@ function ActivityCard({
         </div>
       </div>
       <div className="activity-card__cta">
-        <Link href={ctaHref as '/'} className={`btn btn--${ctaVariant}`}>{ctaText}</Link>
+        {ctaHref.startsWith('http') ? (
+          <a href={ctaHref} target="_blank" rel="noopener" className={`btn btn--${ctaVariant}`}>{ctaText}</a>
+        ) : (
+          <Link href={ctaHref as '/'} className={`btn btn--${ctaVariant}`}>{ctaText}</Link>
+        )}
       </div>
     </div>
   );
@@ -163,7 +167,7 @@ export default function SaunaPage() {
               capacity={t('card1Capacity')}
               heat={t('card1Heat')}
               ctaText={t('card1Cta')}
-              ctaHref="/bestilling"
+              ctaHref="https://minside.periode.no/bookinggroups/XXmQQb6626w6NAq7OrKm/afhIIXBvWsjDF9kbTIuG/2026-03-31"
             />
             <ActivityCard
               imageUrl="https://cdn.prod.website-files.com/66cdaa32049dd5d43a1497db/66d5b794214f399c4feb6c48_DSC00037.avif"
@@ -175,7 +179,7 @@ export default function SaunaPage() {
               capacity={t('card2Capacity')}
               heat={t('card2Heat')}
               ctaText={t('card2Cta')}
-              ctaHref="/bestilling"
+              ctaHref="https://minside.periode.no/bookinggroups/XXmQQb6626w6NAq7OrKm/afhIIXBvWsjDF9kbTIuG/2026-03-31"
             />
             <ActivityCard
               imageUrl="https://cdn.prod.website-files.com/66cdaa32049dd5d43a1497db/66d82315c4e5401855538b46_NR3A6028.avif"
@@ -187,7 +191,7 @@ export default function SaunaPage() {
               capacity={t('card3Capacity')}
               heat={t('card3Heat')}
               ctaText={t('card3Cta')}
-              ctaHref="/bestilling"
+              ctaHref="https://minside.periode.no/bookinggroups/XXmQQb6626w6NAq7OrKm/afhIIXBvWsjDF9kbTIuG/2026-03-31"
               ctaVariant="outline"
             />
           </div>

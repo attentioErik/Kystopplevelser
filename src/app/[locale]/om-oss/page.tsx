@@ -160,7 +160,7 @@ export default function AboutPage() {
                 <path d="M0,200 C100,160 200,220 300,180 C400,140 500,210 600,170 C700,130 750,190 800,160 L800,300 L0,300 Z" fill="#A8C5D8" />
                 <path d="M0,240 C100,200 200,260 300,220 C400,180 500,250 600,210 C700,170 750,230 800,200 L800,300 L0,300 Z" fill="#2C5F8A" opacity="0.6" />
               </svg>
-              <a href="https://maps.app.goo.gl/NF1L1XXA4FJKeYiM7" target="_blank" rel="noopener" className="location-card__map-link">
+              <a href="https://maps.app.goo.gl/VKaw8pbq24QrQ8Ar9" target="_blank" rel="noopener" className="location-card__map-link">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
                 {t('locationMapLink')}
               </a>
