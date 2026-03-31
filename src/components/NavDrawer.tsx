@@ -74,7 +74,9 @@ export default function NavDrawer() {
         aria-controls="navDrawer"
         onClick={openDrawer}
       >
-        <span></span><span></span><span></span>
+        <div className="nav__hamburger-lines">
+          <span></span><span></span><span></span>
+        </div>
       </button>
 
       <div
