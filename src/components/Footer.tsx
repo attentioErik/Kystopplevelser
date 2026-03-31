@@ -39,12 +39,12 @@ export default function Footer() {
           <h3 className="footer__heading">{t('contact')}</h3>
           <a href="tel:+4793624642" className="footer__link">+47 936 24 642</a>
           <a href="mailto:post@kyst-opplevelser.no" className="footer__link">post@kyst-opplevelser.no</a>
-          <address className="footer__address">Bryggen 12, 5003 Bergen</address>
+          <address className="footer__address">Austefjordsvegen 165, 5379 Steinsland</address>
         </div>
       </div>
       <div className="footer__bottom">
         <div className="container">
-          <span>&copy; 2025 Kystopplevelser AS</span>
+          <span>&copy; 2026 Kystopplevelser AS</span>
           <div className="footer__legal">
             <Link href="/personvern">{t('privacy')}</Link>
             <Link href="/personvern">{t('terms')}</Link>
