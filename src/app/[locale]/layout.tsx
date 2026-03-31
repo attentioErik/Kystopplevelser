@@ -6,7 +6,6 @@ import { Fraunces, DM_Serif_Display, Inter } from 'next/font/google';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
-import ThemeScript from '@/components/ThemeScript';
 
 import '@/css/design-system.css';
 import '@/css/layout.css';
@@ -57,27 +56,18 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html
-      lang={locale}
-      data-theme=""
-      className={`${fraunces.variable} ${dmSerif.variable} ${inter.variable}`}
-    >
-      <head>
-        <ThemeScript />
-      </head>
-      <body>
-        <NextIntlClientProvider messages={messages}>
-          <a href="#main-content" className="skip-link">
-            {locale === 'nb' ? 'Hopp til innhold' : 'Skip to content'}
-          </a>
-          <Nav />
-          <main id="main-content">
-            {children}
-          </main>
-          <Footer />
-          <ScrollReveal />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <div className={`${fraunces.variable} ${dmSerif.variable} ${inter.variable}`}>
+      <NextIntlClientProvider messages={messages}>
+        <a href="#main-content" className="skip-link">
+          {locale === 'nb' ? 'Hopp til innhold' : 'Skip to content'}
+        </a>
+        <Nav />
+        <main id="main-content">
+          {children}
+        </main>
+        <Footer />
+        <ScrollReveal />
+      </NextIntlClientProvider>
+    </div>
   );
 }
