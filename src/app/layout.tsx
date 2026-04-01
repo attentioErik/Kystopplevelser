@@ -87,19 +87,26 @@ function JsonLd() {
           '@type': 'PostalAddress',
           streetAddress: 'Austefjordsvegen 165',
           addressLocality: 'Steinsland',
+          addressRegion: 'Vestland',
           postalCode: '5379',
           addressCountry: 'NO',
         },
         geo: {
           '@type': 'GeoCoordinates',
-          latitude: 60.2414,
-          longitude: 5.1052,
+          latitude: 60.3506,
+          longitude: 5.0821,
         },
-        areaServed: {
-          '@type': 'City',
-          name: 'Bergen',
-          '@id': 'https://www.wikidata.org/wiki/Q26793',
-        },
+        areaServed: [
+          {
+            '@type': 'City',
+            name: 'Bergen',
+            '@id': 'https://www.wikidata.org/wiki/Q26793',
+          },
+          {
+            '@type': 'AdministrativeArea',
+            name: 'Øygarden',
+          },
+        ],
         priceRange: 'NOK 319–13900',
         currenciesAccepted: 'NOK',
         paymentAccepted: 'Vipps, Credit Card',
