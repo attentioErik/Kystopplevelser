@@ -241,7 +241,7 @@ export default function RibTurPage() {
             <p className="section__subtitle">{t('includedSubtitle')}</p>
           </div>
           <ul className="included-list included-list--2col reveal" style={{ maxWidth: 680, marginInline: 'auto' }}>
-            {[1, 2, 3, 4, 5, 6].map((i) => (
+            {[1, 2, 3, 4].map((i) => (
               <li key={i}>
                 <CheckIcon />
                 {t(`included${i}`)}
