@@ -52,7 +52,9 @@ export default function middleware(request: NextRequest) {
     return NextResponse.redirect(url, 301);
   }
 
-  return intlMiddleware(request);
+  const response = intlMiddleware(request);
+  response.headers.set('x-middleware-custom', 'active');
+  return response;
 }
 
 export const config = {
