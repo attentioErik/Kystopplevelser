@@ -304,9 +304,9 @@
 /* ──────────────────────────────────────────────
    5. MOBILE DRAWER
 ────────────────────────────────────────────── */
-/* When drawer is open, hide GPU-composited hero layers (video/WebGL)
-   so they don't paint over the drawer on iOS Safari */
-.drawer-open .hero__bg {
+/* When drawer is open, hide entire hero section so GPU-composited
+   layers (WebGL canvas, video) don't paint over the drawer */
+.drawer-open .hero {
   visibility: hidden;
 }
 

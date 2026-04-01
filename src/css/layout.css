@@ -184,10 +184,12 @@
 .hero {
   min-height: 100dvh;
   position: relative;
+  z-index: 0;                  /* explicit stacking context — contains all hero children */
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  transform: translateZ(0);    /* prevents WebGL canvas from being promoted to GPU hardware overlay */
   margin-top: -72px; /* pull hero up behind fixed nav so video/image fills from y=0 */
 }
 
