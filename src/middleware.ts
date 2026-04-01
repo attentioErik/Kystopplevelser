@@ -19,6 +19,7 @@ const REDIRECTS: Record<string, string> = {
   '/opplevelser/rib-tur': '/rib-tur-bergen',
   '/opplevelser/batutleie': '/baatutleie-bergen',
   '/opplevelser/badstu': '/sauna-badstue-bergen',
+  '/en/opplevelser/rib-tur': '/en/rib-tour-bergen',
   '/en/opplevelser/badstu': '/en/sauna-bergen',
   '/en/opplevelser/batutleie': '/en/boat-rental-bergen',
   '/betalingsbetingelser': '/personvern',
