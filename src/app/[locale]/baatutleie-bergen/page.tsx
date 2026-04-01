@@ -141,6 +141,7 @@ export default function BoatRentalPage() {
               </li>
             ))}
           </ul>
+          <p style={{ textAlign: 'center', marginTop: 'var(--space-4)', color: 'var(--text-secondary)', fontSize: 'var(--text-sm)' }}>{t('includedFootnote')}</p>
         </div>
       </section>
 
