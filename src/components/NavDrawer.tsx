@@ -13,6 +13,7 @@ export default function NavDrawer() {
   const t = useTranslations('nav');
   const locale = useLocale();
   const pathname = usePathname();
+  const previousPathnameRef = useRef(pathname);
   const otherLocale = locale === 'nb' ? 'en' : 'nb';
 
   const openDrawer = useCallback(() => {
@@ -53,9 +54,10 @@ export default function NavDrawer() {
   }, [isMounted, isOpen]);
 
   useEffect(() => {
-    if (isOpen) {
+    if (previousPathnameRef.current !== pathname && isOpen) {
       closeDrawer(false);
     }
+    previousPathnameRef.current = pathname;
   }, [pathname, isOpen, closeDrawer]);
 
   useEffect(() => {
