@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import ThemeScript from '@/components/ThemeScript';
 
 const OG_IMAGE = 'https://ucarecdn.com/f35d0529-b060-4496-a6de-164e4f6c4b33/hf_20260309_124501_de624687f2e640f2b3575ba107be2584.jpeg';
@@ -219,12 +220,10 @@ export default function RootLayout({
         <ThemeScript />
         <JsonLd />
         {/* BusinessBooster Agent: Kystopplevelser */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.bbConfig = { clientId: "06477a32-f05b-4f14-b198-c871fe7d5324", agentId: "807d0d3e-4b82-4e34-a3d5-032a085adf7f" };`,
-          }}
-        />
-        <script src="https://booster-engine.vercel.app/api/widget" async />
+        <Script id="bb-config" strategy="beforeInteractive">
+          {`window.bbConfig = { clientId: "06477a32-f05b-4f14-b198-c871fe7d5324", agentId: "807d0d3e-4b82-4e34-a3d5-032a085adf7f" };`}
+        </Script>
+        <Script src="https://booster-engine.vercel.app/api/widget" strategy="afterInteractive" />
       </head>
       <body>{children}</body>
     </html>
