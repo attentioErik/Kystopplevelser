@@ -218,6 +218,13 @@ export default function RootLayout({
       <head>
         <ThemeScript />
         <JsonLd />
+        {/* BusinessBooster Agent: Kystopplevelser */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.bbConfig = { clientId: "06477a32-f05b-4f14-b198-c871fe7d5324", agentId: "807d0d3e-4b82-4e34-a3d5-032a085adf7f" };`,
+          }}
+        />
+        <script src="https://booster-engine.vercel.app/api/widget" async />
       </head>
       <body>{children}</body>
     </html>
