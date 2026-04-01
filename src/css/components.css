@@ -39,6 +39,7 @@
   height: 72px;
   display: flex;
   align-items: center;
+  transform: translateZ(0);
   transition: background-color var(--transition-base),
               box-shadow var(--transition-base),
               backdrop-filter var(--transition-base);
@@ -309,6 +310,7 @@
   z-index: var(--z-drawer);
   pointer-events: none;
   visibility: hidden;
+  transform: translateZ(0);
   transition: visibility var(--transition-base);
 }
 
