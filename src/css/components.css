@@ -304,6 +304,12 @@
 /* ──────────────────────────────────────────────
    5. MOBILE DRAWER
 ────────────────────────────────────────────── */
+/* When drawer is open, hide GPU-composited hero layers (video/WebGL)
+   so they don't paint over the drawer on iOS Safari */
+.drawer-open .hero__bg {
+  visibility: hidden;
+}
+
 .nav-drawer {
   position: fixed;
   inset: 0;

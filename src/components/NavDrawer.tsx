@@ -15,11 +15,13 @@ export default function NavDrawer() {
   const openDrawer = useCallback(() => {
     setIsOpen(true);
     document.body.style.overflow = 'hidden';
+    document.body.classList.add('drawer-open');
   }, []);
 
   const closeDrawer = useCallback(() => {
     setIsOpen(false);
     document.body.style.overflow = '';
+    document.body.classList.remove('drawer-open');
     triggerRef.current?.focus();
   }, []);
 
