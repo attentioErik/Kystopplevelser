@@ -29,6 +29,7 @@
 ────────────────────────────────────────────── */
 .section {
   padding-block: var(--section-padding);
+  isolation: isolate;
 }
 
 .section--sm {
@@ -188,6 +189,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  isolation: isolate;
   margin-top: -72px; /* pull hero up behind fixed nav so video/image fills from y=0 */
 }
 
