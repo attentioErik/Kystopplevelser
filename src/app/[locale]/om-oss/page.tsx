@@ -47,8 +47,10 @@ export default function AboutPage() {
       <section className="section">
         <div className="container">
           <div className="story-section">
-            <p className="section__eyebrow text-center reveal">{t('storyEyebrow')}</p>
-            <h2 className="section__title text-center reveal" style={{ marginBottom: 'var(--space-8)' }}>{t('storyTitle')}</h2>
+            <div className="section__header reveal">
+              <p className="section__eyebrow">{t('storyEyebrow')}</p>
+              <h2 className="section__title">{t('storyTitle')}</h2>
+            </div>
 
             <div className="reveal">
               <p>{t('storyP1')}</p>
