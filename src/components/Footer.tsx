@@ -60,6 +60,7 @@ export default function Footer() {
           <div className="footer__legal">
             <Link href="/personvern">{t('privacy')}</Link>
             <Link href="/personvern">{t('terms')}</Link>
+            <a href="https://www.attentio.no" target="_blank" rel="noreferrer" className="footer__legal-attentio">Nettside fra Attentio</a>
           </div>
         </div>
       </div>
