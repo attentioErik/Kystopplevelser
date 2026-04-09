@@ -156,7 +156,7 @@ export default function AboutPage() {
           </div>
           <div className="location-card reveal" style={{ maxWidth: 900, marginInline: 'auto' }}>
             <div className="location-card__map" role="img" aria-label={t('locationMapAlt')}>
-              <svg width="100%" height="100%" viewBox="0 0 800 300" fill="none" style={{ position: 'absolute', inset: 0, opacity: 0.15 }} aria-hidden="true">
+              <svg width="100%" height="100%" viewBox="0 0 800 300" fill="none" style={{ position: 'absolute', inset: 0, opacity: 0.15, pointerEvents: 'none' }} aria-hidden="true">
                 <path d="M0,200 C100,160 200,220 300,180 C400,140 500,210 600,170 C700,130 750,190 800,160 L800,300 L0,300 Z" fill="#A8C5D8" />
                 <path d="M0,240 C100,200 200,260 300,220 C400,180 500,250 600,210 C700,170 750,230 800,200 L800,300 L0,300 Z" fill="#2C5F8A" opacity="0.6" />
               </svg>
