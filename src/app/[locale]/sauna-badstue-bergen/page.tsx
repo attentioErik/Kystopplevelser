@@ -254,7 +254,7 @@ export default function SaunaPage() {
         topWaveFill="var(--bg-secondary)"
         ctas={[
           { href: '/bestilling', label: t('ctaCta1'), variant: 'primary' },
-          { href: 'tel:+4793624642' as '/', label: t('ctaCta2'), variant: 'ghost' },
+          { href: 'tel:+4746949333' as '/', label: t('ctaCta2'), variant: 'ghost' },
         ]}
       />
     </>

@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
         <div className="footer__col">
           <h3 className="footer__heading">{t('contact')}</h3>
-          <a href="tel:+4793624642" className="footer__link">+47 936 24 642</a>
+          <a href="tel:+4746949333" className="footer__link">+47 469 49 333</a>
           <a href="mailto:post@kyst-opplevelser.no" className="footer__link">post@kyst-opplevelser.no</a>
           <address className="footer__address">Austefjordsvegen 165, 5379 Steinsland</address>
         </div>

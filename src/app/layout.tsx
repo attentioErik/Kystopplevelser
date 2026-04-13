@@ -82,7 +82,7 @@ function JsonLd() {
         logo: 'https://kystopplevelser.no/icon.png',
         image: OG_IMAGE,
         description: 'Kystopplevelser tilbyr autentiske kystopplevelser fra Bergen — RIB-turer på fjorden, båtutleie og flytende badstue ved sjøen. Opplev den norske kysten med erfarne, sertifiserte guider.',
-        telephone: '+4793624642',
+        telephone: '+4746949333',
         email: 'post@kyst-opplevelser.no',
         address: {
           '@type': 'PostalAddress',

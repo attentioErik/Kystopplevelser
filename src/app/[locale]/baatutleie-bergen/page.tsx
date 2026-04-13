@@ -154,7 +154,7 @@ export default function BoatRentalPage() {
             <p className="contact-cta-card__body">{t('contactBody')}</p>
             <div className="contact-cta-card__actions">
               <Link href={'/bestilling' as '/'} className="btn btn--primary btn--lg">{t('contactCta1')}</Link>
-              <a href="tel:+4793624642" className="btn btn--outline btn--lg">{t('contactCta2')}</a>
+              <a href="tel:+4746949333" className="btn btn--outline btn--lg">{t('contactCta2')}</a>
             </div>
           </div>
         </div>
