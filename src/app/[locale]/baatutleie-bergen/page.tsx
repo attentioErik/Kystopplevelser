@@ -134,7 +134,7 @@ export default function BoatRentalPage() {
             <h2 className="section__title">{t('includedTitle')}</h2>
           </div>
           <ul className="included-list included-list--2col reveal" style={{ maxWidth: 680, marginInline: 'auto' }}>
-            {[1, 2, 3, 4, 5].map((i) => (
+            {[1, 2, 3, 4].map((i) => (
               <li key={i}>
                 <CheckIcon />
                 {t(`included${i}`)}
