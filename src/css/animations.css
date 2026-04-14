@@ -426,8 +426,8 @@ body,
   margin-bottom: 1rem;
 }
 
-.hero-loader__logo svg {
-  color: rgba(168, 197, 216, 0.7);
+.hero-loader__logo img {
+  opacity: 0.9;
 }
 
 
@@ -508,7 +508,6 @@ body,
     animation: none;
   }
   .hero-loader__logo,
-  .hero-loader__title,
   .hero-loader__subtitle,
   .hero-loader__pulse {
     animation: none;

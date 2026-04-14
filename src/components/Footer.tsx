@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 
@@ -8,7 +9,15 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer__inner container">
         <div className="footer__col">
-          <Link href="/" className="footer__logo">Kystopplevelser</Link>
+          <Link href="/" className="footer__logo">
+            <Image
+              src="https://ucarecdn.com/6f9e4d34-c1b4-4828-9612-58cbf854312b/kystopplevelserlogosidewhite.png"
+              alt="Kystopplevelser"
+              height={24}
+              width={120}
+              style={{ objectFit: 'contain' }}
+            />
+          </Link>
           <p className="footer__tagline">{t('tagline')}</p>
           <div className="footer__social">
             <a

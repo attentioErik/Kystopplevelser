@@ -26,6 +26,17 @@ export async function generateMetadata({
   };
 }
 
+const PARTNERS = [
+  { nameKey: 'partner1Name', descKey: 'partner1Desc', url: 'https://www.panoramahotell.no/' },
+  { nameKey: 'partner2Name', descKey: 'partner2Desc', url: 'https://www.marsteinlighthouse.com' },
+  { nameKey: 'partner3Name', descKey: 'partner3Desc', url: 'https://holmakaien.no/' },
+  { nameKey: 'partner4Name', descKey: 'partner4Desc', url: '' },
+  { nameKey: 'partner5Name', descKey: 'partner5Desc', url: 'http://www.haaheimgaard.no/' },
+  { nameKey: 'partner6Name', descKey: 'partner6Desc', url: 'https://www.sotra-villmarksenter.no/' },
+  { nameKey: 'partner7Name', descKey: 'partner7Desc', url: 'http://corneliusrestaurant.no/' },
+  { nameKey: 'partner8Name', descKey: 'partner8Desc', url: 'https://www.fjordfolk-norway.no/' },
+];
+
 function BenefitCard({ icon, title, body }: { icon: React.ReactNode; title: string; body: string }) {
   return (
     <div className="benefit-card reveal">
@@ -248,6 +259,40 @@ export default function RibTurPage() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      {/* PARTNERS */}
+      <section className="section">
+        <div className="container">
+          <div className="section__header reveal">
+            <p className="section__eyebrow">{t('partnersEyebrow')}</p>
+            <h2 className="section__title">{t('partnersTitle')}</h2>
+            <p className="section__subtitle">{t('partnersSubtitle')}</p>
+          </div>
+          <div className="partners-grid reveal-stagger">
+            {PARTNERS.map((p) => {
+              const card = (
+                <div className={`partner-card reveal${p.url ? ' partner-card--link' : ''}`}>
+                  <h3 className="partner-card__name">{t(p.nameKey as Parameters<typeof t>[0])}</h3>
+                  <p className="partner-card__desc">{t(p.descKey as Parameters<typeof t>[0])}</p>
+                  {p.url && (
+                    <span className="partner-card__cta">
+                      Les mer
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                    </span>
+                  )}
+                </div>
+              );
+              return p.url ? (
+                <a key={p.nameKey} href={p.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                  {card}
+                </a>
+              ) : (
+                <div key={p.nameKey}>{card}</div>
+              );
+            })}
+          </div>
         </div>
       </section>
 

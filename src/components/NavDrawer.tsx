@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { createPortal } from 'react-dom';
+import Image from 'next/image';
 import { Link, usePathname } from '@/i18n/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 
@@ -131,7 +132,13 @@ export default function NavDrawer() {
           <div className="nav-drawer__overlay" onClick={() => closeDrawer()}></div>
           <div className="nav-drawer__panel">
             <div className="nav-drawer__header">
-              <span className="nav__logo-text">Kystopplevelser</span>
+              <Image
+                src="https://ucarecdn.com/c49160b7-8a02-4603-900e-18d5c784a393/kystopplevelserlogoside.png"
+                alt="Kystopplevelser"
+                height={28}
+                width={140}
+                className="nav__logo-img"
+              />
               <button
                 type="button"
                 className="nav-drawer__close"

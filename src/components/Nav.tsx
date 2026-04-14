@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import ThemeToggle from './ThemeToggle';
@@ -47,11 +48,23 @@ export default function Nav({ variant = 'transparent' }: NavProps) {
     >
       <div className="nav__inner container">
         <Link href="/" className="nav__logo" aria-label={t('logoLabel')}>
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-            <path d="M4 20 Q8 12 16 16 Q24 20 28 12" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-            <path d="M4 24 Q8 16 16 20 Q24 24 28 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.5" />
-          </svg>
-          <span className="nav__logo-text">Kystopplevelser</span>
+          <Image
+            src="https://ucarecdn.com/6f9e4d34-c1b4-4828-9612-58cbf854312b/kystopplevelserlogosidewhite.png"
+            alt="Kystopplevelser"
+            height={18}
+            width={90}
+            className="nav__logo-img nav__logo-img--white"
+            priority
+          />
+          <Image
+            src="https://ucarecdn.com/c49160b7-8a02-4603-900e-18d5c784a393/kystopplevelserlogoside.png"
+            alt="Kystopplevelser"
+            height={18}
+            width={90}
+            className="nav__logo-img nav__logo-img--color"
+            priority
+            aria-hidden
+          />
         </Link>
         <div className="nav__links" role="list">
           <Link href="/rib-tur-bergen" className="nav__link" role="listitem">{t('rib')}</Link>

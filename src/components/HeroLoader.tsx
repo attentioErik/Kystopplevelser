@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 interface HeroLoaderProps {
   visible: boolean;
 }
@@ -29,12 +31,15 @@ export default function HeroLoader({ visible }: HeroLoaderProps) {
       {/* Centered content */}
       <div className="hero-loader__content">
         <div className="hero-loader__logo">
-          <svg width="40" height="40" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-            <path d="M4 20 Q8 12 16 16 Q24 20 28 12" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-            <path d="M4 24 Q8 16 16 20 Q24 24 28 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.5" />
-          </svg>
+          <Image
+            src="https://ucarecdn.com/6f9e4d34-c1b4-4828-9612-58cbf854312b/kystopplevelserlogosidewhite.png"
+            alt="Kystopplevelser"
+            height={32}
+            width={160}
+            style={{ objectFit: 'contain' }}
+            priority
+          />
         </div>
-        <h2 className="hero-loader__title">Kystopplevelser</h2>
         <p className="hero-loader__subtitle">Bergen · Norge</p>
         <div className="hero-loader__pulse">
           <span />

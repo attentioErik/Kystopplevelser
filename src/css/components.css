@@ -87,17 +87,36 @@
 .nav__logo {
   display: flex;
   align-items: center;
-  gap: var(--space-1);
-  font-family: var(--font-heading);
-  font-size: var(--text-lg);
-  font-weight: var(--weight-bold);
-  letter-spacing: var(--tracking-tight);
   text-decoration: none;
-  transition: color var(--transition-fast), opacity var(--transition-fast);
+  transition: opacity var(--transition-fast);
 }
 
 .nav__logo:hover {
   opacity: 0.8;
+}
+
+.nav__logo-img {
+  height: 18px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Logo switching based on nav state and theme */
+
+/* Default: white logo visible, color logo hidden */
+.nav__logo-img--color { display: none; }
+
+/* Scrolled + light mode: show color logo, hide white */
+.nav--scrolled .nav__logo-img--white { display: none; }
+.nav--scrolled .nav__logo-img--color { display: block; }
+
+/* Scrolled + dark mode: keep white logo */
+[data-theme="dark"] .nav--scrolled .nav__logo-img--white { display: block; }
+[data-theme="dark"] .nav--scrolled .nav__logo-img--color { display: none; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .nav--scrolled .nav__logo-img--white { display: block; }
+  :root:not([data-theme="light"]) .nav--scrolled .nav__logo-img--color { display: none; }
 }
 
 .nav__logo-text {
@@ -1052,11 +1071,8 @@ body.drawer-open {
 }
 
 .footer__logo {
-  font-family: var(--font-heading);
-  font-size: var(--text-xl);
-  color: var(--text-inverse);
   text-decoration: none;
-  display: block;
+  display: inline-block;
   margin-bottom: var(--space-2);
   transition: opacity var(--transition-fast);
 }
@@ -2242,7 +2258,63 @@ body.drawer-open {
 }
 
 /* ──────────────────────────────────────────────
-   29. RESPONSE BADGE
+   29. PARTNER CARDS
+────────────────────────────────────────────── */
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .partners-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.partner-card {
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  height: 100%;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.partner-card--link:hover {
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+}
+
+.partner-card__name {
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+}
+
+.partner-card__desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+  flex: 1;
+}
+
+.partner-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--accent-primary);
+  margin-top: var(--space-1);
+}
+
+/* ──────────────────────────────────────────────
+   30. RESPONSE BADGE
 ────────────────────────────────────────────── */
 .response-badge {
   display: inline-flex;
