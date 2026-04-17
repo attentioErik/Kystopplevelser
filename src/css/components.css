@@ -2391,3 +2391,32 @@ body.drawer-open {
   line-height: var(--leading-relaxed);
   position: relative;
 }
+
+.teambuilding-card .btn {
+  position: relative;
+}
+
+@media (max-width: 640px) {
+  .teambuilding-card {
+    padding: var(--space-6) var(--space-4);
+    border-radius: var(--radius-xl);
+  }
+
+  .teambuilding-card__title {
+    font-size: var(--text-2xl);
+    line-height: var(--leading-tight);
+    margin-bottom: var(--space-2);
+  }
+
+  .teambuilding-card__body {
+    font-size: var(--text-base);
+    margin-bottom: var(--space-5);
+  }
+
+  .teambuilding-card .btn {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    margin-inline: auto;
+  }
+}
