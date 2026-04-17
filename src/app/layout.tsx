@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     default: 'Kystopplevelser — Autentiske kystopplevelser fra Bergen',
     template: '%s | Kystopplevelser',
   },
-  description: 'Kystopplevelser tilbyr RIB-turer, båtutleie og badstue ved sjøen i Bergen. Opplev den norske kysten med erfarne guider — book din opplevelse i dag.',
+  description: 'Kystopplevelser tilbyr RIB-turer, båtutleie og badstue ved sjøen i Bergen. Opplev den norske kysten med sertifiserte skippere. Book din opplevelse i dag.',
   keywords: ['RIB-tur Bergen', 'båtutleie Bergen', 'badstue Bergen', 'sauna Bergen', 'kystopplevelser', 'fjordopplevelser', 'aktiviteter Bergen', 'teambuilding Bergen'],
   authors: [{ name: 'Kystopplevelser AS' }],
   creator: 'Kystopplevelser AS',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     locale: 'nb_NO',
     alternateLocale: 'en_US',
     title: 'Kystopplevelser — Autentiske kystopplevelser fra Bergen',
-    description: 'RIB-turer, båtutleie og badstue ved sjøen i Bergen. Opplev den norske kysten med erfarne guider.',
+    description: 'RIB-turer, båtutleie og badstue ved sjøen i Bergen. Opplev den norske kysten med sertifiserte skippere.',
     url: 'https://kystopplevelser.no',
     images: [
       {
@@ -81,7 +81,7 @@ function JsonLd() {
         url: 'https://kystopplevelser.no',
         logo: 'https://kystopplevelser.no/icon.png',
         image: OG_IMAGE,
-        description: 'Kystopplevelser tilbyr autentiske kystopplevelser fra Bergen — RIB-turer på fjorden, båtutleie og flytende badstue ved sjøen. Opplev den norske kysten med erfarne, sertifiserte guider.',
+        description: 'Kystopplevelser tilbyr autentiske kystopplevelser fra Bergen: RIB-turer på fjorden, båtutleie og flytende badstue ved sjøen. Opplev den norske kysten med sertifiserte skippere.',
         telephone: '+4746949333',
         email: 'post@kyst-opplevelser.no',
         address: {
