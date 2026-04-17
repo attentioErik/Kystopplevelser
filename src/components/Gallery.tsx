@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import { uc } from '@/lib/uploadcare';
 
 interface GalleryItem {
   category: string;
@@ -275,7 +276,7 @@ export default function Gallery() {
                     role="img"
                     aria-label={caption}
                     style={{
-                      backgroundImage: `url('${item.imageUrl}')`,
+                      backgroundImage: `url('${uc(item.imageUrl, { width: 800 })}')`,
                       backgroundSize: 'cover',
                       backgroundPosition: 'center',
                       aspectRatio: ASPECT_RATIOS[idx] || '4/3',
@@ -383,7 +384,7 @@ export default function Gallery() {
             {lightboxOpen && currentItem && (
               <img
                 className="lightbox__img"
-                src={currentItem.imageUrl}
+                src={uc(currentItem.imageUrl, { width: 1600 })}
                 alt={t(currentItem.caption)}
               />
             )}

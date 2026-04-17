@@ -28,11 +28,19 @@ export default function CtaBlock({ eyebrow, title, body, ctas, topWaveFill }: Ct
           <h2 className="cta-block__title">{title}</h2>
           <p className="cta-block__body">{body}</p>
           <div style={{ display: 'flex', gap: 'var(--space-3)', justifyContent: 'center', flexWrap: 'wrap' }}>
-            {ctas.map((cta, i) => (
-              <Link key={i} href={cta.href as '/'} className={`btn btn--${cta.variant} btn--lg`}>
-                {cta.label}
-              </Link>
-            ))}
+            {ctas.map((cta, i) => {
+              const isExternal = /^(https?:|mailto:|tel:)/.test(cta.href);
+              const className = `btn btn--${cta.variant} btn--lg`;
+              return isExternal ? (
+                <a key={i} href={cta.href} className={className} target={cta.href.startsWith('http') ? '_blank' : undefined} rel={cta.href.startsWith('http') ? 'noopener noreferrer' : undefined}>
+                  {cta.label}
+                </a>
+              ) : (
+                <Link key={i} href={cta.href as '/'} className={className}>
+                  {cta.label}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>

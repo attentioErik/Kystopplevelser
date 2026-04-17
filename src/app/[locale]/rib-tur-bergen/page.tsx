@@ -296,6 +296,25 @@ export default function RibTurPage() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="section section--secondary" aria-labelledby="rib-faq-heading">
+        <div className="container--md">
+          <div className="section__header reveal">
+            <p className="section__eyebrow">{t('faqEyebrow')}</p>
+            <h2 id="rib-faq-heading" className="section__title">{t('faqTitle')}</h2>
+            <p className="section__subtitle">{t('faqSubtitle')}</p>
+          </div>
+          <div className="faq reveal" role="list">
+            {[1, 2, 3, 4, 5].map((i) => (
+              <details key={i} role="listitem">
+                <summary>{t(`faq${i}Question` as Parameters<typeof t>[0])}</summary>
+                <div className="faq__answer"><div className="faq__answer-inner">{t(`faq${i}Answer` as Parameters<typeof t>[0])}</div></div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <CtaBlock
         eyebrow={t('ctaEyebrow')}

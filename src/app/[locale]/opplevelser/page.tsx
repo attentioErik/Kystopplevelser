@@ -2,6 +2,8 @@ import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import Hero from '@/components/Hero';
+import ServiceHubCard from '@/components/ServiceHubCard';
+import { uc } from '@/lib/uploadcare';
 import type { Metadata } from 'next';
 
 export async function generateMetadata({
@@ -30,19 +32,19 @@ export default function ExperiencesPage() {
   return (
     <>
       {/* HERO */}
-      <section className="hero hero--inner" aria-label={t('heroTitle')}>
-        <div
-          className="hero__bg"
-          aria-hidden="true"
-          style={{ background: 'linear-gradient(160deg, #0D1B26 0%, #1B3A52 40%, #2C5F8A 70%, #A8C5D8 100%)' }}
-        />
-        <div className="hero__overlay" aria-hidden="true"></div>
-        <div className="hero__content container">
-          <p className="hero__eyebrow">{t('heroEyebrow')}</p>
-          <h1 className="hero__title" style={{ fontSize: 'var(--text-4xl)' }}>{t('heroTitle')}</h1>
-          <p className="hero__subtitle">{t('heroSubtitle')}</p>
-        </div>
-      </section>
+      <Hero
+        variant="inner"
+        eyebrow={t('heroEyebrow')}
+        title={t('heroTitle')}
+        subtitle={t('heroSubtitle')}
+        bgStyle={{ background: '#0A141D' }}
+        shaderColors={[
+          'hsl(204, 50%, 21%)',
+          'hsl(205, 45%, 52%)',
+          'hsl(209, 52%, 36%)',
+          'hsl(200, 35%, 75%)',
+        ]}
+      />
 
       {/* SERVICE HUB */}
       <section className="section">
@@ -53,67 +55,33 @@ export default function ExperiencesPage() {
             <p className="section__subtitle">{t('hubSubtitle')}</p>
           </div>
           <div className="services-hub-grid reveal-stagger">
-
-            <Link href={'/rib-tur-bergen' as '/'} className="service-hub-card reveal">
-              <div className="service-hub-card__image">
-                <div
-                  className="service-hub-card__image-bg"
-                  role="img"
-                  aria-label={t('ribTitle')}
-                  style={{ background: 'linear-gradient(160deg, #1B3A52 0%, #2C5F8A 50%, #A8C5D8 100%)' }}
-                />
-              </div>
-              <div className="service-hub-card__body">
-                <p className="service-hub-card__eyebrow">{t('ribEyebrow')}</p>
-                <h2 className="service-hub-card__title">{t('ribTitle')}</h2>
-                <p className="service-hub-card__desc">{t('ribDesc')}</p>
-                <span className="service-hub-card__link">
-                  {t('ribLink')}
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6" /></svg>
-                </span>
-              </div>
-            </Link>
-
-            <Link href={'/baatutleie-bergen' as '/'} className="service-hub-card reveal">
-              <div className="service-hub-card__image">
-                <div
-                  className="service-hub-card__image-bg"
-                  role="img"
-                  aria-label={t('boatTitle')}
-                  style={{ background: 'linear-gradient(160deg, #1B3A52 0%, #2C5F8A 45%, #3D6B4F 100%)' }}
-                />
-              </div>
-              <div className="service-hub-card__body">
-                <p className="service-hub-card__eyebrow">{t('boatEyebrow')}</p>
-                <h2 className="service-hub-card__title">{t('boatTitle')}</h2>
-                <p className="service-hub-card__desc">{t('boatDesc')}</p>
-                <span className="service-hub-card__link">
-                  {t('boatLink')}
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6" /></svg>
-                </span>
-              </div>
-            </Link>
-
-            <Link href={'/sauna-badstue-bergen' as '/'} className="service-hub-card reveal">
-              <div className="service-hub-card__image">
-                <div
-                  className="service-hub-card__image-bg"
-                  role="img"
-                  aria-label={t('saunaTitle')}
-                  style={{ background: 'linear-gradient(160deg, #C97B2A 0%, #1B3A52 55%, #0D1B26 100%)' }}
-                />
-              </div>
-              <div className="service-hub-card__body">
-                <p className="service-hub-card__eyebrow">{t('saunaEyebrow')}</p>
-                <h2 className="service-hub-card__title">{t('saunaTitle')}</h2>
-                <p className="service-hub-card__desc">{t('saunaDesc')}</p>
-                <span className="service-hub-card__link">
-                  {t('saunaLink')}
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6" /></svg>
-                </span>
-              </div>
-            </Link>
-
+            <ServiceHubCard
+              href="/rib-tur-bergen"
+              imageUrl={uc('https://ucarecdn.com/e1f06564-4b7f-47a9-b225-d4b38d40be95/creative_1_4x5.jpg', { width: 800 })}
+              imageAlt={t('ribTitle')}
+              eyebrow={t('ribEyebrow')}
+              title={t('ribTitle')}
+              desc={t('ribDesc')}
+              linkText={t('ribLink')}
+            />
+            <ServiceHubCard
+              href="/baatutleie-bergen"
+              imageUrl={uc('https://ucarecdn.com/9219159c-e2f1-42e7-8495-19e909e408a2/ChatGPTImage9mars202614_38_38.png', { width: 800 })}
+              imageAlt={t('boatTitle')}
+              eyebrow={t('boatEyebrow')}
+              title={t('boatTitle')}
+              desc={t('boatDesc')}
+              linkText={t('boatLink')}
+            />
+            <ServiceHubCard
+              href="/sauna-badstue-bergen"
+              imageUrl={uc('https://ucarecdn.com/2f6895d2-423a-4ac4-9193-6f21d0d75aad/NR3A5948.jpg', { width: 800 })}
+              imageAlt={t('saunaTitle')}
+              eyebrow={t('saunaEyebrow')}
+              title={t('saunaTitle')}
+              desc={t('saunaDesc')}
+              linkText={t('saunaLink')}
+            />
           </div>
         </div>
       </section>

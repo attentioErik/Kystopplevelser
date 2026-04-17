@@ -19,6 +19,9 @@ interface FormErrors {
 
 export default function BookingForm() {
   const t = useTranslations('booking');
+  const tRib = useTranslations('rib');
+  const tBoat = useTranslations('boat');
+  const tSauna = useTranslations('sauna');
   const searchParams = useSearchParams();
 
   const [formData, setFormData] = useState({
@@ -380,7 +383,6 @@ export default function BookingForm() {
                         name="antall"
                         className="form-input"
                         min="1"
-                        max="30"
                         required
                         aria-required="true"
                         placeholder={t('placeholderGuests')}
@@ -491,17 +493,6 @@ export default function BookingForm() {
                 </div>
               </div>
 
-              <div className="sidebar-card">
-                <h2 className="sidebar-card__title">{t('sidebarHoursTitle')}</h2>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 'var(--text-sm)', color: 'var(--text-secondary)' }}>
-                    <span>{t('sidebarHoursDays')}</span>
-                    <span style={{ fontWeight: 'var(--weight-medium)' as unknown as number, color: 'var(--text-primary)' }}>08:00 – 20:00</span>
-                  </div>
-                  <div style={{ fontSize: 'var(--text-sm)', color: 'var(--text-muted)' }}>{t('sidebarHoursSeason')}</div>
-                </div>
-              </div>
-
               <div className="sidebar-note">
                 <p>
                   <strong style={{ color: 'var(--text-primary)' }}>{t('sidebarSeasonalLabel')}</strong>{' '}
@@ -527,7 +518,7 @@ export default function BookingForm() {
         </div>
       </section>
 
-      {/* FAQ SECTION */}
+      {/* FAQ SECTION — grouped by service */}
       <section className="section section--secondary" aria-labelledby="faq-heading">
         <div className="container--md">
           <div className="section__header reveal">
@@ -535,13 +526,41 @@ export default function BookingForm() {
             <h2 id="faq-heading" className="section__title">{t('faqTitle')}</h2>
             <p className="section__subtitle">{t('faqSubtitle')}</p>
           </div>
-          <div className="faq reveal" role="list">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-              <details key={i} role="listitem">
-                <summary>{t(`faq${i}Question`)}</summary>
-                <div className="faq__answer"><div className="faq__answer-inner">{t(`faq${i}Answer`)}</div></div>
-              </details>
-            ))}
+
+          <div className="reveal" style={{ marginBottom: 'var(--space-8)' }}>
+            <h3 className="faq-group__title">{t('faqRibTitle')}</h3>
+            <div className="faq" role="list">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <details key={`rib-${i}`} role="listitem">
+                  <summary>{tRib(`faq${i}Question` as Parameters<typeof tRib>[0])}</summary>
+                  <div className="faq__answer"><div className="faq__answer-inner">{tRib(`faq${i}Answer` as Parameters<typeof tRib>[0])}</div></div>
+                </details>
+              ))}
+            </div>
+          </div>
+
+          <div className="reveal" style={{ marginBottom: 'var(--space-8)' }}>
+            <h3 className="faq-group__title">{t('faqBoatTitle')}</h3>
+            <div className="faq" role="list">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <details key={`boat-${i}`} role="listitem">
+                  <summary>{tBoat(`faq${i}Question` as Parameters<typeof tBoat>[0])}</summary>
+                  <div className="faq__answer"><div className="faq__answer-inner">{tBoat(`faq${i}Answer` as Parameters<typeof tBoat>[0])}</div></div>
+                </details>
+              ))}
+            </div>
+          </div>
+
+          <div className="reveal">
+            <h3 className="faq-group__title">{t('faqSaunaTitle')}</h3>
+            <div className="faq" role="list">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <details key={`sauna-${i}`} role="listitem">
+                  <summary>{tSauna(`faq${i}Question` as Parameters<typeof tSauna>[0])}</summary>
+                  <div className="faq__answer"><div className="faq__answer-inner">{tSauna(`faq${i}Answer` as Parameters<typeof tSauna>[0])}</div></div>
+                </details>
+              ))}
+            </div>
           </div>
         </div>
       </section>

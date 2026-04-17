@@ -29,7 +29,6 @@ export async function generateMetadata({
 function ActivityCard({
   imageUrl,
   imageAlt,
-  priceBadge,
   title,
   desc,
   duration,
@@ -41,7 +40,6 @@ function ActivityCard({
 }: {
   imageUrl: string;
   imageAlt: string;
-  priceBadge: string;
   title: string;
   desc: string;
   duration: string;
@@ -60,7 +58,6 @@ function ActivityCard({
           aria-label={imageAlt}
           style={{ backgroundImage: `url('${imageUrl}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
         />
-        <span className="activity-card__price-badge">{priceBadge}</span>
       </div>
       <div className="activity-card__body">
         <h3 className="activity-card__title">{title}</h3>
@@ -120,7 +117,7 @@ export default function SaunaPage() {
         ]}
         ctas={[
           { href: '#tilbud', label: t('heroCta1'), variant: 'primary' },
-          { href: '/bestilling', label: t('heroCta2'), variant: 'ghost' },
+          { href: 'https://www.havblikkfjordsauna.no/', label: t('heroCta2'), variant: 'ghost' },
         ]}
       />
 
@@ -160,39 +157,35 @@ export default function SaunaPage() {
             <ActivityCard
               imageUrl="https://cdn.prod.website-files.com/66cdaa32049dd5d43a1497db/66d8210b4627604940fcbdf8_NR3A5948.avif"
               imageAlt={t('card1Title')}
-              priceBadge={t('card1Price')}
               title={t('card1Title')}
               desc={t('card1Desc')}
               duration={t('card1Duration')}
               capacity={t('card1Capacity')}
               heat={t('card1Heat')}
               ctaText={t('card1Cta')}
-              ctaHref="https://minside.periode.no/bookinggroups/XXmQQb6626w6NAq7OrKm/afhIIXBvWsjDF9kbTIuG/2026-03-31"
+              ctaHref="https://www.havblikkfjordsauna.no/"
             />
             <ActivityCard
               imageUrl="https://cdn.prod.website-files.com/66cdaa32049dd5d43a1497db/66d5b794214f399c4feb6c48_DSC00037.avif"
               imageAlt={t('card2Title')}
-              priceBadge={t('card2Price')}
               title={t('card2Title')}
               desc={t('card2Desc')}
               duration={t('card2Duration')}
               capacity={t('card2Capacity')}
               heat={t('card2Heat')}
               ctaText={t('card2Cta')}
-              ctaHref="https://minside.periode.no/bookinggroups/XXmQQb6626w6NAq7OrKm/afhIIXBvWsjDF9kbTIuG/2026-03-31"
+              ctaHref="https://www.havblikkfjordsauna.no/"
             />
             <ActivityCard
               imageUrl="https://cdn.prod.website-files.com/66cdaa32049dd5d43a1497db/66d82315c4e5401855538b46_NR3A6028.avif"
               imageAlt={t('card3Title')}
-              priceBadge={t('card3Price')}
               title={t('card3Title')}
               desc={t('card3Desc')}
               duration={t('card3Duration')}
               capacity={t('card3Capacity')}
               heat={t('card3Heat')}
               ctaText={t('card3Cta')}
-              ctaHref="https://minside.periode.no/bookinggroups/XXmQQb6626w6NAq7OrKm/afhIIXBvWsjDF9kbTIuG/2026-03-31"
-              ctaVariant="outline"
+              ctaHref="https://www.havblikkfjordsauna.no/"
             />
           </div>
           <p style={{ textAlign: 'center', marginTop: 'var(--space-4)', fontSize: 'var(--text-sm)', color: 'var(--text-muted)' }}>
@@ -246,6 +239,25 @@ export default function SaunaPage() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="section section--secondary" aria-labelledby="sauna-faq-heading">
+        <div className="container--md">
+          <div className="section__header reveal">
+            <p className="section__eyebrow">{t('faqEyebrow')}</p>
+            <h2 id="sauna-faq-heading" className="section__title">{t('faqTitle')}</h2>
+            <p className="section__subtitle">{t('faqSubtitle')}</p>
+          </div>
+          <div className="faq reveal" role="list">
+            {[1, 2, 3, 4, 5].map((i) => (
+              <details key={i} role="listitem">
+                <summary>{t(`faq${i}Question` as Parameters<typeof t>[0])}</summary>
+                <div className="faq__answer"><div className="faq__answer-inner">{t(`faq${i}Answer` as Parameters<typeof t>[0])}</div></div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <CtaBlock
         eyebrow={t('ctaEyebrow')}
@@ -253,8 +265,7 @@ export default function SaunaPage() {
         body={t('ctaBody')}
         topWaveFill="var(--bg-secondary)"
         ctas={[
-          { href: '/bestilling', label: t('ctaCta1'), variant: 'primary' },
-          { href: 'tel:+4746949333' as '/', label: t('ctaCta2'), variant: 'ghost' },
+          { href: 'https://www.havblikkfjordsauna.no/', label: t('ctaCta1'), variant: 'primary' },
         ]}
       />
     </>

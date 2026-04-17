@@ -74,7 +74,7 @@ export default function Nav({ variant = 'transparent' }: NavProps) {
         </div>
         <div className="nav__actions">
           <Link href="/" locale={otherLocale} className="lang-switch" hrefLang={otherLocale}>
-            {otherLocale.toUpperCase()}
+            {otherLocale === 'nb' ? 'NO' : otherLocale.toUpperCase()}
           </Link>
           <ThemeToggle />
           <Link href="/bestilling" className="btn btn--primary btn--sm">{t('bookNow')}</Link>

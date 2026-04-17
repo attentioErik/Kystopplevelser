@@ -153,9 +153,28 @@ export default function BoatRentalPage() {
             <h2 className="contact-cta-card__title">{t('contactTitle')}</h2>
             <p className="contact-cta-card__body">{t('contactBody')}</p>
             <div className="contact-cta-card__actions">
-              <Link href={'/bestilling' as '/'} className="btn btn--primary btn--lg">{t('contactCta1')}</Link>
-              <a href="tel:+4746949333" className="btn btn--outline btn--lg">{t('contactCta2')}</a>
+              <a href="mailto:booking@panoramahotell.no" className="btn btn--primary btn--lg">{t('contactCta1')}</a>
+              <a href="tel:+4756319000" className="btn btn--outline btn--lg">{t('contactCta2')}</a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section" aria-labelledby="boat-faq-heading">
+        <div className="container--md">
+          <div className="section__header reveal">
+            <p className="section__eyebrow">{t('faqEyebrow')}</p>
+            <h2 id="boat-faq-heading" className="section__title">{t('faqTitle')}</h2>
+            <p className="section__subtitle">{t('faqSubtitle')}</p>
+          </div>
+          <div className="faq reveal" role="list">
+            {[1, 2, 3, 4, 5].map((i) => (
+              <details key={i} role="listitem">
+                <summary>{t(`faq${i}Question` as Parameters<typeof t>[0])}</summary>
+                <div className="faq__answer"><div className="faq__answer-inner">{t(`faq${i}Answer` as Parameters<typeof t>[0])}</div></div>
+              </details>
+            ))}
           </div>
         </div>
       </section>
@@ -167,8 +186,8 @@ export default function BoatRentalPage() {
         body={t('ctaBody')}
         topWaveFill="var(--bg-secondary)"
         ctas={[
-          { href: '/bestilling', label: t('ctaCta1'), variant: 'primary' },
-          { href: 'mailto:post@kyst-opplevelser.no' as '/', label: t('ctaCta2'), variant: 'ghost' },
+          { href: 'mailto:booking@panoramahotell.no', label: t('ctaCta1'), variant: 'primary' },
+          { href: 'tel:+4756319000', label: t('ctaCta2'), variant: 'ghost' },
         ]}
       />
     </>

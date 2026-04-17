@@ -11,7 +11,7 @@ interface HeroProps {
   eyebrow: string;
   title: string;
   subtitle: string;
-  ctas: HeroCTA[];
+  ctas?: HeroCTA[];
   variant?: 'full' | 'inner';
   bgStyle?: React.CSSProperties;
   videoUrl?: string;
@@ -22,7 +22,7 @@ export default function Hero({
   eyebrow,
   title,
   subtitle,
-  ctas,
+  ctas = [],
   variant = 'full',
   bgStyle,
   videoUrl,
@@ -39,23 +39,22 @@ export default function Hero({
       >
         {videoUrl && (
           <div style={{ position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none' }}>
-            <iframe
+            <video
               id="heroVideo"
               src={videoUrl}
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
               style={{
                 position: 'absolute',
                 top: '50%',
                 left: '50%',
-                width: '100vw',
-                height: '56.25vw',
-                minHeight: '100%',
-                minWidth: '177.78vh',
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
                 transform: 'translate(-50%,-50%)',
-                opacity: 0,
-                transition: 'opacity .8s ease',
               }}
               title="Kystopplevelser Promo"
             />
@@ -76,23 +75,30 @@ export default function Hero({
         <p className="hero__eyebrow reveal">{eyebrow}</p>
         <h1 className="hero__title reveal">{title}</h1>
         <p className="hero__subtitle reveal">{subtitle}</p>
-        <div className="hero__ctas reveal">
+        {ctas.length > 0 && <div className="hero__ctas reveal">
           {ctas.map((cta, i) => {
-            const isAnchor = cta.href.startsWith('#');
-            if (isAnchor) {
+            const className = `btn btn--${cta.variant} btn--lg`;
+            const isExternal = /^(https?:|mailto:|tel:|#)/.test(cta.href);
+            if (isExternal) {
               return (
-                <a key={i} href={cta.href} className={`btn btn--${cta.variant} btn--lg`}>
+                <a
+                  key={i}
+                  href={cta.href}
+                  className={className}
+                  target={cta.href.startsWith('http') ? '_blank' : undefined}
+                  rel={cta.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                >
                   {cta.label}
                 </a>
               );
             }
             return (
-              <Link key={i} href={cta.href as '/'} className={`btn btn--${cta.variant} btn--lg`}>
+              <Link key={i} href={cta.href as '/'} className={className}>
                 {cta.label}
               </Link>
             );
           })}
-        </div>
+        </div>}
       </div>
       <div className="hero__scroll" aria-hidden="true">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

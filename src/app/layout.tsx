@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import ThemeScript from '@/components/ThemeScript';
 
-const OG_IMAGE = 'https://ucarecdn.com/f35d0529-b060-4496-a6de-164e4f6c4b33/hf_20260309_124501_de624687f2e640f2b3575ba107be2584.jpeg';
+const OG_IMAGE = 'https://ucarecdn.com/f35d0529-b060-4496-a6de-164e4f6c4b33/hf_20260309_124501_de624687f2e640f2b3575ba107be2584.jpeg/-/format/jpeg/-/quality/smart/-/resize/1200x630/';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://kystopplevelser.no'),

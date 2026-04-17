@@ -1,10 +1,10 @@
 import { useTranslations } from 'next-intl';
+import { uc } from '@/lib/uploadcare';
 import { getTranslations } from 'next-intl/server';
 import Hero from '@/components/Hero';
 import ServiceHubCard from '@/components/ServiceHubCard';
 import FeatureSplit from '@/components/FeatureSplit';
 import CtaBlock from '@/components/CtaBlock';
-import HeroVideo from '@/components/HeroVideo';
 import type { Metadata } from 'next';
 
 export async function generateMetadata({
@@ -42,14 +42,12 @@ export default function HomePage() {
         eyebrow={t('heroEyebrow')}
         title={t('heroTitle')}
         subtitle={t('heroSubtitle')}
-        videoUrl="https://player.vimeo.com/video/1170952103?badge=0&autopause=0&player_id=0&app_id=58479&background=1&autoplay=1&loop=1&muted=1"
+        videoUrl="https://ucarecdn.com/a35db4af-2133-46a6-8482-b43291c4e13f/videohero_demo_ai_2026.mp4"
         ctas={[
           { href: '/opplevelser', label: t('heroCta1'), variant: 'primary' },
           { href: '/bestilling', label: t('heroCta2'), variant: 'ghost' },
         ]}
       />
-      <HeroVideo />
-
       {/* SERVICE CARDS */}
       <section className="section" aria-labelledby="services-heading">
         <div className="container">
@@ -61,7 +59,7 @@ export default function HomePage() {
           <div className="services-hub-grid reveal-stagger">
             <ServiceHubCard
               href="/rib-tur-bergen"
-              imageUrl="https://ucarecdn.com/e1f06564-4b7f-47a9-b225-d4b38d40be95/creative_1_4x5.jpg"
+              imageUrl={uc('https://ucarecdn.com/e1f06564-4b7f-47a9-b225-d4b38d40be95/creative_1_4x5.jpg', { width: 800 })}
               imageAlt={t('ribTitle')}
               eyebrow={t('ribEyebrow')}
               title={t('ribTitle')}
@@ -70,7 +68,7 @@ export default function HomePage() {
             />
             <ServiceHubCard
               href="/baatutleie-bergen"
-              imageUrl="https://ucarecdn.com/9219159c-e2f1-42e7-8495-19e909e408a2/ChatGPTImage9mars202614_38_38.png"
+              imageUrl={uc('https://ucarecdn.com/9219159c-e2f1-42e7-8495-19e909e408a2/ChatGPTImage9mars202614_38_38.png', { width: 800 })}
               imageAlt={t('boatTitle')}
               eyebrow={t('boatEyebrow')}
               title={t('boatTitle')}
@@ -79,7 +77,7 @@ export default function HomePage() {
             />
             <ServiceHubCard
               href="/sauna-badstue-bergen"
-              imageUrl="https://ucarecdn.com/2f6895d2-423a-4ac4-9193-6f21d0d75aad/NR3A5948.jpg"
+              imageUrl={uc('https://ucarecdn.com/2f6895d2-423a-4ac4-9193-6f21d0d75aad/NR3A5948.jpg', { width: 800 })}
               imageAlt={t('saunaTitle')}
               eyebrow={t('saunaEyebrow')}
               title={t('saunaTitle')}
@@ -145,7 +143,7 @@ export default function HomePage() {
             bullets={[t('featureRibBullet1'), t('featureRibBullet2'), t('featureRibBullet3')]}
             ctaText={t('featureRibCta')}
             ctaHref="/rib-tur-bergen"
-            imageUrl="https://ucarecdn.com/63a64994-bb1a-4015-9b41-7a705a6e84a4/hf_20260309_124325_5604bd3732d74ee89dc0be428cb316e7.jpeg"
+            imageUrl={uc('https://ucarecdn.com/63a64994-bb1a-4015-9b41-7a705a6e84a4/hf_20260309_124325_5604bd3732d74ee89dc0be428cb316e7.jpeg', { width: 1200 })}
             imageAlt={t('featureRibTitle')}
             useImgTag
           />
@@ -162,7 +160,7 @@ export default function HomePage() {
             bullets={[t('featureSaunaBullet1'), t('featureSaunaBullet2'), t('featureSaunaBullet3')]}
             ctaText={t('featureSaunaCta')}
             ctaHref="/sauna-badstue-bergen"
-            imageUrl="https://ucarecdn.com/f9dfa111-1715-4fae-8c30-9d95c72895ef/DSC00039.jpg"
+            imageUrl={uc('https://ucarecdn.com/f9dfa111-1715-4fae-8c30-9d95c72895ef/DSC00039.jpg', { width: 1200 })}
             imageAlt={t('featureSaunaTitle')}
             reversed
           />
@@ -232,7 +230,7 @@ export default function HomePage() {
               'https://ucarecdn.com/0be2f591-b48c-4af5-9bae-a6c96d2ac848/DSC00030.jpg',
               'https://ucarecdn.com/f35d0529-b060-4496-a6de-164e4f6c4b33/hf_20260309_124501_de624687f2e640f2b3575ba107be2584.jpeg',
               'https://ucarecdn.com/00bbbd10-916f-42af-ad7d-3709e700ba54/hf_20260309_124306_644cf7b4f14a4eaa8178a9f050d8f4ed.jpeg',
-            ].map((url, i) => (
+            ].map((url) => uc(url, { width: 800 })).map((url, i) => (
               <div key={i} className="gallery-teaser__item">
                 <div
                   className="gallery-teaser__placeholder"
