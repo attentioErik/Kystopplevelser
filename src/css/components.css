@@ -101,6 +101,12 @@
   object-fit: contain;
 }
 
+@media (max-width: 640px) {
+  .nav__logo-img {
+    height: 14px;
+  }
+}
+
 /* Logo switching based on nav state and theme */
 
 /* Default: white logo visible, color logo hidden */
