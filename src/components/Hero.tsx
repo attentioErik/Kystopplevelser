@@ -83,6 +83,7 @@ export default function Hero({
               return (
                 <a
                   key={i}
+                  id={cta.href.startsWith('tel:') ? 'phone-contact' : undefined}
                   href={cta.href}
                   className={className}
                   target={cta.href.startsWith('http') ? '_blank' : undefined}

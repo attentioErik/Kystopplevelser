@@ -32,7 +32,7 @@ export default function CtaBlock({ eyebrow, title, body, ctas, topWaveFill }: Ct
               const isExternal = /^(https?:|mailto:|tel:)/.test(cta.href);
               const className = `btn btn--${cta.variant} btn--lg`;
               return isExternal ? (
-                <a key={i} href={cta.href} className={className} target={cta.href.startsWith('http') ? '_blank' : undefined} rel={cta.href.startsWith('http') ? 'noopener noreferrer' : undefined}>
+                <a key={i} id={cta.href.startsWith('tel:') ? 'phone-contact' : undefined} href={cta.href} className={className} target={cta.href.startsWith('http') ? '_blank' : undefined} rel={cta.href.startsWith('http') ? 'noopener noreferrer' : undefined}>
                   {cta.label}
                 </a>
               ) : (

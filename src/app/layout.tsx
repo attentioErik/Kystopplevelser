@@ -219,13 +219,34 @@ export default function RootLayout({
       <head>
         <ThemeScript />
         <JsonLd />
+        {/* Google Tag Manager */}
+        <Script id="gtm" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M8KCC74Q');`}
+        </Script>
+        {/* End Google Tag Manager */}
         {/* BusinessBooster Agent: Kystopplevelser */}
         <Script id="bb-config" strategy="beforeInteractive">
           {`window.bbConfig = { clientId: "06477a32-f05b-4f14-b198-c871fe7d5324", agentId: "807d0d3e-4b82-4e34-a3d5-032a085adf7f" };`}
         </Script>
         <Script src="https://booster-engine.vercel.app/api/widget" strategy="afterInteractive" />
       </head>
-      <body>{children}</body>
+      <body>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-M8KCC74Q"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
+        {children}
+      </body>
     </html>
   );
 }
