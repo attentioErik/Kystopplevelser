@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-export const SITE_URL = 'https://kystopplevelser.no';
+export const SITE_URL = 'https://kyst-opplevelser.no';
 
 export type RouteDef = {
   /** Norwegian (default) path, e.g. '/rib-tur-bergen' */

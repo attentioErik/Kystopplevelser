@@ -6,24 +6,24 @@ Selskapet er norsk, holder til i Øygarden kommune, og tilbyr opplevelser på no
 
 ## Tjenester
 
-- [RIB-tur Bergen](https://kystopplevelser.no/rib-tur-bergen): Guidet RIB-tur på Byfjorden med sertifiserte guider. Avgang fra Bergen sentrum (kr 13 900) eller Sotra/Sund (kr 9 900) per gruppe, opptil 12 personer. Varighet ca. 1,5 time.
-- [Båtutleie Bergen](https://kystopplevelser.no/baatutleie-bergen): Leie av motorbåt for selvkjøring i skjærgården rundt Bergen. Opptil 8 personer, ingen erfaring nødvendig.
-- [Badstue Bergen](https://kystopplevelser.no/sauna-badstue-bergen): Flytende badstue (sauna) med panoramautsikt over Byfjorden. Tre alternativer: privat sauna (kr 5 150), badstuecruise (kr 9 900) eller drop-in (kr 319 per person). Tilgjengelig hele året. Booking via Periode.no.
+- [RIB-tur Bergen](https://kyst-opplevelser.no/rib-tur-bergen): Guidet RIB-tur på Byfjorden med sertifiserte guider. Avgang fra Bergen sentrum (kr 13 900) eller Sotra/Sund (kr 9 900) per gruppe, opptil 12 personer. Varighet ca. 1,5 time.
+- [Båtutleie Bergen](https://kyst-opplevelser.no/baatutleie-bergen): Leie av motorbåt for selvkjøring i skjærgården rundt Bergen. Opptil 8 personer, ingen erfaring nødvendig.
+- [Badstue Bergen](https://kyst-opplevelser.no/sauna-badstue-bergen): Flytende badstue (sauna) med panoramautsikt over Byfjorden. Tre alternativer: privat sauna (kr 5 150), badstuecruise (kr 9 900) eller drop-in (kr 319 per person). Tilgjengelig hele året. Booking via Periode.no.
 
 ## Informasjon
 
-- [Om oss](https://kystopplevelser.no/om-oss): Bakgrunn, verdier og teamet bak Kystopplevelser. Lokasjon: Austefjordsvegen 165, 5379 Steinsland, Øygarden, Vestland.
-- [Bestilling og kontakt](https://kystopplevelser.no/bestilling): Kontaktskjema og bookingforespørsel. E-post: post@kyst-opplevelser.no. Telefon: +47 469 49 333.
-- [Galleri](https://kystopplevelser.no/galleri): Bilder fra turer og opplevelser.
-- [Personvern](https://kystopplevelser.no/personvern): Personvernpolicy og vilkår.
+- [Om oss](https://kyst-opplevelser.no/om-oss): Bakgrunn, verdier og teamet bak Kystopplevelser. Lokasjon: Austefjordsvegen 165, 5379 Steinsland, Øygarden, Vestland.
+- [Bestilling og kontakt](https://kyst-opplevelser.no/bestilling): Kontaktskjema og bookingforespørsel. E-post: post@kyst-opplevelser.no. Telefon: +47 469 49 333.
+- [Galleri](https://kyst-opplevelser.no/galleri): Bilder fra turer og opplevelser.
+- [Personvern](https://kyst-opplevelser.no/personvern): Personvernpolicy og vilkår.
 
 ## Engelsk versjon
 
-- [RIB Tour Bergen](https://kystopplevelser.no/en/rib-tour-bergen)
-- [Boat Rental Bergen](https://kystopplevelser.no/en/boat-rental-bergen)
-- [Sauna Bergen](https://kystopplevelser.no/en/sauna-bergen)
-- [About](https://kystopplevelser.no/en/about)
-- [Booking](https://kystopplevelser.no/en/booking)
+- [RIB Tour Bergen](https://kyst-opplevelser.no/en/rib-tour-bergen)
+- [Boat Rental Bergen](https://kyst-opplevelser.no/en/boat-rental-bergen)
+- [Sauna Bergen](https://kyst-opplevelser.no/en/sauna-bergen)
+- [About](https://kyst-opplevelser.no/en/about)
+- [Booking](https://kyst-opplevelser.no/en/booking)
 
 ## Faktaopplysninger
 
