@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import Hero from '@/components/Hero';
 import WarpShaderBg from '@/components/WarpShaderBg';
+import { buildAlternates } from '@/lib/seo';
 import type { Metadata } from 'next';
 
 export async function generateMetadata({
@@ -15,13 +16,7 @@ export async function generateMetadata({
   return {
     title: t('title'),
     description: t('description'),
-    alternates: {
-      canonical: 'https://kystopplevelser.no/om-oss',
-      languages: {
-        nb: 'https://kystopplevelser.no/om-oss',
-        en: 'https://kystopplevelser.no/en/about',
-      },
-    },
+    alternates: buildAlternates(locale, '/om-oss', '/en/about'),
   };
 }
 

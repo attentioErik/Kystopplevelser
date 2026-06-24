@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import { getTranslations } from 'next-intl/server';
 import BookingForm from '@/components/BookingForm';
+import { buildAlternates } from '@/lib/seo';
 import type { Metadata } from 'next';
 
 export async function generateMetadata({
@@ -13,13 +14,7 @@ export async function generateMetadata({
   return {
     title: t('metaTitle'),
     description: t('metaDescription'),
-    alternates: {
-      canonical: 'https://kystopplevelser.no/bestilling',
-      languages: {
-        nb: 'https://kystopplevelser.no/bestilling',
-        en: 'https://kystopplevelser.no/en/booking',
-      },
-    },
+    alternates: buildAlternates(locale, '/bestilling', '/en/booking'),
   };
 }
 

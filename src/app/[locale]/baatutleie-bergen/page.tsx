@@ -4,6 +4,7 @@ import { Link } from '@/i18n/navigation';
 import Hero from '@/components/Hero';
 import CtaBlock from '@/components/CtaBlock';
 import CheckIcon from '@/components/CheckIcon';
+import { buildAlternates } from '@/lib/seo';
 import type { Metadata } from 'next';
 
 export async function generateMetadata({
@@ -16,13 +17,7 @@ export async function generateMetadata({
   return {
     title: t('title'),
     description: t('description'),
-    alternates: {
-      canonical: 'https://kystopplevelser.no/baatutleie-bergen',
-      languages: {
-        nb: 'https://kystopplevelser.no/baatutleie-bergen',
-        en: 'https://kystopplevelser.no/en/boat-rental-bergen',
-      },
-    },
+    alternates: buildAlternates(locale, '/baatutleie-bergen', '/en/boat-rental-bergen'),
   };
 }
 

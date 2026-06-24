@@ -5,6 +5,7 @@ import Hero from '@/components/Hero';
 import ServiceHubCard from '@/components/ServiceHubCard';
 import FeatureSplit from '@/components/FeatureSplit';
 import CtaBlock from '@/components/CtaBlock';
+import { buildAlternates } from '@/lib/seo';
 import type { Metadata } from 'next';
 
 export async function generateMetadata({
@@ -17,17 +18,11 @@ export async function generateMetadata({
   return {
     title: t('title'),
     description: t('description'),
-    alternates: {
-      canonical: 'https://kystopplevelser.no/',
-      languages: {
-        nb: 'https://kystopplevelser.no/',
-        en: 'https://kystopplevelser.no/en',
-      },
-    },
+    alternates: buildAlternates(locale, '/', '/en'),
     openGraph: {
       title: t('title'),
       description: t('description'),
-      url: 'https://kystopplevelser.no',
+      url: locale === 'en' ? 'https://kystopplevelser.no/en' : 'https://kystopplevelser.no/',
       images: ['https://ucarecdn.com/f35d0529-b060-4496-a6de-164e4f6c4b33/hf_20260309_124501_de624687f2e640f2b3575ba107be2584.jpeg'],
     },
   };

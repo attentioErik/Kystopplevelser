@@ -4,6 +4,7 @@ import { Link } from '@/i18n/navigation';
 import Hero from '@/components/Hero';
 import ServiceHubCard from '@/components/ServiceHubCard';
 import { uc } from '@/lib/uploadcare';
+import { buildAlternates } from '@/lib/seo';
 import type { Metadata } from 'next';
 
 export async function generateMetadata({
@@ -16,13 +17,7 @@ export async function generateMetadata({
   return {
     title: t('title'),
     description: t('description'),
-    alternates: {
-      canonical: 'https://kystopplevelser.no/opplevelser',
-      languages: {
-        nb: 'https://kystopplevelser.no/opplevelser',
-        en: 'https://kystopplevelser.no/en/experiences',
-      },
-    },
+    alternates: buildAlternates(locale, '/opplevelser', '/en/experiences'),
   };
 }
 

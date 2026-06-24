@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import Gallery from '@/components/Gallery';
+import { buildAlternates } from '@/lib/seo';
 import type { Metadata } from 'next';
 
 export async function generateMetadata({
@@ -12,12 +13,7 @@ export async function generateMetadata({
   return {
     title: t('metaTitle'),
     description: t('metaDescription'),
-    alternates: {
-      canonical: 'https://kystopplevelser.no/galleri',
-      languages: {
-        nb: 'https://kystopplevelser.no/galleri',
-      },
-    },
+    alternates: buildAlternates(locale, '/galleri', '/en/gallery'),
   };
 }
 

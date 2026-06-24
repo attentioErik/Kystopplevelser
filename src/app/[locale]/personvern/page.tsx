@@ -1,5 +1,6 @@
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
+import { buildAlternates } from '@/lib/seo';
 import type { Metadata } from 'next';
 
 export async function generateMetadata({
@@ -12,13 +13,7 @@ export async function generateMetadata({
   return {
     title: t('title'),
     description: t('description'),
-    alternates: {
-      canonical: 'https://kystopplevelser.no/personvern',
-      languages: {
-        nb: 'https://kystopplevelser.no/personvern',
-        en: 'https://kystopplevelser.no/en/privacy',
-      },
-    },
+    alternates: buildAlternates(locale, '/personvern', '/en/privacy'),
   };
 }
 
