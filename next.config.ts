@@ -36,6 +36,24 @@ const nextConfig: NextConfig = {
       { source: '/en/opplevelser/badstu', destination: '/en/sauna-bergen', permanent: true },
       { source: '/en/opplevelser/batutleie', destination: '/en/boat-rental-bergen', permanent: true },
       { source: '/en/betalingsbetingelser', destination: '/en/privacy', permanent: true },
+      // Discontinued Webflow experiences (404 in GSC) — Norwegian
+      { source: '/opplevelser/fisking', destination: '/opplevelser', permanent: true },
+      { source: '/opplevelser/krabbefiske', destination: '/opplevelser', permanent: true },
+      { source: '/opplevelser/vannscooter', destination: '/opplevelser', permanent: true },
+      // Discontinued Webflow experiences (404 in GSC) — English
+      { source: '/en/opplevelser/fisking', destination: '/en/experiences', permanent: true },
+      { source: '/en/opplevelser/krabbefiske', destination: '/en/experiences', permanent: true },
+      { source: '/en/opplevelser/vannscooter', destination: '/en/experiences', permanent: true },
+      { source: '/en/home', destination: '/en', permanent: true },
+      // Norwegian slugs under /en (next-intl otherwise answers with a temporary 307)
+      { source: '/en/bestilling', destination: '/en/booking', permanent: true },
+      { source: '/en/om-oss', destination: '/en/about', permanent: true },
+      { source: '/en/opplevelser', destination: '/en/experiences', permanent: true },
+      { source: '/en/galleri', destination: '/en/gallery', permanent: true },
+      { source: '/en/personvern', destination: '/en/privacy', permanent: true },
+      { source: '/en/rib-tur-bergen', destination: '/en/rib-tour-bergen', permanent: true },
+      { source: '/en/baatutleie-bergen', destination: '/en/boat-rental-bergen', permanent: true },
+      { source: '/en/sauna-badstue-bergen', destination: '/en/sauna-bergen', permanent: true },
     ];
   },
 };
