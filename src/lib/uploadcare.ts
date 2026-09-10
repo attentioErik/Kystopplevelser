@@ -11,3 +11,8 @@ export function uc(url: string, opts: { width?: number; quality?: 'smart' | 'lig
   const opsPath = transforms.join('/') + '/';
   return filename ? `${base}/${opsPath}${filename}` : `${base}/${opsPath}`;
 }
+
+// next/image loader for crisp graphics (logos): Uploadcare resizes per srcset width at best quality.
+export function ucSharpLoader({ src, width }: { src: string; width: number }): string {
+  return uc(src, { width, quality: 'best' });
+}

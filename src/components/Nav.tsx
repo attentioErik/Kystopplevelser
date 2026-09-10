@@ -6,6 +6,7 @@ import { Link } from '@/i18n/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import ThemeToggle from './ThemeToggle';
 import NavDrawer from './NavDrawer';
+import { ucSharpLoader } from '@/lib/uploadcare';
 
 interface NavProps {
   variant?: 'transparent' | 'scrolled';
@@ -51,16 +52,18 @@ export default function Nav({ variant = 'transparent' }: NavProps) {
           <Image
             src="https://ucarecdn.com/6f9e4d34-c1b4-4828-9612-58cbf854312b/kystopplevelserlogosidewhite.png"
             alt="Kystopplevelser"
+            loader={ucSharpLoader}
             height={18}
-            width={90}
+            width={218}
             className="nav__logo-img nav__logo-img--white"
             priority
           />
           <Image
             src="https://ucarecdn.com/c49160b7-8a02-4603-900e-18d5c784a393/kystopplevelserlogoside.png"
             alt="Kystopplevelser"
+            loader={ucSharpLoader}
             height={18}
-            width={90}
+            width={218}
             className="nav__logo-img nav__logo-img--color"
             priority
             aria-hidden

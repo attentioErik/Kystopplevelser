@@ -5,6 +5,7 @@ import { createPortal } from 'react-dom';
 import Image from 'next/image';
 import { Link, usePathname } from '@/i18n/navigation';
 import { useLocale, useTranslations } from 'next-intl';
+import { ucSharpLoader } from '@/lib/uploadcare';
 
 export default function NavDrawer() {
   const [isOpen, setIsOpen] = useState(false);
@@ -135,8 +136,9 @@ export default function NavDrawer() {
               <Image
                 src="https://ucarecdn.com/c49160b7-8a02-4603-900e-18d5c784a393/kystopplevelserlogoside.png"
                 alt="Kystopplevelser"
-                height={28}
-                width={140}
+                loader={ucSharpLoader}
+                height={18}
+                width={218}
                 className="nav__logo-img"
               />
               <button

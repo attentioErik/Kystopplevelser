@@ -37,7 +37,8 @@ export default function HomePage() {
         eyebrow={t('heroEyebrow')}
         title={t('heroTitle')}
         subtitle={t('heroSubtitle')}
-        videoUrl="https://ucarecdn.com/a35db4af-2133-46a6-8482-b43291c4e13f/videohero_demo_ai_2026.mp4"
+        videoUrl="https://ucarecdn.com/a35db4af-2133-46a6-8482-b43291c4e13f/adaptive_video/"
+        videoFallbackUrl="https://ucarecdn.com/a35db4af-2133-46a6-8482-b43291c4e13f/videohero_demo_ai_2026.mp4"
         ctas={[
           { href: '/opplevelser', label: t('heroCta1'), variant: 'primary' },
           { href: '/bestilling', label: t('heroCta2'), variant: 'ghost' },
