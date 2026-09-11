@@ -1,9 +1,12 @@
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import Hero from '@/components/Hero';
 import CtaBlock from '@/components/CtaBlock';
 import CheckIcon from '@/components/CheckIcon';
+import FactBox from '@/components/FactBox';
+import JsonLd from '@/components/JsonLd';
+import { ORG_ID, breadcrumbList, faqPage, pageUrl } from '@/lib/schema';
 import { buildAlternates } from '@/lib/seo';
 import type { Metadata } from 'next';
 
@@ -15,7 +18,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'rib' });
   return {
-    title: t('title'),
+    title: { absolute: t('title') },
     description: t('description'),
     alternates: buildAlternates(locale, '/rib-tur-bergen', '/en/rib-tour-bergen'),
   };
@@ -109,11 +112,60 @@ function PricingCard({
   );
 }
 
+const FAQ_COUNT = 5;
+const FACT_COUNT = 6;
+
 export default function RibTurPage() {
   const t = useTranslations('rib');
+  const tc = useTranslations('common');
+  const locale = useLocale();
+  const url = pageUrl(locale, '/rib-tur-bergen', '/en/rib-tour-bergen');
+  const faqs = Array.from({ length: FAQ_COUNT }, (_, i) => ({
+    question: t(`faq${i + 1}Question` as Parameters<typeof t>[0]),
+    answer: t(`faq${i + 1}Answer` as Parameters<typeof t>[0]),
+  }));
+  const facts = Array.from({ length: FACT_COUNT }, (_, i) => ({
+    label: t(`fact${i + 1}Label` as Parameters<typeof t>[0]),
+    value: t(`fact${i + 1}Value` as Parameters<typeof t>[0]),
+  }));
+  const offers = [1, 2].map((i) => ({
+    '@type': 'Offer',
+    name: t(`pricing${i}Title` as Parameters<typeof t>[0]),
+    price: i === 1 ? '13900' : '9900',
+    priceCurrency: 'NOK',
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
+      price: i === 1 ? '13900' : '9900',
+      priceCurrency: 'NOK',
+      valueAddedTaxIncluded: false,
+      referenceQuantity: { '@type': 'QuantitativeValue', value: 1, unitText: 'group' },
+    },
+    eligibleQuantity: { '@type': 'QuantitativeValue', maxValue: 12, unitText: 'persons' },
+    url: `${url}#priser`,
+  }));
 
   return (
     <>
+      <JsonLd
+        nodes={[
+          {
+            '@type': 'TouristTrip',
+            '@id': `${url}#trip`,
+            name: t('breadcrumbCurrent'),
+            description: t('factsSummary'),
+            url,
+            inLanguage: locale,
+            touristType: ['Adventure tourism', 'Water sports'],
+            provider: { '@id': ORG_ID },
+            offers,
+          },
+          breadcrumbList([
+            { name: t('breadcrumbHome'), url: pageUrl(locale, '/', '/en') },
+            { name: t('breadcrumbCurrent'), url },
+          ]),
+          faqPage(url, faqs),
+        ]}
+      />
       <Hero
         variant="inner"
         eyebrow={t('heroEyebrow')}
@@ -140,6 +192,8 @@ export default function RibTurPage() {
           <span aria-current="page">{t('breadcrumbCurrent')}</span>
         </nav>
       </div>
+
+      <FactBox title={tc('factsTitle')} summary={t('factsSummary')} facts={facts} />
 
       {/* INTRO */}
       <section className="section section--sm">
@@ -300,10 +354,10 @@ export default function RibTurPage() {
             <p className="section__subtitle">{t('faqSubtitle')}</p>
           </div>
           <div className="faq reveal" role="list">
-            {[1, 2, 3, 4, 5].map((i) => (
-              <details key={i} role="listitem">
-                <summary>{t(`faq${i}Question` as Parameters<typeof t>[0])}</summary>
-                <div className="faq__answer"><div className="faq__answer-inner">{t(`faq${i}Answer` as Parameters<typeof t>[0])}</div></div>
+            {faqs.map((faq) => (
+              <details key={faq.question} role="listitem">
+                <summary>{faq.question}</summary>
+                <div className="faq__answer"><div className="faq__answer-inner">{faq.answer}</div></div>
               </details>
             ))}
           </div>

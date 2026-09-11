@@ -5,6 +5,7 @@ import Hero from '@/components/Hero';
 import WarpShaderBg from '@/components/WarpShaderBg';
 import { buildAlternates } from '@/lib/seo';
 import type { Metadata } from 'next';
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 
 export async function generateMetadata({
   params,
@@ -14,7 +15,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'aboutPage' });
   return {
-    title: t('title'),
+    title: { absolute: t('title') },
     description: t('description'),
     alternates: buildAlternates(locale, '/om-oss', '/en/about'),
   };
@@ -25,6 +26,7 @@ export default function AboutPage() {
 
   return (
     <>
+      <BreadcrumbJsonLd nameKey="crumbAbout" nbPath="/om-oss" enPath="/en/about" />
       {/* HERO */}
       <section className="hero hero--inner-sm" aria-label={t('heroTitle')}>
         <div className="hero__bg" aria-hidden="true" style={{ background: '#0D1B26' }}>

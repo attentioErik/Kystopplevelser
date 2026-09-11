@@ -182,7 +182,20 @@
     "faq4Question": "How many people can join?",
     "faq4Answer": "Up to 12 people per boat. For larger groups we add more boats. There is no upper limit.",
     "faq5Question": "Can children participate?",
-    "faq5Answer": "Yes, the RIB tour is suitable for children from age 8. We adjust speed and route when children are on board."
+    "faq5Answer": "Yes, the RIB tour is suitable for children from age 8. We adjust speed and route when children are on board.",
+    "factsSummary": "Kystopplevelser runs guided RIB tours in the archipelago outside Bergen with certified skippers. A tour lasts 1 hour and takes up to 12 people per boat. The price is NOK 13,900 from Bergen city centre or NOK 9,900 from Sotra (Sund), excl. VAT per group. Dry suit, life jacket and goggles are included, and children from age 8 can join.",
+    "fact1Label": "Duration",
+    "fact1Value": "1 hour",
+    "fact2Label": "Capacity",
+    "fact2Value": "Up to 12 people per boat. Larger groups are split across several boats.",
+    "fact3Label": "Price",
+    "fact3Value": "NOK 13,900 (Bergen city centre) / NOK 9,900 (Sotra), excl. VAT per group",
+    "fact4Label": "Departure",
+    "fact4Value": "Bergen city centre, Sotra, Flesland or another agreed location along the coast",
+    "fact5Label": "Age",
+    "fact5Value": "From 8 years",
+    "fact6Label": "Included",
+    "fact6Value": "Certified skipper, dry suit, life jacket and goggles"
   },
   "booking": {
     "metaTitle": "Booking — Kystopplevelser Bergen",
@@ -369,7 +382,18 @@
     "faq4Question": "When can I rent?",
     "faq4Answer": "Availability varies by season. Check directly with Panorama Hotel & Resort for current times and booking options.",
     "faq5Question": "Where do I pick up the boat?",
-    "faq5Answer": "Boat rental is based at Panorama Hotel & Resort on Sotra. Pick-up and drop-off details are arranged directly with them at booking."
+    "faq5Answer": "Boat rental is based at Panorama Hotel & Resort on Sotra. Pick-up and drop-off details are arranged directly with them at booking.",
+    "factsSummary": "Boat rental is run by our partner Panorama Hotel & Resort on Sotra. You rent one of 7 Øien motorboats docked at the hotel and get an introduction to handling the boat before departure. The renter presents a boat operator's licence and signs a declaration (born before 1980: no licence required). Price and availability are arranged directly with Panorama Hotel & Resort.",
+    "fact1Label": "Operator",
+    "fact1Value": "Panorama Hotel & Resort, Sotra",
+    "fact2Label": "Boats",
+    "fact2Value": "7 Øien motorboats",
+    "fact3Label": "Requirements",
+    "fact3Value": "Boat operator's licence and signed declaration (born before 1980: no licence required)",
+    "fact4Label": "Price",
+    "fact4Value": "Depends on duration, time and season",
+    "fact5Label": "Booking",
+    "fact5Value": "booking@panoramahotell.no · +47 56 31 90 00"
   },
   "sauna": {
     "title": "Sauna by the Sea — Havblikk Fjordsauna in Øygarden | Kystopplevelser",
@@ -436,7 +460,20 @@
     "faq4Question": "Is the sauna open all year?",
     "faq4Answer": "Yes, the sauna is available twelve months a year. Check current availability with Havblikk Fjordsauna.",
     "faq5Question": "What should I bring?",
-    "faq5Answer": "Bring a swimsuit and a towel. The wood-fired stove is pre-heated on arrival, and you have access to the sea for cold water swimming."
+    "faq5Answer": "Bring a swimsuit and a towel. The wood-fired stove is pre-heated on arrival, and you have access to the sea for cold water swimming.",
+    "factsSummary": "Havblikk Fjordsauna is a floating sauna by Havgapet in Øygarden, approx. 45 minutes from Bergen city centre. It is open all year, with wood-fired and electric stoves (80–90 °C). Choose a private sauna (2 hours, up to 15 people), a sauna cruise (2 hours, up to 12) or drop-in (90 minutes). Booking is made with Havblikk Fjordsauna.",
+    "fact1Label": "Location",
+    "fact1Value": "Havgapet, Austefjordsvegen 165, 5379 Steinsland (Øygarden)",
+    "fact2Label": "Distance",
+    "fact2Value": "Approx. 45 min from Bergen city centre",
+    "fact3Label": "Open",
+    "fact3Value": "All year",
+    "fact4Label": "Formats",
+    "fact4Value": "Private sauna (2 h, up to 15) · Sauna cruise (2 h, up to 12) · Drop-in (90 min, up to 12 per session)",
+    "fact5Label": "Temperature",
+    "fact5Value": "80–90 °C, wood-fired and electric stove",
+    "fact6Label": "Booking",
+    "fact6Value": "havblikkfjordsauna.no"
   },
   "aboutPage": {
     "title": "About Us — Kystopplevelser Bergen",
@@ -554,5 +591,14 @@
     "contactText": "If you have further questions about Kystopplevelser's payment terms or other enquiries, you can contact the company.",
     "contactPhone": "Phone: <a href=\"tel:+4746949333\" style=\"color:var(--accent);text-decoration:underline;\">+47 469 49 333</a>",
     "contactEmail": "Email: <a href=\"mailto:post@kyst-opplevelser.no\" style=\"color:var(--accent);text-decoration:underline;\">post@kyst-opplevelser.no</a>"
+  },
+  "common": {
+    "factsTitle": "At a glance",
+    "crumbHome": "Home",
+    "crumbExperiences": "Our services",
+    "crumbAbout": "About us",
+    "crumbBooking": "Booking",
+    "crumbGallery": "Gallery",
+    "crumbPrivacy": "Privacy and terms"
   }
 }

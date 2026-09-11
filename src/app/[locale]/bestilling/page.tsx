@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import { getTranslations } from 'next-intl/server';
 import BookingForm from '@/components/BookingForm';
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import { buildAlternates } from '@/lib/seo';
 import type { Metadata } from 'next';
 
@@ -12,7 +13,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'booking' });
   return {
-    title: t('metaTitle'),
+    title: { absolute: t('metaTitle') },
     description: t('metaDescription'),
     alternates: buildAlternates(locale, '/bestilling', '/en/booking'),
   };
@@ -20,8 +21,11 @@ export async function generateMetadata({
 
 export default function BestillingPage() {
   return (
-    <Suspense>
-      <BookingForm />
-    </Suspense>
+    <>
+      <BreadcrumbJsonLd nameKey="crumbBooking" nbPath="/bestilling" enPath="/en/booking" />
+      <Suspense>
+        <BookingForm />
+      </Suspense>
+    </>
   );
 }

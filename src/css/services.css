@@ -106,6 +106,56 @@
   user-select: none;
 }
 
+/* Fact box — short answer + key facts right below the hero */
+.factbox {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+
+.factbox__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.factbox__summary {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-4);
+}
+
+.factbox__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: var(--space-3) var(--space-5);
+  margin: 0;
+}
+
+.factbox__item dt {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.factbox__item dd {
+  margin: 2px 0 0;
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+  .factbox {
+    padding: var(--space-4);
+  }
+}
+
 /* ──────────────────────────────────────────────
    3. SERVICE INTRO TEXT
 ────────────────────────────────────────────── */

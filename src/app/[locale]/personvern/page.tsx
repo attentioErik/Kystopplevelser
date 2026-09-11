@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { buildAlternates } from '@/lib/seo';
 import type { Metadata } from 'next';
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 
 export async function generateMetadata({
   params,
@@ -11,7 +12,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'privacy' });
   return {
-    title: t('title'),
+    title: { absolute: t('title') },
     description: t('description'),
     alternates: buildAlternates(locale, '/personvern', '/en/privacy'),
   };
@@ -22,6 +23,7 @@ export default function PrivacyPage() {
 
   return (
     <>
+      <BreadcrumbJsonLd nameKey="crumbPrivacy" nbPath="/personvern" enPath="/en/privacy" />
       <section className="section section--secondary" style={{ paddingTop: 'calc(var(--nav-height) + var(--space-8))' }}>
         <div className="container" style={{ maxWidth: 800 }}>
           <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: 'var(--text-4xl)', color: 'var(--text-primary)', marginBottom: 'var(--space-2)' }}>

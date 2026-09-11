@@ -182,7 +182,20 @@
     "faq4Question": "Hvor mange kan være med?",
     "faq4Answer": "Opptil 12 personer per båt. Har dere en større gruppe tar vi flere båter, så det er ingen øvre grense.",
     "faq5Question": "Kan barn delta?",
-    "faq5Answer": "Ja, RIB-tur er egnet for barn fra 8 år. Vi tilpasser fart og rute når vi har barn om bord."
+    "faq5Answer": "Ja, RIB-tur er egnet for barn fra 8 år. Vi tilpasser fart og rute når vi har barn om bord.",
+    "factsSummary": "Kystopplevelser arrangerer guidede RIB-turer i skjærgården utenfor Bergen med sertifiserte skippere. En tur varer 1 time og har plass til opptil 12 personer per båt. Prisen er kr 13 900 fra Bergen sentrum eller kr 9 900 fra Sotra (Sund), eks. mva. per gruppe. Flytedress, redningsvest og briller er inkludert, og barn fra 8 år kan være med.",
+    "fact1Label": "Varighet",
+    "fact1Value": "1 time",
+    "fact2Label": "Kapasitet",
+    "fact2Value": "Opptil 12 personer per båt. Større grupper fordeles på flere båter.",
+    "fact3Label": "Pris",
+    "fact3Value": "kr 13 900 (Bergen sentrum) / kr 9 900 (Sotra), eks. mva. per gruppe",
+    "fact4Label": "Avgang",
+    "fact4Value": "Bergen sentrum, Sotra, Flesland eller annet avtalt sted langs kysten",
+    "fact5Label": "Alder",
+    "fact5Value": "Fra 8 år",
+    "fact6Label": "Inkludert",
+    "fact6Value": "Sertifisert skipper, flytedress, redningsvest og briller"
   },
   "booking": {
     "metaTitle": "Bestilling — Kystopplevelser Bergen",
@@ -369,7 +382,18 @@
     "faq4Question": "Når kan jeg leie?",
     "faq4Answer": "Tilgjengelighet varierer etter sesong. Sjekk direkte med Panorama Hotell og Resort for oppdaterte tider og bookingsmuligheter.",
     "faq5Question": "Hvor henter jeg båten?",
-    "faq5Answer": "Båtutleien har sin base ved Panorama Hotell og Resort på Sotra. Detaljer om henting og avlevering avtales direkte med dem ved booking."
+    "faq5Answer": "Båtutleien har sin base ved Panorama Hotell og Resort på Sotra. Detaljer om henting og avlevering avtales direkte med dem ved booking.",
+    "factsSummary": "Båtutleien drives av vår samarbeidspartner Panorama Hotell og Resort på Sotra. Du leier en av 7 Øien-motorbåter som ligger til kai ved hotellet, og får en introduksjon i håndtering av båten før avgang. Leietaker viser båtførerbevis og signerer egenerklæring (født før 1980: ikke krav om båtførerbevis). Pris og tilgjengelighet avtales direkte med Panorama Hotell og Resort.",
+    "fact1Label": "Utleier",
+    "fact1Value": "Panorama Hotell og Resort, Sotra",
+    "fact2Label": "Båter",
+    "fact2Value": "7 Øien-motorbåter",
+    "fact3Label": "Krav",
+    "fact3Value": "Båtførerbevis og egenerklæring (født før 1980: ikke krav om båtførerbevis)",
+    "fact4Label": "Pris",
+    "fact4Value": "Avhenger av varighet, tidspunkt og sesong",
+    "fact5Label": "Booking",
+    "fact5Value": "booking@panoramahotell.no · +47 56 31 90 00"
   },
   "sauna": {
     "title": "Badstue ved sjøen — Havblikk Fjordsauna i Øygarden | Kystopplevelser",
@@ -436,7 +460,20 @@
     "faq4Question": "Er badstuen tilgjengelig hele året?",
     "faq4Answer": "Ja, badstuen er tilgjengelig tolv måneder i året. Sjekk aktuell kalender og tilgjengelighet hos Havblikk Fjordsauna.",
     "faq5Question": "Hva tar jeg med meg?",
-    "faq5Answer": "Ta med badetøy og håndkle. Vedfyrt ovn er forvarmet ved ankomst, og du har tilgang til sjøen for kaldtvannsbad."
+    "faq5Answer": "Ta med badetøy og håndkle. Vedfyrt ovn er forvarmet ved ankomst, og du har tilgang til sjøen for kaldtvannsbad.",
+    "factsSummary": "Havblikk Fjordsauna er en flytende badstue ved Havgapet i Øygarden, ca. 45 minutter fra Bergen sentrum. Den er åpen hele året, har både vedovn og elektrisk ovn (80–90 °C) og direkte tilgang til sjøen. Du velger mellom privat badstu (2 timer, opptil 15 personer), badstuecruise (2 timer, opptil 12) og drop-in (90 minutter). Booking skjer hos Havblikk Fjordsauna.",
+    "fact1Label": "Sted",
+    "fact1Value": "Havgapet, Austefjordsvegen 165, 5379 Steinsland (Øygarden)",
+    "fact2Label": "Avstand",
+    "fact2Value": "Ca. 45 min fra Bergen sentrum",
+    "fact3Label": "Åpent",
+    "fact3Value": "Hele året",
+    "fact4Label": "Formater",
+    "fact4Value": "Privat badstu (2 t, opptil 15) · Badstuecruise (2 t, opptil 12) · Drop-in (90 min, opptil 12 per økt)",
+    "fact5Label": "Temperatur",
+    "fact5Value": "80–90 °C, vedovn og elektrisk ovn",
+    "fact6Label": "Booking",
+    "fact6Value": "havblikkfjordsauna.no"
   },
   "aboutPage": {
     "title": "Om oss — Kystopplevelser Bergen",
@@ -554,5 +591,14 @@
     "contactText": "Har du ytterligere spørsmål om Kystopplevelsers betalingsbetingelser eller andre forespørsler kan du kontakte bedriften.",
     "contactPhone": "Telefon: <a href=\"tel:+4746949333\" style=\"color:var(--accent);text-decoration:underline;\">+47 469 49 333</a>",
     "contactEmail": "E-post: <a href=\"mailto:post@kyst-opplevelser.no\" style=\"color:var(--accent);text-decoration:underline;\">post@kyst-opplevelser.no</a>"
+  },
+  "common": {
+    "factsTitle": "Kort fortalt",
+    "crumbHome": "Hjem",
+    "crumbExperiences": "Våre tjenester",
+    "crumbAbout": "Om oss",
+    "crumbBooking": "Bestilling",
+    "crumbGallery": "Galleri",
+    "crumbPrivacy": "Personvern og vilkår"
   }
 }

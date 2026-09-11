@@ -69,20 +69,20 @@ export const metadata: Metadata = {
   category: 'travel',
 };
 
-// JSON-LD structured data for search engines and AI models
+// Site-wide JSON-LD (company + website). Service, FAQ and breadcrumb data live on each page.
 function JsonLd() {
   const data = {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'TouristAttraction',
+        '@type': 'LocalBusiness',
         '@id': 'https://www.kyst-opplevelser.no/#organization',
         name: 'Kystopplevelser',
-        alternateName: 'Kystopplevelser AS',
+        legalName: 'Kystopplevelser AS',
         url: 'https://www.kyst-opplevelser.no',
         logo: 'https://www.kyst-opplevelser.no/icon.png',
         image: OG_IMAGE,
-        description: 'Kystopplevelser tilbyr autentiske kystopplevelser fra Bergen: RIB-turer på fjorden, båtutleie og flytende badstue ved sjøen. Opplev den norske kysten med sertifiserte skippere.',
+        description: 'Kystopplevelser arrangerer guidede RIB-turer i skjærgården utenfor Bergen med sertifiserte skippere, med base på Sotra. Sammen med samarbeidspartnere formidler vi også båtutleie hos Panorama Hotell og Resort og badstue hos Havblikk Fjordsauna i Øygarden.',
         telephone: '+4746949333',
         email: 'post@kyst-opplevelser.no',
         address: {
@@ -109,15 +109,8 @@ function JsonLd() {
             name: 'Øygarden',
           },
         ],
-        priceRange: 'NOK 319–13900',
+        priceRange: 'NOK 9900–13900',
         currenciesAccepted: 'NOK',
-        paymentAccepted: 'Vipps, Credit Card',
-        openingHoursSpecification: {
-          '@type': 'OpeningHoursSpecification',
-          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-          opens: '08:00',
-          closes: '20:00',
-        },
         sameAs: [
           'https://www.instagram.com/kyst.opplevelser/',
           'https://www.facebook.com/kystopplevelser',
@@ -130,74 +123,6 @@ function JsonLd() {
         name: 'Kystopplevelser',
         publisher: { '@id': 'https://www.kyst-opplevelser.no/#organization' },
         inLanguage: ['nb', 'en'],
-      },
-      {
-        '@type': 'TouristTrip',
-        name: 'RIB-tur Bergen',
-        description: 'Guidet RIB-tur på Byfjorden med erfarne guider. Avgang fra Bergen sentrum eller Sotra. Opptil 12 personer.',
-        touristType: ['Adventure tourism', 'Water sports'],
-        provider: { '@id': 'https://www.kyst-opplevelser.no/#organization' },
-        offers: [
-          {
-            '@type': 'Offer',
-            name: 'RIB-tur fra Bergen Sentrum',
-            price: '13900',
-            priceCurrency: 'NOK',
-            priceSpecification: {
-              '@type': 'PriceSpecification',
-              valueAddedTaxIncluded: false,
-            },
-            url: 'https://www.kyst-opplevelser.no/rib-tur-bergen',
-          },
-          {
-            '@type': 'Offer',
-            name: 'RIB-tur fra Sotra (Sund)',
-            price: '9900',
-            priceCurrency: 'NOK',
-            priceSpecification: {
-              '@type': 'PriceSpecification',
-              valueAddedTaxIncluded: false,
-            },
-            url: 'https://www.kyst-opplevelser.no/rib-tur-bergen',
-          },
-        ],
-      },
-      {
-        '@type': 'Product',
-        name: 'Båtutleie Bergen',
-        description: 'Lei motorbåt og utforsk skjærgården rundt Bergen i eget tempo. Opptil 8 personer, ingen erfaring nødvendig.',
-        provider: { '@id': 'https://www.kyst-opplevelser.no/#organization' },
-        url: 'https://www.kyst-opplevelser.no/baatutleie-bergen',
-      },
-      {
-        '@type': 'TouristTrip',
-        name: 'Badstue Bergen',
-        description: 'Flytende badstue med panoramautsikt over Byfjorden. Privat sauna, badstuecruise og drop-in. Tilgjengelig hele året.',
-        touristType: ['Wellness tourism'],
-        provider: { '@id': 'https://www.kyst-opplevelser.no/#organization' },
-        offers: [
-          {
-            '@type': 'Offer',
-            name: 'Privat sauna',
-            price: '5150',
-            priceCurrency: 'NOK',
-            url: 'https://www.kyst-opplevelser.no/sauna-badstue-bergen',
-          },
-          {
-            '@type': 'Offer',
-            name: 'Badstuecruise',
-            price: '9900',
-            priceCurrency: 'NOK',
-            url: 'https://www.kyst-opplevelser.no/sauna-badstue-bergen',
-          },
-          {
-            '@type': 'Offer',
-            name: 'Drop-in sauna',
-            price: '319',
-            priceCurrency: 'NOK',
-            url: 'https://www.kyst-opplevelser.no/sauna-badstue-bergen',
-          },
-        ],
       },
     ],
   };

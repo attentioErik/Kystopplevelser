@@ -6,6 +6,7 @@ import ServiceHubCard from '@/components/ServiceHubCard';
 import { uc } from '@/lib/uploadcare';
 import { buildAlternates } from '@/lib/seo';
 import type { Metadata } from 'next';
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 
 export async function generateMetadata({
   params,
@@ -15,7 +16,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'experiences' });
   return {
-    title: t('title'),
+    title: { absolute: t('title') },
     description: t('description'),
     alternates: buildAlternates(locale, '/opplevelser', '/en/experiences'),
   };
@@ -26,6 +27,7 @@ export default function ExperiencesPage() {
 
   return (
     <>
+      <BreadcrumbJsonLd nameKey="crumbExperiences" nbPath="/opplevelser" enPath="/en/experiences" />
       {/* HERO */}
       <Hero
         variant="inner"
