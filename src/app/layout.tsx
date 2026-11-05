@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import { getLocale } from 'next-intl/server';
 import ThemeScript from '@/components/ThemeScript';
+import { GTM_ID, consentDefaultsScript, gtmScript } from '@/lib/tracking';
 
 const OG_IMAGE = 'https://ucarecdn.com/f35d0529-b060-4496-a6de-164e4f6c4b33/hf_20260309_124501_de624687f2e640f2b3575ba107be2584.jpeg/-/format/jpeg/-/quality/smart/-/resize/1200x630/';
 
@@ -146,15 +147,17 @@ export default async function RootLayout({
       <head>
         <ThemeScript />
         <JsonLd />
-        {/* Google Tag Manager */}
-        <Script id="gtm" strategy="afterInteractive">
-          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-M8KCC74Q');`}
-        </Script>
-        {/* End Google Tag Manager */}
+        {/* Consent Mode v2-standard: MÅ kjøre før GTM. Attentio Consent lastes via GTM. */}
+        <Script
+          id="consent-default"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: consentDefaultsScript }}
+        />
+        <Script
+          id="gtm"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: gtmScript(GTM_ID) }}
+        />
         {/* BusinessBooster Agent: Kystopplevelser */}
         <Script id="bb-config" strategy="beforeInteractive">
           {`window.bbConfig = { clientId: "06477a32-f05b-4f14-b198-c871fe7d5324", agentId: "807d0d3e-4b82-4e34-a3d5-032a085adf7f" };`}
@@ -165,10 +168,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-M8KCC74Q"
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
+            title="Google Tag Manager"
           />
         </noscript>
         {/* End Google Tag Manager (noscript) */}

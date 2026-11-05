@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import { pushFormSubmitSuccess } from '@/lib/tracking';
 
 const BASIN_ENDPOINT = 'https://usebasin.com/f/a1c855f71785';
 
@@ -122,11 +123,15 @@ export default function BookingForm() {
     if (formData.kilde) body.append('kilde', formData.kilde);
 
     try {
-      await fetch(BASIN_ENDPOINT, {
+      const res = await fetch(BASIN_ENDPOINT, {
         method: 'POST',
         headers: { Accept: 'application/json' },
         body,
       });
+      if (res.ok) {
+        pushFormSubmitSuccess('kontaktskjema');
+      }
+      // Still show success — Basin queues submissions even if response is odd
       setSubmitted(true);
     } catch {
       // Still show success — Basin queues submissions

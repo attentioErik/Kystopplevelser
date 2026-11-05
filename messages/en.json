@@ -23,7 +23,8 @@
     "bookingLink": "Booking",
     "contact": "Contact",
     "privacy": "Privacy",
-    "terms": "Terms"
+    "terms": "Terms",
+    "cookies": "Cookie settings"
   },
   "home": {
     "title": "Kystopplevelser — Authentic Coastal Experiences from Bergen",
@@ -590,7 +591,15 @@
     "contactTitle": "Contact information",
     "contactText": "If you have further questions about Kystopplevelser's payment terms or other enquiries, you can contact the company.",
     "contactPhone": "Phone: <a href=\"tel:+4746949333\" style=\"color:var(--accent);text-decoration:underline;\">+47 469 49 333</a>",
-    "contactEmail": "Email: <a href=\"mailto:post@kyst-opplevelser.no\" style=\"color:var(--accent);text-decoration:underline;\">post@kyst-opplevelser.no</a>"
+    "contactEmail": "Email: <a href=\"mailto:post@kyst-opplevelser.no\" style=\"color:var(--accent);text-decoration:underline;\">post@kyst-opplevelser.no</a>",
+    "cookiesTitle": "Cookies and tracking",
+    "cookiesText": "This site uses cookies for visitor statistics and to measure advertising performance. These are used only if you consent. Without consent, only what is necessary for the site and your consent choice to work is stored.",
+    "cookiesChange": "You can change or withdraw your consent at any time.",
+    "cookiesChangeLink": "Change cookie settings",
+    "cookiesDeclarationBefore": "The full overview of the cookies we use is in",
+    "cookiesDeclarationLink": "our cookie declaration",
+    "cookiesDeclarationAfter": "(opens in a new tab).",
+    "cookiesProcessor": "Attentio Consent stores your cookie consent (EU/EEA, Norway)."
   },
   "common": {
     "factsTitle": "At a glance",

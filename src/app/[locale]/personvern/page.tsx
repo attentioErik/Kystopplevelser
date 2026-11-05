@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import { buildAlternates } from '@/lib/seo';
 import type { Metadata } from 'next';
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
+import { CONSENT_DECLARATION_URL } from '@/lib/tracking';
 
 export async function generateMetadata({
   params,
@@ -103,6 +104,35 @@ export default function PrivacyPage() {
             <p style={{ marginBottom: 'var(--space-4)', color: 'var(--text-secondary)' }} dangerouslySetInnerHTML={{ __html: t.raw('disputeText') }} />
 
             <hr style={{ border: 'none', borderTop: '1px solid var(--border-color)', margin: 'var(--space-8) 0' }} />
+
+            <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'var(--text-2xl)', color: 'var(--text-primary)', marginBottom: 'var(--space-4)' }}>
+              {t('cookiesTitle')}
+            </h2>
+            <p style={{ marginBottom: 'var(--space-4)', color: 'var(--text-secondary)' }}>
+              {t('cookiesText')}
+            </p>
+            <p style={{ marginBottom: 'var(--space-4)', color: 'var(--text-secondary)' }}>
+              {t('cookiesChange')}{' '}
+              <a href="#att-consent" style={{ color: 'var(--accent-primary)', textDecoration: 'underline', fontWeight: 600 }}>
+                {t('cookiesChangeLink')}
+              </a>
+              .
+            </p>
+            <p style={{ marginBottom: 'var(--space-4)', color: 'var(--text-secondary)' }}>
+              {t('cookiesDeclarationBefore')}{' '}
+              <a
+                href={CONSENT_DECLARATION_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: 'var(--accent-primary)', textDecoration: 'underline', fontWeight: 600 }}
+              >
+                {t('cookiesDeclarationLink')}
+              </a>{' '}
+              {t('cookiesDeclarationAfter')}
+            </p>
+            <p style={{ marginBottom: 'var(--space-8)', color: 'var(--text-secondary)' }}>
+              {t('cookiesProcessor')}
+            </p>
 
             <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'var(--text-2xl)', color: 'var(--text-primary)', marginBottom: 'var(--space-4)' }}>
               {t('contactTitle')}
